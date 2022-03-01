@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background: url('/media/header-image.png') no-repeat center center fixed;
+    background: url('/media/hero1.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px); 
     color:#D2AB94;
@@ -32,9 +32,14 @@ body{
 
 .nav-link{
     color: black;
-    letter-spacing: 2px;
     text-align: center;
+    font-family: 'Belleza', sans-serif;
 }
+
+.nav-link p {
+    letter-spacing: 0.1rem;
+}
+
 
 .list-inline-item a:hover {
     color: white;
@@ -136,3 +141,10 @@ section {
         padding-top: 52px;
     }
 }
+
+@media (max-width: 400px) {
+   .navbar .nav-link {
+        padding:2px 1px !important;
+        letter-spacing: 0;
+    }
+  }
