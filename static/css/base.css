@@ -1,0 +1,138 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    background: url('/media/header-image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px); 
+    color:#D2AB94;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* from Bulma: code institute */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color:black;
+}
+
+.nav-bar{
+    background-color: #d9aa8f;
+}
+
+.nav-link{
+    color: black;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.list-inline-item a:hover {
+    color: white;
+}
+
+.nav-link i {
+    color:black;
+}
+
+.border {
+    border: 1px solid #4a4a4a!important;
+}
+
+#site-banner {
+    background-color: #a66e4e;
+    color: black;
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.dropdown-menu{
+    text-align: center;
+    background-color: #D2AB94;
+    text-transform: uppercase;
+}
+
+.dropdown-menu a:hover{
+    color:#592715;
+}
+
+section {
+    overflow-x: hidden !important;
+}
+
+.main-logo-link{
+    width: fit-content;
+}
+
+/* Buttons */
+
+.shop-button .btn{
+    color:black;
+    border:#ffff;
+}
+
+.btn-white{
+    background-color: transparent;
+    color:black;
+}
+
+.shop-button a:hover{
+        cursor:pointer;
+        box-shadow:0 0.1rem 1.2rem 0 rgba(180, 50, 10, 0.6);
+        color: white;
+        background-color:#d9aa8f;
+}
+
+
+.shop-now-button{
+    display: inline-block;
+    padding: 14px 28px;
+    line-height: normal;
+    border: 1px solid ;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .2em;
+    font-family: 'Belleza', sans-serif;
+    background-color: white;
+    transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
+}
+
+
+.logo-font{
+    font-family: 'Belleza', sans-serif;
+    color: black;
+}
+
+
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+     
+    .header-container {
+        padding-top: 52px;
+    }
+}
