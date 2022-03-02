@@ -188,7 +188,7 @@ section {
 }
 
 .service {
-    font-size: 1.5rem;
+    line-height: 1.3rem;
 }
 
 .news{
@@ -246,11 +246,6 @@ section {
 
     .btn-lg{
         font-size:1rem;
-    }
-
-    .general{
-        margin-top: 10px;
-        font-size: 1rem;
     }
 }
 
