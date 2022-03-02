@@ -61,14 +61,21 @@ body{
     text-transform: capitalize;
 }
 
+/* Navigation bar */
 .dropdown-menu{
     text-align: center;
     background-color: #D2AB94;
-    text-transform: uppercase;
+    text-transform: capitalize
 }
 
 .dropdown-menu a:hover{
     color:#592715;
+}
+
+.dropdown-item:hover{
+    color:#592715;
+    background-color:white;
+    cursor:pointer;
 }
 
 section {
@@ -78,6 +85,27 @@ section {
 .main-logo-link{
     width: fit-content;
 }
+
+.nav-font{
+    font-family: 'Belleza', sans-serif;
+    color: black !important;
+    margin: 0 2rem;
+    font-weight: 600;
+}
+
+.nav-font:hover{
+    text-transform: uppercase;
+    letter-spacing:1px;
+    text-decoration:underline white;
+    letter-spacing:1px;
+}
+
+.navbar-nav li{
+    color:black;
+    padding:0.5rem 0rem;   
+    font-family: 'Belleza', sans-serif; 
+}
+
 
 /* Buttons */
 
@@ -109,7 +137,6 @@ section {
     letter-spacing: .2em;
     font-family: 'Belleza', sans-serif;
     background-color: white;
-    transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
 }
 
 
@@ -142,9 +169,38 @@ section {
     }
 }
 
+@media (max-width: 450px) {
+    body{
+        background: url('/media/mobile-hero.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        height: calc(100vh - 164px);
+    }
+}
+
 @media (max-width: 400px) {
    .navbar .nav-link {
         padding:2px 1px !important;
         letter-spacing: 0;
     }
-  }
+
+    .logo-font{
+        color:#D2AB94;
+        font-size:2.8rem;
+    }
+
+    .btn-lg{
+        font-size:1rem;
+    }
+}
+
+  @media (max-width: 320px) {
+     .logo-font{
+         color:#D2AB94;
+         font-size:2.5rem;
+     }
+ 
+     .btn-lg{
+         font-size:0.8rem;
+     }
+   }
+ 

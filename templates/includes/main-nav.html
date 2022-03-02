@@ -1,0 +1,66 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item">
+            <a class="nav-font nav-link " href="" id="home-link">
+               About
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-font nav-link dropdown-toggle" href="#"  role="button" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="" class="dropdown-item ">By Category</a>
+                <a href="" class="dropdown-item">All Products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-font nav-link dropdown-toggle" href="#" id="haircare-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Haircare
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="haircare-link">
+                <a href="" class="dropdown-item">Conditioners</a>
+                <a href="" class="dropdown-item"> Detanglers</a>
+                <a href="" class="dropdown-item">Edge Control</a>
+                <a href="" class="dropdown-item">Shampoo</a>
+                <a href="" class="dropdown-item"> Treatments</a>
+                <a href="" class="dropdown-item">All Haircare</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-font nav-link dropdown-toggle" href="#" id="extension-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Extensions
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="extension-link">
+                <a href="" class="dropdown-item">Clip Ins</a>
+                <a href="" class="dropdown-item">All Extensions</a>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-font nav-link " href="" id="accessories-link">
+               Accessories
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% if request.user.is_authenticated %}
+                <a class="nav-font nav-link" href="" id="blog-link">
+                Blog 
+                </a>
+            {% endif %}
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-font nav-link" href="" id="contact-link">
+               Contact Us
+            </a>
+        </li>
+
+    </ul>
+</div>
