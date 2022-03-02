@@ -187,7 +187,13 @@ section {
     color:#dc3545;
 }
 
+.service {
+    font-size: 1.5rem;
+}
 
+.news{
+    margin:1rem;
+}
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -211,12 +217,20 @@ section {
     }
 }
 
-@media (max-width: 450px) {
+@media only screen and (max-width: 760px){
+    .general{
+        font-size: 1.2rem;
+        font-weight:600;
+    }
+}
+
+@media (max-width: 480px) {
     body{
         background: url('/media/mobile-hero.jpeg') no-repeat center center fixed;
         background-size: cover;
         height: calc(100vh - 164px);
     }
+
 }
 
 @media (max-width: 400px) {
@@ -233,6 +247,11 @@ section {
     .btn-lg{
         font-size:1rem;
     }
+
+    .general{
+        margin-top: 10px;
+        font-size: 1rem;
+    }
 }
 
   @media (max-width: 320px) {
@@ -244,5 +263,6 @@ section {
      .btn-lg{
          font-size:0.8rem;
      }
+     
    }
  
