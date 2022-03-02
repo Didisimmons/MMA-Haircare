@@ -145,6 +145,48 @@ section {
     color: black;
 }
 
+/* Footer */
+
+.footer-container{
+    background-color:#a66e4e;
+    padding:20px 0 10px;
+    color:black;
+    font-family: 'Belleza', sans-serif;
+}
+
+.community-button{
+    padding: 0 3px;
+}
+
+.social-links{
+    margin-top:15px;
+    padding:0;
+}
+
+.social-links li a i {
+    width:30px;
+    height:30px; 
+    font-size:13px;
+    text-align:center;
+    color:black;
+}
+
+.fa-facebook-f:hover {
+    color:#007bff;
+}
+
+.fa-instagram:hover {
+    color:#fd7e14;
+}
+
+.fa-twitter:hover {
+    color:#17a2b8;
+}
+
+.fa-youtube:hover {
+    color:#dc3545;
+}
+
 
 /* Media Queries */
 
