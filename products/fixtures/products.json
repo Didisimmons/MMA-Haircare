@@ -1,0 +1,461 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340154",
+        "name": "Shea Moisture African Charcoal Deep Cleansing Shampoo",
+        "description": "Treat your scalp and hair with this gentle deep cleansing Sulfate free Shampoo helps fight away  dirt, excess oil and flaky build up as you calm and soothe the scalp.Dryness prone scalp: Helps soothe itching, while revitalizing hair; Leaves scalp rigorously clean, yet comfortable, creating an ideal environment for healthy hair",
+        "usage": "Apply to wet hair, lather and massage at the root; Rinse thoroughly; Follow with our balancing conditioner",
+        "brand": "Shea Moisture",
+        "ingredients": "Water, Sodium Lauroyl Methyl lsethionate, Cocamidopropyl Betaine, Glycol Distearate, Fragrance (Essential Oil Blend), Panthenol, Guar Hydroxypropyltrimonium Chloride, Aloe Barbadensis Leaf Juice, Sodium Benzoate, Sodium Palm Kernelate, Tocopheryl Acetate, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Salix Nigra (Willow)",
+        "price": 14.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw4c30c991/large/sheamoisture/764302271048_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-shampoo.png"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340155",
+        "name": "SheaMoisture Strengthen & Restore Shampoo - Jamaican Black Castor Oil",
+        "description": "Stimulate the scalp with peppermint for a refreshing, invigorating experience.Soften dry, over-processed hair into a manageable, shiny style with Apple Cider Vinegar",
+        "usage": "Apply to wet hair, gently massage from root to ends. Rinse thoroughly. Repeat if necessary. For best results pair with JAMAICAN BLACK CASTOR OIL STRENGTHEN & RESTORE CONDITIONER.",
+        "brand": "Shea Moisture",
+        "ingredients": "Water (Aqua), Decyl Glucoside, Sodium Lauroyl Lactylate, Fragrance (Essential Oil Blend), Glycerin (Vegetable), Hydrolyzed Rice Protein, Panthenol, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Guar Hydroxypropyltrimonium Chloride, Butyrospermum Parkii (Shea) Butter*",
+        "price": 18.99,
+        "category": 2,
+        "rating": 4.3,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw98d71385/large/sheamoisture/764302215837_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-shampoo1.png"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340156",
+        "name": "Shea Moisture Intensive Hydration Shampoo - manuka honey and mafura oil",
+        "description": "SheaMoisture Manuka Honey Shampoo with Mafura Oil is truly one of the best Manuka Honey shampoo products designed for all type 4 hair. This sulfate-free shampoo cleanses hair follicles with a luxurious lather that sweetly pampers hair with natural nutrients and moisturizers. By itself, the honey offers powerful antioxidant protection, and we've combined it with rich, exotic Mafura Oil for unparalleled deep masking for curly hair.",
+        "usage": "Apply to wet hair, gently massage into a rich lather. Rinse thoroughly. Repeat, if necessary.",
+        "brand": "Shea Moisture",
+        "ingredients": "Water (Aqua), Decyl Glucoside, Sodium Lauroyl Lactylate, Glycol Stearate, Glycerin (Vegetable), Hydrolyzed Rice Protein, Panthenol, Butyrospermum Parkii (Shea) Butter*, Fragrance (Essential Oil Blend), Adansonia Digitata Seed Oil, Guar Hydroxypropyltrimonium Chloride, Trichilia Emetica Seed Butter, Ficus Carica (Fig) Extract",
+        "price": 13.99,
+        "category": 2,
+        "rating": 4.2,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw9595d1a6/large/sheamoisture/764302231042_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-shampoo2.png"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340157",
+        "name": "Shea Moisture Jamaican Black Castor Oil Strengthen & Restore Conditioner",
+        "description": "A strengthening conditioner that detangles and restores moisture without weighing hair down. Perfect for those who regularly color, straighten or perm their hair as well as kinky, curly and wavy natural styles. Formulated with Jamaican Black Castor Oil and certified organic Shea Butter to nourish and strengthen damaged, brittle hair, reducing the appearance of breakage and shedding. Peppermint Oil helps stimulate the scalp for an invigorating experience. Leaves hair shiny and fully rejuvenated.",
+        "usage": "After shampooing with JAMAICAN BLACK CASTOR OIL STRENGTHEN & RESTORE CONDITIONER apply generously and comb through for even distribution. Leave in for 3 minutes. Rinse. Style as desired.",
+        "brand": "Shea Moisture",
+        "ingredients": "Nucifera (Coconut) Oil, Dicaprylyl Ether, Panthenol, Hydrolyzed Rice Protein, Simmondsia Chinensis (Jojoba) Seed Oil, Hydrolyzed Keratin, Hydroxyethylcellulose, Adansonia Digitata (Baobab) Seed Oil, Glycerin (Vegetable), Aloe Barbadensis Leaf Juice, Macadamia Ternifolia Seed Oil",
+        "price": 12.60,
+        "category": 1,
+        "rating": 3.8,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw7bb890f6/large/sheamoisture/764302215516_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-conditioner-1.png"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340158",
+        "name": "Shea Moisture Moisturizing Conditioner Coconut Oil - Daily Hydration",
+        "description": "Re-hydrate, soften and detangle hair with this daily rinse out SheaMoisture conditioner made from premium Coconut Oil. Formulated with a nourishing blend of 100% Virgin Coconut and Shea Oils, creamy Coconut Milk and Acacia Senegal, this lightweight formula penetrates the hair shaft to re-hydrate and enhance the natural softness of your strands while reducing frizz.This sulfate-free coconut oil conditioner for the hair is ideal for all hair types, and it makes hair feel lovingly nourished and healthy for long-term growth and maintenance. Our formula also contains Argan Oil, a potent hair smoother, Aloe and Rosehip Oil for a well-rounded softener. Designed to be used with our other 100% Virgin Coconut Oil treatments, the smell is like a warm coconut breeze.",
+        "usage": "After shampooing with RAW SHEA BUTTER MOISTURE RETENTION SHAMPOO, work conditioner through hair from roots to ends. Leave on for 3 minutes, then rinse thoroughly. For deeper conditioning, leave on for up to 15 minutes. As a leave-in, work a dime-sized amount through damp hair, then style as desired",
+        "brand": "Shea Moisture",
+        "ingredients": "Water, Glyceryl Stearate, Glycerin (Vegetable), Caprylic/Capric Triglyceride, Cocos Nucifera (Coconut) Oil, Glyceryl Caprylate, Cetrimonium Chloride, Butyrospermum Parkii (Shea) Butter",
+        "price": 15.80,
+        "category": 1,
+        "rating": 4.1,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw38028336/large/sheamoisture/764302204183_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-conditioner1.png"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340159",
+        "name": "SheaMoisture Raw Shea Butter Restorative Conditioner",
+        "description": "Trying to figure out what to do with hair that is dry and damaged? This SheaMoisture Raw Shea Butter Moisture Restorative Conditioner offers the perfect solution. Our leave-in or rinse out conditioner gives hair the kind of hydrating moisture it craves, all in one treatment. And this SheaMoisture conditioner helps restore dull, lifeless hair to its healthier, shinier version.",
+        "usage": "After shampooing with RAW SHEA BUTTER MOISTURE RETENTION SHAMPOO, work conditioner through hair from roots to ends. Leave on for 3 minutes, then rinse thoroughly. For deeper conditioning, leave on for up to 15 minutes. As a leave-in, work a dime-sized amount through damp hair, then style as desired",
+        "brand": "Shea Moisture",
+        "ingredients": "Water, Stearyl Alcohol, Olea Europaea (Olive) Fruit Oil, Behentrimonium Chloride, Cetyl Alcohol, Butyrospermum Parkii (Shea) Butter, Glyceryl Caprylate, Argania Spinosa Kernel Oil, Macrocystis Pyrifera (Kelp) Extract, Simmondsia Chinensis (Jojoba) Seed Oil, Daucus Carota Sativa (Carrot) Seed Oil, Hydrolyzed Silk",
+        "price": 13.50,
+        "category": 1,
+        "rating": 4.3,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dwe8dcec79/large/sheamoisture/764302280217_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-conditioner-3.png"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340160",
+        "name": "Carol's Daughter Wash Day Delight Sulfate Free Shampoo For Curly Hair",
+        "description": "Carol's Daughter Wash Day Delight Micellar shampoo with Aloe for hair transforms from a water to a gentle foam lather for a deep clean quickly without stripping or harsh friction to help cut down time on wash day. Perfect for curly hair and coily hair, our targeted applicator helps the liquid formula instantly flow through hair providing easy scalp access and quickly rinses clean. Sulfate free shampoo transforms from a liquid into a gentle foam lather without harsh friction and effortlessly works throughout, minimizing tangles. Sulfate free shampoo for curly hair with Micellar Water acts like a magnet to attract and lift away buildup for a thorough hair and scalp cleanse without stripping hair.",
+        "usage": "Untwist applicator tip and apply directly to scalp. The water formula foams to transform into gentle foam lather, hair easily detangles and feels moisturised.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Aqua / Water, Coco-Glucoside, Glycerin, Parfum / Fragrance, Citric Acid, Salicylic Acid, Potassium Hydroxide, Linalool, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Aloe Barbadensis Leaf Juice, Limonene, Geraniol, Citral, Potassium Sorbate, Sodium Benzoate",
+        "price": 17.60,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://cdn.shopify.com/s/files/1/1120/1136/products/71WdmhfZkjL._SL1500_400x400.jpg?v=1602508076",
+        "image": "carol-daughter-shampoo-1.png"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340161",
+        "name": "Carol's Daughter Black Vanilla Moisture & Shine Sulfate free Shampoo",
+        "description": "When your hair has the right balance of moisture the rest just falls into place - manageability, shine, softness - no matter how dry, dull or brittle the hair. So, fix it in an instant with help from this sulfate free, color-safe shampoo that cleanses and restores your natural moisture without adding weight to your hair. Aloe Leaf Juice hydrates your hair so it’s softer and more manageable, while Sweet Clover and Rose Extract give hair oodles of healthy shine.",
+        "usage": "Completely wet your hair so the shampoo can work in easily. Apply the shampoo and take a moment to gently massage into your hair and scalp. Rinse well with warm water until all suds are gone.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua),Disodium Laureth Sulfosuccinate, Cocamidopropyl Betaine, PEG-2 Cocamide, Fragrance (Parfum), Aloe Barbadensis Leaf Juice, Calendula Officinalis Flower Extract, Citric Acid, Glycerin, Hydrolyzed Soy Protein, Lavandula Angustifolia (Lavender) Flower Extract,Rosmarinus Officinalis (Rosemary) Leaf Extract, Salvia Officinalis (Sage) Leaf Extract, Urtica Dioica (Nettle) Leaf Extract, Caprylyl Glycol, Hexylene Glycol, Phenoxyethanol, Potassium Sorbate, Caramel. Ingredients may vary.",
+        "price": 19.99,
+        "category": 2,
+        "rating": 4.5,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dw1c7d74d3/ProductImages/Black-Vanilla/Carols-Daughter-Black-Vanilla-Moisture-Shine-Luscious-Moisture-Shampoo-1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-shampoo-2.png"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340162",
+        "name": "Carol's Daughter Wash Day Delight Conditioner With Rose Water",
+        "description": "wash day rose conditioner brings surprise and delight to your wash day with our unique jelly-to-cream formula that transforms from a thick jelly to a nourishing cream to moisturize hair from root to ends and minimize tangles. our nourishing jelly-to-cream formula is blended with glycerin, a naturally-derived ingredient* known to lock in moisture. rose water leaves hair petal soft, hydrated and blooming with shine. this moisturizing conditioner for curly natural hair with tangle-melting technology easily spreads through hair providing perfect slip so curls glide past each other, minimizing tangles, and untying knots. pair carol's daughter wash day delight conditioner with our wash day delight micellar water-to-foam shampoo for the best results. this deep hair conditioner is blended with glycerin and rose water. vegan** and free of parabens, petrolatum, mineral oils and artificial colors.",
+        "usage": "After shampooing, work thoroughly into wet hair. Massage gently into your scalp and hair, especially the ends. Rinse well.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Glycerin, Aqua / Water, Amodimethicone, Cetearyl Alcohol, Dimethicone, Behentrimonium Chloride, Peg-180, Parfum / Fragrance, Hydroxypropyl Starch Phosphate, Isopropyl Alcohol, Trideceth-6, Linalool, Sodium Benzoate, Salicylic Acid, Cetrimonium Chloride, Aloe Barbadensis Leaf Juice, Limonenem, Geraniol, Citral, Citric Acid, Potassium Sorbate",
+        "price": 20.50,
+        "category": 1,
+        "rating": 4.9,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dwdec4f22d/ProductImages/Wash-Day/carols-daughter-wash-day-delight-conditioner-with-rose-water-P1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-conditioner-1.png"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340163",
+        "name": "Carol's Daughter Black Vanilla Moisture & Shine Hydrating Conditioner",
+        "description": "you can instantly put an end to dry, dull, brittle hair. when you naturally balance hair’s moisture - manageability, softness and shine are just around the corner. this rich hydrating conditioner can do just that, plus it detangles and makes hair easier to style. the blend of pro-vitamin b5 and biotin strengthens and softens hair when it’s wet so there are fewer snags, snaps and tugs. and, it’s light enough to use daily and is also perfect as a co-wash.",
+        "usage": "After shampooing, work thoroughly into wet hair. Massage gently into your scalp and hair, especially the ends. Leave in your hair for 3 to 5 minutes and rinse well.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua), Cetearyl Alcohol, Glycerin, Cyclopentasiloxane, Behentrimonium Methosulfate, Butyrospermum Parkii (Shea Butter), (Lavender) Flower Extract, Melilotus Officinalis (Sweet Clover) Extract, Rosa Canina Fruit Extract, Calendula Officinalis Flower Extract, Salvia Officinalis (Sage) Leaf Extract, Panthenol (Pro-vitamin B5), Biotin, Tocopherol (Vitamin E), Tocopheryl Acetate, Retinyl Palmitate, Ascorbic Acid, Linoleic Acid, Linolenic Acid, Propylene Glycol Dicaprylate/Dicaprate",
+        "price": 20.99,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dw8e80d5c2/ProductImages/Black-Vanilla/Carols-Daughter-Black-Vanilla-Moisture-Shine-Luscious-Moisture-Conditioner-1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-conditioner-2.png"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340164",
+        "name": "Aunt Jackie’s Moisturizing & Softening - Oh So Clean Shampoo",
+        "description": "Treat your chronically dry hair to this lather-rich, deep moisturizing hair bath. Enriched with Coconut Oil, Shea Butter and Extra Virgin Olive Oil, tresses become super clean, soft, hydrated and easier to comb.",
+        "usage": "Shampoo thoroughly by working OH SO CLEAN! into wet hair. Do not shampoo vigorously. Gently massage, rubbing scalp with fingertips, and working lather in, along hair strands. Rinse and repeat to wash away raised particles and impurities from the first shampoo. Gentle enough for daily use. Towel dry and follow with IN CONTROL “Anti-Poof” Moisturizing and Softening Conditioner.",
+        "brand": "Aunt Jackie’s",
+        "ingredients": "Aqua, Sodium C14-16 Olefin Sulfonate, Cocamide MEA, Cocamidopropyl Betaine, Glycol Stearate, Glycerin, Parfum, Sodium Chloride, Polyquaternium-7, Butyrospermum Parkii Butter, Olea Europaea Fruit Oil, Tetrasodium EDTA, Magnesium Nitrate, Sodium Benzoate, Methylchloroisothiazolinone, Magnesium Chloride, Methylisothiazolinone, Citric Acid, d-Limonene, Hexyl Cinnamal, Linalool, Amyl Cinnamal, Butylphenyl Methylpropional, Yellow 6 (CI 15985), Yellow 10",
+        "price": 18.59,
+        "category": 2,
+        "rating": 4.5,
+        "image_url": "https://cdn.shopify.com/s/files/1/0573/6123/6126/products/AJ_Oh_So_CLean_16oz_590x.jpg?v=1645681264",
+        "image": "aunt-jackies-shampoo.png"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340165",
+        "name": "Aunt Jackie’s Quench -Moisture intensive Leave in conditioner ",
+        "description": "Ahhhh! That’s the sound of your hair exhaling after it drinks in Aunt Jackie’s Quench! Leave-In Conditioner. Long-lasting moisture, slip and softness are delivered through natural conditioners, including Marshmallow Root, Shea Butter and Extra Virgin Olive Oil.Don’t rinse it out! This mega-moisturizing and conditioning treatment helps eliminate dryness, without a heavy feel.",
+        "usage": "On clean, towel-dried or dampened hair, squeeze into hands, rub palms together and apply throughout the hair. Gently comb through starting at the ends, working up to the roots. Do not force through tangles. Apply more, as needed, to tangled areas. Style as usual. For optimal results, prep hair first with Aunt Jackie’s Oh So Clean Shampoo and In Control Conditioner.",
+        "brand": "Aunt Jackie’s",
+        "ingredients": "Water, Glycerin, Cetearyl Alcohol, Cetyl Alcohol, Aloe Barbadensis Leaf Extract, Behentrimonium Methosulfate, Althaea Officinalis Root Extract, Ulmus Fulva Bark Extract, Parfum, Argania Spinosa (Argan) Kernel Oil, Panthenol, Dehydroacetic Acid, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Hydrolyzed Wheat Protein, Butyrospermum Parkii (Shea) Butter, Olea Europaea (Olive) Fruit Oil.",
+        "price": 22.60,
+        "category": 10,
+        "rating": 5.0,
+        "image_url": "https://cdn.shopify.com/s/files/1/0573/6123/6126/products/Product-Images_Quench_2048x2048_0139a070-f179-4fc7-9229-b7ae21104e7f_1080x.jpg?v=1645680849",
+        "image": "aunt-jackies-leave-in-conditioner.png"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340166",
+        "name": "Aunt Jackie’s Curl La La – Defining Curl Custard",
+        "description": "Define your signature look by adding a little or a lot. Whatever your style, rest assure that it will be well-moisturized and soft to the touch, without caking or flaking. Use it as often as needed on wet or dry hair",
+        "usage": "For Scrunchy, Tight Curls: apply generously to wet or dry hair and use a diffuser while scrunching style into place, or allowing to air dry.For Elongated, Bouncy Curls or Spirals: apply to wet or dry hair, gently stretching curls with your fingers as you style, using a diffuser, hooded dryer or allowing to air dry. For Coils, Braid-Outs and Twists: apply a small amount to sections of wet or dry hair, roller/rod set, braid or twist each section. Sit under a hooded dryer or allow to completely air dry, then release each section, finger styling into place.",
+        "brand": "Aunt Jackie’s",
+        "ingredients": "Water, Glycerin, Cetearyl Alcohol, Cetyl Alcohol, Aloe Barbadensis Leaf Extract, Behentrimonium Methosulfate, Althaea Officinalis Root Extract, Ulmus Fulva Bark Extract, Parfum, Argania Spinosa (Argan) Kernel Oil, Panthenol, Dehydroacetic Acid, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Hydrolyzed Wheat Protein, Butyrospermum Parkii (Shea) Butter, Olea Europaea (Olive) Fruit Oil.",
+        "price": 24.50,
+        "category": 3,
+        "rating": 4.9,
+        "image_url": "https://cdn.shopify.com/s/files/1/0573/6123/6126/products/CurlLaLa_1080x.png?v=1644814706",
+        "image": "aunt-jackies-treatment.png"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340167",
+        "name": "Aunt Jackie’s Repair My Hair – Argan",
+        "description": "Vitamin-infused, this remarkable natural growth oil blend is fortified with carrier oils known to help correct and prevent breakage & damage, while helping to reduce thinning & shedding. These oils are excellent remedies for treating split ends, restoring vibrancy and luster. For use on all hair types, especially curly, wavy, coily, coarse and thicker textures.",
+        "usage": "Pour a quarter-size amount in your hand and rub palms together, then apply throughout hair, massaging into scalp and hair, from roots to ends. Comb or gently brush through, distributing evenly. Apply more as needed. As an anti-damage treatment, apply and cover hair with a plastic cap. After 10 minutes, remove cap and rinse thoroughly.",
+        "brand": "Aunt Jackie’s",
+        "ingredients": "Ricinus Communis (Castor) Seed Oil, Cocos Nucifera (Coconut) Oil, Glycine Soja (Soybean) Oil, C12-15 Alkyl Benzoate, C9-12 Alkane, Parfum, Diphenylsiloxy Phenyl Trimethicone, Argania Spinosa (Argan) Kernel Oil, TBHQ, Daucus Carota Sativa Root Extract, Citric Acid, Limonene, Hexyl Cinnamal, Linalool, Amyl Cinnamal, Butylphenyl Methylpropional, Benzyl Alcohol, Citronellol, Hydroxycitronellal, Cinnamyl Alcohol",
+        "price": 12.50,
+        "category": 9,
+        "rating": 4.1,
+        "image_url": "https://cdn.shopify.com/s/files/1/0573/6123/6126/products/Product-Images_RepairMyHair_2048x2048_3443ae7d-23d2-4318-bd20-9dfeeeea7705_1080x.jpg?v=1645683419",
+        "image": "aunt-jackies-hair-oil.png"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340168",
+        "name": "Aunt Jackie’s Knot On My Watch – Instant Detangling Therapy",
+        "description": "Have no fear! Your hair has its own personal Super Hero, guarding against tangles, knots and unruly, tresses! With the power of its “silky slip,” Knot On My Watch helps the comb glide through hard-to-manage hair, leaving it tangle-free and protected from breakage, while restoring a healthy moisture balance. Use as often as needed on wet or dry hair. Great detangling solution for all hair types and textures.",
+        "usage": "Apply a generous amount of Knot On My Watch throughout hair, concentrating on areas that are more prone to tangles and knots. Comb through with a wide-tooth comb. Do not pull tangles. Apply more to difficult areas and gently comb in small sections, starting from the bottom of strands, moving upward, until comb glides through hair from roots to ends. Follow with Curl La La Defining Curl Custard",
+        "brand": "Aunt Jackie’s",
+        "ingredients": "Water, Propylene Glycol, Butyrospermum Parkii (Shea) Butter, PEG-150 Distearate, Cetyl Alcohol , Glycine Soja (Soybean) Oil, Glycerin, Phenoxyethanol, Parfum, Polyquaternium-37, Propylene Glycol Dicaprylate/Dicaprate, Diphenylsiloxy Phenyl Trimethicone, Olea Europaea (Olive) Fruit Oil, C9-12 Alkane, Theobroma Cacao Seed Butter, Glyceryl Stearate, PEG-100 Stearate, Hydrogenated Soybean Oil, Lanolin Oil, Stearalkonium Chloride, Acrylamidopropyltrimonium Chloride/Acrylamide Copolymer, Ethylhexylglycerin",
+        "price": 15.50,
+        "category": 5,
+        "rating": 3.9,
+        "image_url": "https://cdn.shopify.com/s/files/1/0573/6123/6126/products/KnotOnMyWatch_1080x.png?v=1644814967",
+        "image": "aunt-jackie-detangler.png"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340169",
+        "name": "Shea Moisture Jamaican Black Castor Oil Strengthen/Grow and Repair Edge Treatment",
+        "description": "This SheaMoisture Jamaican Black Castor Oil precision styling gel and edge control for hair treatment effectively blocks humidity, while controlling reversion and those flyaway hairs that sometimes get out of hand. We designed it for those looking to use the best curl products for natural hair and for those who simply want an easier way to style all hair sections using one product.If you enjoy using castor oil for hair styling, you may fall in love with this formulated treatment gel that goes on smoothly, precisely where you want it. Use this gel regularly to help promote the natural growth of your edges. Jamaican Black Castor Oil combined with certified organic Shea Butter work to strengthen and condition hair to prevent breakage.",
+        "usage": "Apply a small amount to styled hair, smoothing flyaways with fingertips. For maximum control, apply small dabs to hairline and to edges the night before and cover hair with a silk scarf. In the morning, hair will be slicked back and well hydrated.",
+        "brand": "Shea Moisture",
+        "ingredients": "Glycerin (Vegetable), Water, Corn Syrup/Glucose, Pectin, Ricinus Communis (Castor) Seed Oil, Butyrospermum Parkii (Shea) Butter, Mentha Piperita (Peppermint) Leaf Extract, Aloe Barbadensis Leaf Juice, Cocodimonium Hydroxypropyl Hydrolyzed Keratin, Tocopherol, Macadamia Ternifolia Seed Oil, Panthenol, Vinegar, Cetrimonium Chloride, Agave Tequilana Leaf Extract, Niacin, Potassium Sorbate, Mauritia Flexuosa Fruit Oil, Fragrance (Essential Oil Blend), Yeast Extract, Citric Acid.",
+        "price": 12.50,
+        "category": 8,
+        "rating": 3.9,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw629e330c/large/sheamoisture/764302215578_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-edge-treatement.png"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340170",
+        "name": "Shea Moisture Manuka Honey & Mafura Oil Twist Defining Custard ",
+        "description": "Are you tired of searching for twist out products that can help you achieve the look you desire? If So, it's time to upgrade to one of our best SheaMoisture twist hair products. This Manuka Honey & Mafura Oil Twist-Defining Custard is quickly becoming legendary for its ability to make your twist outs look like a million bucks!Designed especially for 4A to 4C hair types, this ultra-hydrating formula immediately adds intensive hydration and softness to extra dry hair.Helping your hair achieve that popping definition you love a blend that includes certified organic Shea Butter, Mafura and Baobab Oils blended with antioxidant-rich African Rock Fig. They are boosted to greatness with the addition of Argan, Jojoba and Sunflower Oils, creating a moisture-infusing formula that envelopes dry hair to soften, smooth and produce well-defined, frizz-free twists and twist out styles.",
+        "usage": "Apply custard to clean, conditioned, wet hair in small sections and work through from roots to tips, then twist. Air dry or use a hooded dryer on a low heat setting. Undo twists, separate and manually fluff only after hair is completely dry.",
+        "brand": "Shea Moisture",
+        "ingredients": "Water, Caprylic/Capric Triglyceride, Glycerin (Vegetable), Glyceryl Stearate, Butyrospermum Parkii (Shea) Butter, Helianthus Annuus (Sunflower) Seed Oil, Cetyl Alcohol, Stearyl Alcohol, Maltodextrin/VP Copolymer, Glyceryl Stearate Citrate, Cetearyl Alcohol, Glyceryl Caprylate, Argania Spinosa Kernel (Argan) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Cocos Nucifera (Coconut) Oil, Theobroma Cacao (Cocoa) Seed Butter, Trichilia Emetica Seed (Mafura) Butter, Hydrolyzed Keratin, Honey, Tocopherol, Aloe Barbadensis Leaf Juice, Glyceryl Undecylenate, Fragrance (Essential Oil Blend), Adansonia Digitata Seed Oil, Ficus Carica (Fig) Extract",
+        "price": 22.50,
+        "category": 3,
+        "rating": 3.7,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dwe81abe1b/large/sheamoisture/764302231301_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-treatment.png"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340171",
+        "name": "SheaMoisture Jamaican Black Castor Oil Leave In Conditioner for Over-Processed, damaged hair 100%",
+        "description": "This reparative leave-in conditioner softens and detangles hair while controlling frizz. Perfect for those who regularly color, straighten, perm or heat style their hair, as well as kinky, curly or wavy natural styles. Formulated with Jamaican Black Castor Oil and certified organic Shea Butter to nourish, moisturize and support elasticity so hair resists breakage when detangling. Conditioners provide a protective layer that improves the appearance of split ends. Peppermint stimulates the scalp for an invigorating experience.",
+        "usage": "Apply to clean, towel dried hair. Work a generous amount of product into hair from root to ends. Gently comb through for even distribution. Do not rinse. Apply additional product as needed depending on hair length and condition.",
+        "brand": "Shea Moisture",
+        "ingredients": "Water, Ricinus Communis (Castor) Seed Oil, Stearyl Alcohol, Cetyl Alcohol, Behentrimonium Chloride, Butyrospermum Parkii (Shea) Butter, Cocos Nucifera (Coconut) Oil, Dicaprylyl Ether, Panthenol, Hydrolyzed Rice Protein, Simmondsia Chinensis (Jojoba) Seed Oil, Hydrolyzed Keratin, Hydroxyethylcellulose, Adansonia Digitata (Baobab) Seed Oil, Glycerin (Vegetable), Aloe Barbadensis Leaf Juice, Macadamia Ternifolia Seed Oil, Vinegar, Mentha Piperita (Peppermint) Leaf Extract, Trifolium Pratense (Clover) Flower Extract, Niacin, Tocopheryl Acetate, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Yeast Extract, Caprylyl Glycol, Caprylhydroxamic Acid, Fragrance (Essential Oil Blend) *Certified Organic Ingredient.",
+        "price": 21.99,
+        "category": 10,
+        "rating": 3.9,
+        "image_url": "https://www.sheamoisture.com/dw/image/v2/BDFL_PRD/on/demandware.static/-/Sites-sundial-master-catalog/default/dw7bb890f6/large/sheamoisture/764302215516_image%201.jpg?sw=560&sh=560&sm=cut&sfrm=jpg",
+        "image": "shea-moisture-leavein-conditioner.png"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340172",
+        "name": "Carol's Daughter Black Vanilla Moisture & Shine Hair Smoothie ",
+        "description": "To instantly fix dry, dull, brittle hair so it can have all the manageability, softness and shine you want, takes a deep moisture-balancing treatment. that’s why this intensely rehydrating hair smoothie is packed with a rich blend of cocoa and shea butters and pro-vitamin b5 to rescue and deeply condition your hair so it has a healthy texture with natural shine. made to absorb into your hair quickly so you’ll notice an immediate difference.",
+        "usage": "Apply to your wet hair. Massage gently into your hair, especially the ends. Leave in your hair for 5 to 7 minutes and then rinse well.You can also use a plastic cap, and sit with your hair under a dryer for 10 to 15 minutes for a deep treatment. Use about once each week for the best results.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua), Cetearyl Alcohol, Glycerin, Brassicamidopropyl Dimethylamine, Helianthus Annuus (Sunflower) Seed Oil, Amodimethicone, Olea Europaea (Olive) Fruit Oil, Butyrospermum Parkii (Shea Butter), Theobroma Cacao (Cocoa) Seed Butter, Mauritia Flexuosa (Buriti) Fruit Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Triticum Vulgare (Wheat) Germ Oil, Aloe Barbadensis Leaf Juice, Panthenol ( Pro-vitamin B5), Tocopheryl Acetate ( Vitamin E Acetate), Hydrolyzed Soy Protein, Caprylyl Glycol, Hexylene Glycol, Propylene Glycol Dicaprylate/Dicaprate, Cyclopentasiloxane, Tetrasodium EDTA, Aspartic Acid, Polysorbate 20, Polyquaternium-37, PEG-40 Castor Oil, Potassium Sorbate, Phenoxyethanol, Fragrance (Parfum).",
+        "price": 20.99,
+        "category": 3,
+        "rating": 4.6,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dw678bf071/ProductImages/Black-Vanilla/Carols-Daughter-Black-Vanilla-Deep-Conditioning-Hair-Smoothie-1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-treatment.png"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340173",
+        "name": "Carol's Daughter Monoi Repairing On-The-Go Hair Mask",
+        "description": "Infused with Monoi Oil and Hydrolyzed Silk, this intense repairing treatment nourishes hair from roots to ends to help reverse damage and prevent any future damage.",
+        "usage": "Start with the Monoi Repairing Shampoo, which is sulfate-free so you know it’s safe for color-treated or any other chemically treated hair, and it won’t strip away your natural moisture. Wet your hair, start massaging your hair and whip up a good lather for 1 minute or 2 so the shampoo can do its job.Rinse out the shampoo with warm water, then work the Monoi Repairing Conditioner into your wet hair. Detangle hair with your fingers and be sure to cover all your hair with the rich cream. Leave in your hair for 3 to 5 minutes.Once you’ve rinsed out the conditioner with warm water, gently massage the Monoi Repairing Hair Mask into wet hair and scalp, being sure to really work it into trouble spots where you’re concerned about breakage or dryness. Leave it in your hair for 5 to 7 minutes and then rinse out.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua), Cetearyl Alcohol, Stearamidopropyl Dimethylamine, Glycerin, Cetyl Esters, Dimethicone, Fragrance (Parfum), Behentrimonium Methosulfate, Cocos Nucifera (Coconut) Oil, Moringa Pterygosperma Seed Oil, Phyllostachis Bambusoides Juice, Hydrogenated Coco-Glycerides, Hydrolyzed Silk, Hydrolyzed Hibiscus Esculentus Extract, Cassia Angustifolia Seed Polysaccharide, Helianthus Annuus (Sunflower) Seed Extract, Panthenol (Provitamin B5), Cetrimonium Chloride, Cetrimonium Methosulfate, Cinnamidopropyltrimonium Chloride, Phenyl Trimethicone, Dimethiconol, Octyldodecanol, Ceteareth-20, Quaternium-91, Citric Acid, Sorbic Acid, Tetrasodium EDTA, Chlorphenesin, Phenoxyethanol, Methylisothiazolinone.",
+        "price": 30.99,
+        "category": 4,
+        "rating": 4.5,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dwc5df8c56/ProductImages/Monoi/Carols-Daughter-Monoi-Hair-Mask-16oz-1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-hair-mask.png"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340174",
+        "name": "Carol's Daughter Almond Milk Leave-In Conditioner- For Extremely Damaged, Over-Processed Hair",
+        "description": "for extremely damaged, over-processed hair. hair damage happens daily—whether it’s due to heat styling or harsh environmental exposure. so start reversing damage with this lightweight leave-in conditioner that also shields your weakened, over-processed hair from future damage.",
+        "usage": "Hold 6 to 8 inches away from your hair and spray all-over. Use on wet or dry hair to help detangle. Use on dry hair to refresh your style. Do not rinse out. Gentle enough to use daily.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua), Aloe Barbadensis Leaf Extract, Ascorbyl Palmitate, Butylene Glycol, Butyrospermum Parkii (Shea Butter), Calendula Officinalis Extract, Carbomer, Cocos Nucifera (Coconut) Oil, Cymbopogon Schoenanthus Extract, Dimethicone PEG-8 Meadowfoamate, Disodium EDTA, Glycerin, Helianthus Annuus (Sunflower) Seed Extract, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Hydrolyzed Wheat Protein/PVP, Crosspolymer, Lactic Acid, Laureth-23, Laureth-4, Panthenol, PEG-40 Hydrogenated Castor Oil, PEG-75 Meadowfoam Oil, Polyquaternium-11, Polyquaternium-7, Polysorbate 20, Potassium Sorbate, PPG-26-Buteth-26, Prunus Amygdalus Dulcis Seed Extract, Prunus Armeniaca (Apricot) Kernel Extract, Prunus Amygdalus Dulcis (Sweet Almond) Oil.",
+        "price": 29.99,
+        "category": 10,
+        "rating": 4.8,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dw12f751e7/ProductImages/Almond%20Milk/Carols-Daughter-Almond-Milk-Leave-In-Conditioner-P1.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carol-daughter-leavein-conditioner.png"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340175",
+        "name": "Wild Growth Hair Oil ",
+        "description": "hair damage happens daily—whether it’s due to heat styling or harsh environmental exposure. so start reversing damage with this lightweight leave-in conditioner that also shields your weakened, over-processed hair from future damage.",
+        "usage": "Apply directly to scalp and massage thoroughly.",
+        "brand": "Wild Growth",
+        "ingredients": "Oils of Coconut, Olive Oil, Jojoba, Rice Bran, Cocoa (Butter), Acerola , Pomegranate , Rosehip , and Pumpkin Seed. Extracts of Mushroom, Chick Pea, Lentil, Cocoa Mass, and Sesame seed.",
+        "price": 11.60,
+        "category": 9,
+        "rating": 4.2,
+        "image_url": "https://cdn11.bigcommerce.com/s-i4obcmlwea/images/stencil/1280x1280/products/6001/5512/WGH101__77656.1566569428.jpg?c=1",
+        "image": "wildgrowth-oil.png"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340176",
+        "name": "Carol's Daughter - Black Vanilla Edge Control Smoother",
+        "description": "FOR DRY, DULL OR BRITTLE HAIR.Forget sticky pomades, crunchy gels and heavy waxes to control edges and flyaways! This clear edge smoother applies dry, not wet, so hair stays sleek when styling face-framing frizzies to be flat, smoothed-out and under complete control. Made with Aloe to keep hair moisturized, soft and manageable, plus Honey Extract to help seal split ends and hold hair in place so your polished pompadours, tapered cuts and slick ponytails never look out of place",
+        "usage": "Get rid of face-framing frizzies by using fingertips to apply the product onto dry, styled hair. Hold, sculpt, flatten and smooth hair as desired, and get ready for seriously fierce hair.",
+        "brand": "Carol's Daughter",
+        "ingredients": "Water (Aqua), Ceteareth-25, PEG-7 Glyceryl Cocoate, Glycerin, PEG-7 Hydrogenated Castor Oil, Macadamia Ternifolia Seed Oil, Honey Extract, Aloe Barbadensis (Aloe) Leaf Juice, Rosemarinus Officinalis (Rosemary) Leaf Extract, Urtica Dioica (Nettle) Extract, Humulus Lupulus (Hops) Extract, Equisetum Arvense Extract, Lawsonia Inermis Extract, Anthemis Nobilis Flower Extract, Symphytum Officinale Rhizome/Root Extract, Caprylyl Glycol, Hexylene Glycol, Cocodimonium Hydroxypropyl Hydrolyzed Wheat Protein, Ethylhexylglycerin, Phenoxyethanol, Fragrance (Parfum).",
+        "price": 11.60,
+        "category": 8,
+        "rating": 4.6,
+        "image_url": "https://www.carolsdaughter.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-cd-master-catalog/default/dw0c99a99f/ProductImages/Black-Vanilla/carols-daughter-black-vanilla-edge-control-smoother-2021glamour-badge.jpg?sw=420&sh=420&sm=fit&q=70",
+        "image": "carols-daughter-edge-control.png"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340177",
+        "name": "Afro Kinky Clip Ins",
+        "description": "The Afro Kinky Clip Ins is the finest hair extension for 4C queens, It creates an untraceable blend with its fine yet coarse texture to help you achieve fullness and spontaneity.One Bundle of the Afro Kinky set is enough to create a full look or multiple styles as you wish. The Afro Kinky Clip Ins is 100% virgin human hair, it can be conditioned, washed, twisted, colored, and blown out.",
+        "usage": "Style with a leave-In conditioner and water mix.Co-wash or condition after every 10 - 15 wears. Use a Denman brush or your hands after applying moisture only.Small size – Full look (12) WEFTS ,Meduim size – 24 wefts,Large – 48 wefts extra full head .",
+        "brand": "Kinky",
+        "ingredients": "The Afro Kinky Clip Ins is 100% virgin human hair, it can be conditioned, washed, twisted, colored, and blown out.",
+        "price": 24.50,
+        "category": 7,
+        "rating": 4.7,
+        "image_url": "https://cdn.shopify.com/s/files/1/0073/6087/2563/products/Afro_kinky_clip_ins_-_KLS_shoot_1000x.jpg?v=1612690747",
+        "image": "clip-ins.png"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340178",
+        "name": "Afro Kinky Comb by Flora & Curl",
+        "description": "Volumise your curls easily with our Gentle Fro Pick. This smooth-layered and sturdy comb allows you to gently pick your curls to create extra volume and combat flat roots. The long teeth reach the roots for even more coverage.FOR 3A,3B,3C & 4A/4B/4C.",
+        "usage": "After your curls have fully dried, use the Gentle Fro Pick to gently fluff your hair to create additional volume at the roots or tips.For best results, you can use it along side the Sweet Hibiscus Curl Volumizing Foam.",
+        "brand": "Flora & Curl",
+        "ingredients": "bamboo",
+        "price": 5.0,
+        "category": 6,
+        "rating": 4.8,
+        "image_url": "https://cdn.shopify.com/s/files/1/1120/1136/products/FloraandCurl3103212295_998x998.jpg?v=1620480282",
+        "image": "comb-accesories.png"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340179",
+        "name": "Insulated Shower Cap by  Flora & Curl ",
+        "description": "A gorgeous shower cap to beautify your wash day with increased benefits than your standard shower cap. Flora & Curl's uniquely designed, dual-purpose shower cap elevates your wash day experience instantly. It is hand-woven with love to boost hair conditioning.The waterproof outside layer features our signature hand-drawn botanicals. The inside layer features a soft and thick insulated lining, that is deeply woven to deliver warmth and snug comfort. Your curls will thank you!",
+        "usage": "As a shower cap: Place it over the hair during your shower with the waterproof side facing outward.Tip - You can use it to support a heat treatment after applying either the the Rose Water & Honey Cream Conditioner or the Curl Refresh Clay Wash or the African Citrus Superfruit Hair Oil.",
+        "brand": "Flora & Curl",
+        "ingredients": "Our unique blend of fabric is composed with 65% Cotton, 30% Polyester and 5% Spandex. Hand wash or machine wash on a 30C / 86F delicate cycle. Hang to dry completely.",
+        "price": 29.99,
+        "category": 6,
+        "rating": 4.1,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "insulated-shower-cap.png"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+        "sku": "001340180",
+        "name": "Felicia Leatherwood Flaxseed Bonnet For Deep Conditioning – RED",
+        "description": "The Flaxseed Conditioning Bonnet is a uniquely designed cordless, microwaveable cap that provides ~20-30 minutes of even, gentle heat. Perfect during your deep conditioning, oil treatments or D.I.Y. conditioning sessions.Applying heat during these treatments allows your hair follicles to better and more effectively absorb the moisture and nutrients. The effect being healthier, stronger hair.Natural Hair, Long Hair, Thick Hair, Curly Hair, Dry Hair",
+        "usage": "conditioner on and the plastic cap that came with your flaxseed bonnet and apply your flaxseed heated bonnet from the microwave for 15-20min.  Feel free to reheat if necessary.",
+        "brand": "Felicia Leatherwood",
+        "ingredients": "Soft Microfiber Cotton for comfort and wearability.Flaxseed for consistent, gentle heat retention over time.Fully cordless for portability and convenience",
+        "price": 35.99,
+        "category": 6,
+        "rating": 5.0,
+        "image_url": "https://cdn.shopify.com/s/files/1/0280/5966/4459/products/Brush-With-The-Best6477_1024x1024@2x.jpg?v=1630682542",
+        "image": "bonnet.jpg"
+      }
+    }
+  ]

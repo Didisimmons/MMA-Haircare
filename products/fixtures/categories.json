@@ -1,0 +1,82 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "conditioners",
+        "friendly_name": "Conditioners"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "shampoo",
+        "friendly_name": "Shampoo"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "treatments",
+        "friendly_name": "Treatments"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "hair_mask",
+        "friendly_name": "Hair Mask"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "detanglers",
+        "friendly_name": "Detanglers"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "accessories",
+        "friendly_name": "Accessories"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "clip_ins",
+        "friendly_name": "Clip Ins"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "edge_control",
+        "friendly_name": "Edge Control"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "hair_oils",
+        "friendly_name": "Hair Oil"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.category",
+      "fields": {
+        "name": "leave_in_conditioners",
+        "friendly_name": "Leave-In Conditioners"
+      }
+    }
+  ]
