@@ -152,6 +152,9 @@ section {
     padding:20px 0 10px;
     color:black;
     font-family: 'Belleza', sans-serif;
+    bottom: 0;
+    width: 100%;
+    position:fixed;
 }
 
 .community-button{
