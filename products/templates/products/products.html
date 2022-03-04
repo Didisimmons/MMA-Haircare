@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row"> 
             <div class="col text-center mt-3">
-                <h3 class="product-text">We got you covered, Sis! Soul Food for your hair</h3>
+                <h3 class="product-text">We got you covered, Sis! Soul Food for your hair <i class="fas fa-crown"></i></h3>
             </div>    
         </div>
         <div class="row">
@@ -47,11 +47,11 @@
                                 <div class="card-footer pt-0 border-0 text-center">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead pt-2 font-weight-bold">${{ product.price }}</p>
                                             {% if product.rating %}
-                                                <small class="rating"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small class="rating rating-detail"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
-                                                <small class="rating">No Rating</small>
+                                                <small class="rating rating-detail">No Rating</small>
                                             {% endif %}
                                         </div>
                                     </div>

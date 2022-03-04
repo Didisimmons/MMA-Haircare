@@ -145,6 +145,102 @@ section {
     color: black;
 }
 
+/* products page */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.products-header{
+    font-family: 'Belleza';
+    padding: 1rem 0;
+    line-height: 2.5rem;
+    color: #bf5f56;
+}
+
+.products{
+    padding-bottom:3rem;
+}
+
+.product-text{
+    color:#d9aa8f;
+    letter-spacing:1px;
+    padding: 2rem 1rem;
+}
+
+.card-footer{
+    background-color: transparent;
+}
+
+.product-btn{
+    border: 1px solid grey;
+}
+
+.product-btn:hover{
+    text-transform: uppercase;
+    color:#592715;
+}
+
+.rating{
+    color: #eec139!important;
+    font-size: 0.8rem;
+}
+
+.divider{
+    width:195px;
+    height:2px;
+    background-color:#894c51;
+}
+
+.card .card-header{
+    font-family: 'Belleza', sans-serif;
+}
+
+.card .collapse{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.card-header button{
+    color:#592715;
+}
+
+.card-header .btn:hover{
+    color:black;
+    text-decoration: none;
+}
+
+.btn-black{
+    border: 1px solid grey;
+    background-color: #D2AB94;
+    font-weight: bold;
+}
+
+.btn-black:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #bf5f56;
+    color:white;
+}
+
+.add-wish{
+    color:#bf5f56;
+    padding: 1rem 0;
+}
+
+.add-wish p:hover{
+    text-decoration: none !important;
+    color:#592715;
+}
+
+.rating-detail{
+    font-size: 1rem;
+}
 /* Footer */
 
 .footer-container{
@@ -154,7 +250,6 @@ section {
     font-family: 'Belleza', sans-serif;
     bottom: 0;
     width: 100%;
-    position:fixed;
 }
 
 .community-button{
@@ -234,6 +329,19 @@ section {
         height: calc(100vh - 164px);
     }
 
+    .products-header{
+        padding: 2rem 1rem;
+        font-size:1.4rem
+    }
+
+    .product-details h3{
+        font-size: 1.45rem;
+    }
+
+    .product-text{
+        font-size: 1.65rem;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -250,6 +358,16 @@ section {
     .btn-lg{
         font-size:1rem;
     }
+
+    .rating-detail{
+        font-size: 1rem;
+    }
+
+    .products-header{
+        padding: 2rem 1rem;
+        font-size:1.25rem
+    }
+
 }
 
   @media (max-width: 320px) {
@@ -262,5 +380,12 @@ section {
          font-size:0.8rem;
      }
      
+     .product-details h3{
+         font-size: 1.2rem;
+     }
+
+     .product-text{
+         font-size: 1.7rem;
+     }
    }
  
