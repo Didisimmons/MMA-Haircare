@@ -23,12 +23,12 @@
                Haircare
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="haircare-link">
-                <a href="" class="dropdown-item">Conditioners</a>
-                <a href="" class="dropdown-item"> Detanglers</a>
-                <a href="" class="dropdown-item">Edge Control</a>
-                <a href="" class="dropdown-item">Shampoo</a>
-                <a href="" class="dropdown-item"> Treatments</a>
-                <a href="" class="dropdown-item">All Haircare</a>
+                <a href="{% url 'products' %}?category=conditioners,leave_in_conditioners" class="dropdown-item">Conditioners</a>
+                <a href="{% url 'products' %}?category=detanglers" class="dropdown-item"> Detanglers</a>
+                <a href="{% url 'products' %}?category=edge_control" class="dropdown-item">Edge Control</a>
+                <a href="{% url 'products' %}?category=shampoo" class="dropdown-item">Shampoo</a>
+                <a href="{% url 'products' %}?category=treatements,hair_mask,hair_oil,leave_in_conditioners" class="dropdown-item"> Treatments</a>
+                <a href="{% url 'products' %}?category=conditioners,detanglers,edge_control,shampoo,treatements,hair_mask,hair_oil,leave_in_conditioners" class="dropdown-item">All Haircare</a>
             </div>
         </li>
 
@@ -37,13 +37,13 @@
                 Extensions
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="extension-link">
-                <a href="" class="dropdown-item">Clip Ins</a>
-                <a href="" class="dropdown-item">All Extensions</a>
+                <a href="{% url 'products' %}?category=clip_ins" class="dropdown-item">Clip Ins</a>
+                <a href="{% url 'products' %}?category=clip_ins" class="dropdown-item">All Extensions</a>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="nav-font nav-link " href="" id="accessories-link">
+            <a class="nav-font nav-link " href="{% url 'products' %}?category=accessories" id="accessories-link">
                Accessories
             </a>
         </li>
