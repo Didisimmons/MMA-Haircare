@@ -38,9 +38,17 @@
                     <a class="add-wish" href="">
                         <div class="text-center add-wish">
                             <div><i class="fas fa-heart fa-lg hvr-grow"></i></div> 
-                            <p class="my-0 d-none d-lg-block">Add to Wishlist</p>
+                            <p class="my-0 d-none d-lg-block text-decoration-none">Add to Wishlist</p>
                         </div>
                     </a>
+                    {% if product.category %}
+                        <p class="small mt-2 mb-0">
+                            <a href="{% url 'products' %}?category={{ product.category.name }}"
+                                class="category-button">
+                                <i class="fas fa-tag mr-1"> {{product.category.friendly_name }}</i>
+                            </a>
+                        </p>
+                    {% endif %}
                    
                     <div class="col-12">
                         <p class="mt-3"><strong>Quantity:</strong></p>

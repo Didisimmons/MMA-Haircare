@@ -151,6 +151,18 @@ section {
     color: black;
 }
 
+.category-button{
+    color:#592715;
+}
+
+.category-button:hover{
+    color:#0e0400;
+}
+
+.sort-select-wrapper{
+    padding-top: 1.5rem;
+}
+
 /* products page */
 
 .overlay {
@@ -243,10 +255,23 @@ section {
     text-decoration: none !important;
     color:#592715;
 }
-
+ƒ
 .rating-detail{
     font-size: 1rem;
 }
+
+a.category-badge > span.badge:hover {
+    background: #a66e4e !important;
+    color: #fff !important;
+}
+
+a.category-badge{
+    color:black !important;
+    border: 1px solid #bf5f56!important;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
 /* Footer */
 
 .footer-container{
