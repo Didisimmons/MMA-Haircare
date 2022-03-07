@@ -26,9 +26,6 @@ body{
     color:black;
 }
 
-.nav-bar{
-    background-color: #d9aa8f;
-}
 
 .nav-link{
     color: black;
@@ -104,6 +101,15 @@ section {
     color:black;
     padding:0.5rem 0rem;   
     font-family: 'Belleza', sans-serif; 
+}
+
+/* assistance from code institute colleague https://github.com/johnroutledge/milestone-project-4/blob/main/static/css/base.css */ 
+.navbar-fixed{
+    z-index: 99;
+    position: sticky;
+    width: 100%;
+    background-color: #d9aa8f;
+    top:0
 }
 
 
@@ -385,7 +391,7 @@ section {
      }
 
      .product-text{
-         font-size: 1.7rem;
+         font-size: 1.5rem;
      }
    }
  
