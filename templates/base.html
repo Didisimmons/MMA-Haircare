@@ -43,7 +43,7 @@
     <section>
         <div id="site-banner" class="row text-center">
             <div class="col site-banner-color">
-                <h6 id="site-banner-text" class="my-1">To celebrate Black History Month 15% OFF SITE ,Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+                <h6 id="site-banner-text" class="my-1">To celebrate Black History Month 15% OFF SITE,Free delivery on orders over €{{ free_delivery_threshold }}</h6>
             </div>
         </div>
     </section>
@@ -109,12 +109,12 @@
 
                     <!--basket items-->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div class="cart-items">
                                     <i class="fas fa-shopping-bag fa-lg"></i>
                                 </div>
-                                <p class="my-0">
+                                <p class="my-0 grand_total">
                                     {% if grand_total %}
                                         €{{ grand_total|floatformat:2 }}
                                     {% else %}
