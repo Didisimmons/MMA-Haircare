@@ -23,14 +23,12 @@
             <div class="col">
                 {% if bag_items %}
                     <!--shopping bag mobile layout -->
-                    <div class="d-block d-md-none">
                         
-                    </div>
                     <!--shopping bag  on meduim devices and above-->
                     <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-center">
-                                <tr class="text-black">
+                                <tr class="text-black text-uppercase">
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
@@ -91,8 +89,8 @@
                         </table>
                     </div> 
                 {% else %}
-                    <p class="lead mb-5">Shopping bag is empty!</p>
-                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 mt-5">
+                    <p class="lead mb-5 mx-auto">Shopping bag is empty!</p>
+                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 mx-auto mt-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
