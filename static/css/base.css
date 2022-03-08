@@ -285,6 +285,34 @@ a.category-badge{
     cursor: pointer;
 }
 
+.error-meesage{
+    color:#bf5f56;
+    padding: 4rem 0;
+    letter-spacing:2px;
+}
+
+/* bag */
+
+.header-text{
+    color:#592715;
+    letter-spacing:1px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; 
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 
 /* Footer */
 
