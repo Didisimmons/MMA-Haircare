@@ -284,7 +284,9 @@ a.category-badge{
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -324,6 +326,9 @@ a.category-badge{
     color:#bf5f56;
 }
 
+.bag-btn{
+    padding-right:0.6rem;
+}
 /* Footer */
 
 .footer-container{

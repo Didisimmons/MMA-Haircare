@@ -76,7 +76,7 @@
                                                     </span>
                                                 </button>
                                             </div>
-                                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="6" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn"
                                                     data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
@@ -165,6 +165,6 @@
     </div>
 {% endblock %}
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
