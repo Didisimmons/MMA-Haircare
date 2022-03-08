@@ -51,7 +51,7 @@
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form w-50 mx-auto" method="POST" action="">
+                                        <form class="form update-form w-50 mx-auto" method="POST" action="{% url 'adjust_bag' item.item_id%}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -152,7 +152,6 @@
         var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
         
-        // using the post method from jQuery Giving it both the URL and the data and when done. Will execute a function to reload the page.
         $.post(url, data)
          .done(function() {
              location.reload();
