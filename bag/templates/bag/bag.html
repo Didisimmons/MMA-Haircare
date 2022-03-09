@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="header-container container">
@@ -82,10 +83,10 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info bag-btn"><small>Update</small></a>
-                                        <a class="remove-item text-danger bag-btn" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="remove-item text-danger bag-btn" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -120,8 +121,8 @@
                         </table>
                     </div> 
                 {% else %}
-                    <p class="lead mb-5 mx-auto">Shopping bag is empty!</p>
-                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 mx-auto mt-5">
+                    <p class="lead pt-3 pt-3 text-center">Shopping bag is empty!</p>
+                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 mt-5 mb-5 mx-auto">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
