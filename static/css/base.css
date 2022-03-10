@@ -396,6 +396,14 @@ a.category-badge{
     border-bottom-color: #343a40 !important;
 }
 
+.color-pink{
+    color:#bf5f56;
+}
+
+.color-black{
+    color:#592715;
+}
+
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -503,6 +511,10 @@ a.category-badge{
         font-size: 1.65rem;
     }
 
+    .size{
+        font-size: 0.8rem;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -548,5 +560,6 @@ a.category-badge{
      .product-text{
          font-size: 1.5rem;
      }
+
    }
  
