@@ -4,18 +4,25 @@
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+{% block inner_content %}
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<h2 class="header-text">{% trans "Sign Up" %}</h2>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form class="signup text-black" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <div class="pt-2 pb-3">
+    <button class="primaryAction btn-black pt-2 pb-2 px-4 text-uppercase" type="submit">{% trans "Sign Up" %} &raquo;</button>
+  </div>
 </form>
 
+<p class="text-black">{% blocktrans %}Already have an account? Sign In <a  class="color-pink" href="{{ login_url }}">HERE</a>.{% endblocktrans %}</p>
+<div>
+  <p class="pt-2"><strong> Return</strong>
+    <a class="text-black" href="{% url 'home' %}">Home</a>
+  </p>
+</div>
 {% endblock %}
