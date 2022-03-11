@@ -461,6 +461,10 @@ a.category-badge{
 .news{
     margin:1rem;
 }
+
+.auth-forms{
+    margin: 0 auto;
+}
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
