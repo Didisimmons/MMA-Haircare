@@ -24,16 +24,16 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-black">Default Delivery Information</p>
-                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                <form class="mt-3 text-center" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn btn-black rounded-0 text-uppercase mb-4 mt-2">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-black">Order History</p>
                 <div class="order-history table-responsive">
-                    <table class="table table-sm table-borderless">
+                    <table class="table text-black table-sm table-borderless">
                         <thead>
                             <tr>
                                 <th>Order Number</th>
@@ -52,6 +52,7 @@
                                         </a>
                                     </td>
                                     <td>{{ order.date }}</td>
+                                    <td>{{ order.full_name }}</td>
                                     <td>
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %} 
@@ -74,4 +75,7 @@
     </div>
 {% endblock %}
 
- 
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
