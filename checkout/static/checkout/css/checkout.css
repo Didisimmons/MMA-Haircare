@@ -46,6 +46,9 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+.order-confirmation-container{
+  margin: 0 auto;
+}
 
 #loading-overlay {
 	display: none;
@@ -71,4 +74,8 @@ select option[value=""] {
     .lead {
          font-size: 1rem;
      }
+
+    .size-name{
+      font-size: 0.9rem;
+    }
 }

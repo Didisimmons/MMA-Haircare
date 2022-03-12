@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 {% for item in bag_items %}
-                    <div class="row">
+                    <div class="row pt-2">
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
@@ -47,7 +47,7 @@
                             </a>
                         </div>
                         <div class="col-7">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 size-name"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 size">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 size text-black">Qty: {{ item.quantity }}</p>
                         </div>
@@ -114,16 +114,15 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">              
-						<a href="{% url 'view_bag' %}" class="btn btn-black rounded-0">
+                    <div class="submit-button text-center mt-5 mb-2">
+						<a href="{% url 'view_bag' %}" class="btn btn-black mb-2 rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span class="text-uppercase">Adjust Bag</span>
 						</a>
-
-						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+                        <button id="submit-button" class="btn btn-black mb-2 rounded-0">
+							<span class="text-uppercase">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
