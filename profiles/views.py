@@ -6,6 +6,8 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Order
+
 
 @login_required
 def profile(request):
@@ -20,7 +22,7 @@ def profile(request):
             messages.error(request, 'Address not updated, ensure fields are filled correctly.')
     else:
         form = UserProfileForm(instance=profile)
- 
+
     orders = profile.orders.all()
     template = 'profiles/profile.html'
     context = {
@@ -28,4 +30,21 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True
     }
+    return render(request, template, context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a confirmation of your order {order_number} {order_date}. '
+        'A confirmation email was sent on the .'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
     return render(request, template, context)
