@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row ">
             <div class="col-12 col-md-6 product-container">
-                <h2 class="header-text">Product Management</h2>
+                <h2 class="header-text">Manage Products</h2>
                 <h5 class="text-black text-uppercase text-center">Add a Product</h5>
             </div>
         </div>
@@ -22,7 +22,14 @@
         <div class="row">
             <div class="col-12 col-md-6 product-container">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2 text-black" enctype="multipart/form-data">
-                    
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
                     <div class="text-center pt-4 pb-4">
                         <a class="btn btn-outline-black text-uppercase rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black text-uppercase rounded-0" type="submit">Add Product</button>
