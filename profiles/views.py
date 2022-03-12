@@ -37,8 +37,8 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'This is a confirmation of your order {order_number} {order_date}. '
-        'A confirmation email was sent on the .'
+        f'This is a confirmation of your order {order_number}. '
+        'A confirmation email has been sent .'
     ))
 
     template = 'checkout/checkout_success.html'
