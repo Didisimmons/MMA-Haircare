@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="col{% if s %}-12 mt-2{% endif %} mb-2">
-                                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 mt-2">
+                                    <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-0 mt-2">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
@@ -104,12 +104,15 @@
                     
                     <!-- display if the user is a super user-->
                     <div>
-                        {% if request.user.is_superuser %}
+                    {% if request.user.is_superuser %}
+                        <div>
                             <small class="ml-3">
                                 <a href="{% url 'edit_product' product.id %}" class="text-black">Edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                             </small>
-                        {% endif %}
+                        </div>      
+                        
+                    {% endif %}
                     </div>
 
                     <!--Accordian-->
@@ -166,5 +169,6 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
+    
     {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
