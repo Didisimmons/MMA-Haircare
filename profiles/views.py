@@ -19,7 +19,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Address updated successfully')
         else:
-            messages.error(request, 'Update failed, ensure all fields are filled correctly.')
+            messages.error(request, 'Update failed. \
+                           Please ensure all fields are filled correctly.')
     else:
         form = UserProfileForm(instance=profile)
 

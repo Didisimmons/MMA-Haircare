@@ -13,7 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
-    ordering = ('sku','brand',)
+    ordering = ('sku', 'brand',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -21,6 +21,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
         'friendly_name',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
