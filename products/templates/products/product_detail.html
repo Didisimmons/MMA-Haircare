@@ -107,34 +107,36 @@
                     {% if request.user.is_superuser %}
                         <div>
                             <small class="ml-3">
-                                <a href="{% url 'edit_product' product.id %}" class="text-black">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_product' product.id %}" data-toggle="modal" data-target="#modaldelete">Delete</a>
-                            </small>
-                        </div>  
-                        <div class="modal-container">
-                            <div class="modal show" id="#modaldelete" tabindex="-1" role="dialog" aria-labelledby="display_results2" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content text-center">
-                                        <div class="modal-header scores">
-                                            <h1 class="modal-title" id="display_results2">You Passed! </h1>
-                                        </div>
-                                        <div class="modal-body">
-                                            <h3>You scored between 800 - 1100!</h3>
-                                            <div>
-                                                <p class="scores-text">Not bad, you understand some of the basics of Sexual consent and harassment but you could use some more information concerning this so that you’re aware of the different circumstances surrounding this.
-                                                    <br> Check this out  
-                                                <a href="https://rapecrisis.org.uk/get-informed/about-sexual-violence/sexual-consent/" target="_blank"> consent & Sexual Harassment - A Discussion</a> </p>
+                                <a href="{% url 'edit_product' product.id %}" class="text-black admin-btn">Edit</a> | 
+                                <a class="text-danger admin-btn" data-toggle="modal" data-target="#modaldelete{{ product.id }}">Delete</a>
+
+                                <div class="modal fade" id="modaldelete{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="text-center text-black mt-2">
+                                                <h5 class="modal-title pt-2" id="modaldelete{{ product.id }}">
+                                                    Delete Product
+                                                </h5>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn general-btn" data-dismiss="modal">Close</button>
+                                            <div class="modal-body text-black">
+                                               <h6>Are you sure you would like to remove <strong class="color-pink"> <em>'{{ product.name }}' </em></strong> from the store product list.<br></h6>
+                                            <br>
+                                            <p class="text-black action">
+                                                <span class="icon">
+                                                    <i class="fas fa-exclamation-circle"></i>
+                                                </span>
+                                                 Please note that this action cannot be undone!
+                                            </p>
+                                            </div>
+                                            <div class="pb-3 ml-3">
+                                                <button type="button" class="btn btn-outline-black text-uppercase rounded-0" data-dismiss="modal">Cancel</button>
+                                                <a class="btn btn-black rounded-0" href="{% url 'delete_product' product.id %}">DELETE</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                       
-                        
+                            </small>
+                        </div>          
                     {% endif %}
                     </div>
 

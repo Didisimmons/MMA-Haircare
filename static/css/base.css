@@ -504,6 +504,16 @@ a.category-badge{
 }
 
 
+a.admin-btn{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.action{
+    font-size: 1rem;
+}
+
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
