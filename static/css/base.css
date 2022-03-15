@@ -513,6 +513,11 @@ a.admin-btn{
     font-size: 1rem;
 }
 
+.products-image{
+    max-width: 50% !important;
+    height: auto;
+}
+
 
 /* Media Queries */
 
@@ -568,6 +573,10 @@ a.admin-btn{
         font-size: 0.8rem;
     }
 
+    .shopping-bag{
+        padding:1rem 0 !important;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -593,6 +602,9 @@ a.admin-btn{
         padding: 2rem 1rem;
         font-size:1.25rem
     }
+    .secure-btn{
+        margin-bottom:13px !important;
+    }
 
 }
 
@@ -613,6 +625,5 @@ a.admin-btn{
      .product-text{
          font-size: 1.5rem;
      }
-
    }
  
