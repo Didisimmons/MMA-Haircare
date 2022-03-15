@@ -518,6 +518,17 @@ a.admin-btn{
     height: auto;
 }
 
+.personal-details p, .personal-details i{
+    display: inline-block;
+}
+
+.heart{
+    color:black;
+}
+
+.heart:hover{
+    color:#bf5f56 !important; 
+}
 
 /* Media Queries */
 

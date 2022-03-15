@@ -85,8 +85,15 @@
                                                     {% else %}
                                                         <small class="rating rating-detail">No Rating</small>
                                                     {% endif %}
+                                                    {% if request.user.is_authenticated%}
+                                                        <p class="my-1">
+                                                            <a href="" class="heart">
+                                                                <i class="far fa-heart hvr-grow"></i>
+                                                            </a>
+                                                        </p>
+                                                    {% endif %}
                                                     {% if product.category %}
-                                                        <p class="small mt-2 mb-0">
+                                                        <p class="small mb-0">
                                                             <a href="{% url 'products' %}?category={{ product.category.name }}"
                                                                 class="category-button">
                                                                 <i class="fas fa-tag mr-1"> {{product.category.friendly_name }}</i>
