@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="header-text">Wishlist Items</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class=" mt-5">
+                    
+                    <a href="">
+                        <img class="card-img-top" src="" alt=" {{ product.name }}">
+                    </a>
+                
+                    <a href="">
+                        <img class="card-img-top" src="" alt=" {{ product.name }}">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class=" my-5">
+                    <h3 class="mb-4 pt-md-5 text-black font-weight-bold"></h3>
+                    <h4 class="text-black lead mb-2 text-left font-weight-bold"></h4>
+                    
+                    <p class="small">
+                        <a class="text-muted text-black font-weight-bold"
+                            href="">
+                            <i class="fas fa-hashtag"></i>
+                        </a>
+                    </p>
+                    
+                </div>
+                <!-- Buttons -->
+                <div class="text-center">
+                    <a class="btn btn-black" href="">
+                        <span class="text-uppercase font-weight-bold">Product Details</span>
+                    </a>
+                    <a class="btn btn-black" href="">
+                        <span class="text-uppercase font-weight-bold">Remove from wishlist</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-4">
+
+    </div>
+{% endblock %}
