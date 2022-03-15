@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col pt-2 pt-2">
                 <h2 class="header-text shopping-bag">  My Shopping Bag </h2>
+                <p class="text-black lead text-center text-capitalize mb-4 d-md-block d-none">Summary of your shopping bag contents below</p>
             </div>
         </div>
         <div class="row">
@@ -25,8 +26,8 @@
                 {% if bag_items %}
                     <!--shopping bag mobile layout -->
                     <div class="d-block d-md-none">
-                        <p class="text-black mt-2 mb-2">Find the summary of your shopping bag contents below</p>
-                        <h4 class="mb-3 color-pink text-center"><strong>Grand Total : ${{ grand_total|floatformat:2 }}</strong></h4>
+                        <p class="text-black text-center mt-2 mb-2">Find the summary of your shopping bag contents below</p>
+                        <h4 class="mb-3 color-pink text-center"><strong> Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                         {% for item in bag_items %}
                             <div class="row">
                                 <div class="col-12 col-sm-6 text-center mb-2">
@@ -36,8 +37,8 @@
                                     {% include "bag/product-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 text-black text-center">
-                                    <p class="color-pink">Price Each: ${{ item.product.price }}</p>
-                                    <p class="color-pink"><strong>Subtotal: </strong>${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="color-pink">Price Each: €{{ item.product.price }}</p>
+                                    <p class="color-pink"><strong>Subtotal: </strong>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     {% include "bag/quantity-form.html" %}
