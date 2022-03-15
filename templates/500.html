@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-4 mb-4">
+                <h4 class="header-text text-capitalize"> Whoops! something went wrong. </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 offset-md-2 text-center pt-3 pb-2">
+                <p class="text-center lead"> Unfortunately,there has been an issue and we appologise for the inconvenience.</p>
+            </div>
+            <div class="col-12 text-center mb-5">
+                <p>
+                    Please Click here to 
+                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 text-uppercase mt-3">CONTINUE SHOPPING</a>
+
+                </p>
+               
+            </div>           
+        </div>
+    </div>
+{% endblock %}
