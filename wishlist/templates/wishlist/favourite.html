@@ -16,17 +16,49 @@
             <div class="col-12">
                 <h2 class="header-text"> {{ user }}'s Wishlist Items</h2>
                 <p class="color-pink text-center mb-4 d-md-block d-none">We update our site with New In products to help you grow and rock your Afro hair <br> 
-                    but don't forget about your favourites - save them all here to buy whenever you can <br>
+                    but don't forget about your favourites - save them all here to buy whenever you can <br>
                     we all need to treat ourselves.</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 {% if favourite.products.all %}
+                    <div class="d-block d-md-none">
+                        <p class="text-black text-center mb-4">Save them all here to buy whenever you can , we all need to treat ourselves.</p>
+                        <p class="color-pink text-center mt-2 mb-2">TOTAL ITEMS:({{ favourite.products.all|length }}) | <strong>€{{ grand_total|floatformat:2 }}</strong> </p>
+                        {% for product in favourite.products.all %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 text-center mb-2">
+                                    {% include "wishlist/wishlist-image.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {% include "wishlist/wishlist-info.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 text-black text-center">
+                                    <p class="color-pink">Price: €{{ product.price }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center mb-5">
+                                    <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                        <span class="text-uppercase">Product Details</span>
+                                    </a>
+                                    <a href="{% url 'remove_favorites' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                        <span class="text-uppercase">Remove</span>
+                                    </a>
+                                </div>
+                            </div>  
+                        {% endfor %}
+                        <div class="btt-button shadow-sm rounded-0 border border-black">
+                            <a class="btt-link d-flex h-100">
+                                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                            </a>	
+                        </div>  
+                    </div>
                     <div class="table-responsive rounded d-none d-md-block">
+                        <p class="pb-2 text-black">TOTAL ITEMS({{ favourite.products.all|length }})</p>
                         <table class="table table-sm table-borderless">
                             <thead class="text-center text-black">
-                                <tr>TOTAL ITEMS({{ favourite.products.all|length }})</tr>
                                 <tr class="text-black text-uppercase">
                                     <th scope="col">Product</th>
                                     <th scope="col"></th>
@@ -58,7 +90,7 @@
                                             </a>
                                         </td>
                                         <td class="py-3">
-                                            <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                            <a href="{% url 'remove_favorites' product.id %}" class="btn btn-black rounded-1 mt-2">
                                                 <span class="text-uppercase">Remove</span>
                                             </a>
                                         </td>
@@ -69,14 +101,13 @@
                 {% else %}
                     <div class="row">
                         <div class="col-12 col-md-6 text-center product-container">
-                            <div class="text-center mt-3">
-                                <h3 class="text-black text-uppercase">You have no products in your wishlist</h3>
-                                <p class="lead color-pink">Feel free to add products you like into your wishlist and buy later!!</p>
-                                <a class="btn btn-black btn-lg mt-5" href="{% url 'products' %}">
+                            <div class="text-center mb-5">
+                                <p class="text-black mt-5 mb-5 lead text-uppercase">You have no products in your wishlist</p>
+                                <a href="{% url 'products' %}" class="btn btn-black secure-btn rounded-0">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase text-black">Start Shopping</span>
+                                    <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                             </div>
                         </div>
@@ -85,4 +116,13 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
 {% endblock %}

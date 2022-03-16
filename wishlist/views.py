@@ -24,7 +24,7 @@ def favorites(request):
 def add_favorites(request, product_id):
     """
     A view to allow users to add items
-    to their wishlist, if it already exist 
+    to their wishlist, if it already exist
     inform user.
     """
     product = get_object_or_404(Product, pk=product_id)
@@ -34,9 +34,31 @@ def add_favorites(request, product_id):
 
         if product not in favourite.products.all():
             favourite.products.add(product)
-            messages.success(request,
-                             (f'Successfully added {product.name} to wishlist'))
+            messages.info(request,
+                          (f'Successfully added {product.name} to wishlist'))
         else:
             messages.error(request,
                            (f'{product.name} already exists in wishlist'))
-    return redirect('products')
+    return redirect(reverse('products'))
+
+
+@login_required
+def remove_favorites(request, product_id):
+    """
+    A view to allow users to remove items
+    from their wishlist.
+    """
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.user.is_authenticated:
+        favourite = Wishlist.objects.get(user=request.user)
+
+        if product in favourite.products.all():
+            favourite.products.remove(product)
+            messages.info(request,
+                          (f'Successfully removed {product.name} '
+                           f'from wishlist'))
+        else:
+            messages.error(request,
+                           (f'{product.name} already removed'))
+    return redirect(reverse('favorites'))
