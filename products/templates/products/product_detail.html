@@ -35,7 +35,7 @@
                     {% else %}
                         <small class="rating rating-detail">No Rating</small>
                     {% endif %}
-                    <a class="add-wish" href="">
+                    <a class="add-wish" href="{% url 'add_favorites' product.id %}">
                         <div class="text-center add-wish">
                             <div><i class="fas fa-heart fa-lg hvr-grow"></i></div> 
                             <p class="my-0 d-none d-lg-block text-decoration-none">Add to Wishlist</p>

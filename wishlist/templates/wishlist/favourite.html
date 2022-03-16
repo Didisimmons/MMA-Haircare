@@ -14,48 +14,74 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="header-text">Wishlist Items</h2>
+                <h2 class="header-text"> {{ user }}'s Wishlist Items</h2>
+                <p class="text-black lead text-center text-capitalize mb-4 d-md-block d-none">Summary of your Wishlist Items</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class=" mt-5">
-                    
-                    <a href="">
-                        <img class="card-img-top" src="" alt=" {{ product.name }}">
-                    </a>
-                
-                    <a href="">
-                        <img class="card-img-top" src="" alt=" {{ product.name }}">
-                    </a>
-                    
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class=" my-5">
-                    <h3 class="mb-4 pt-md-5 text-black font-weight-bold"></h3>
-                    <h4 class="text-black lead mb-2 text-left font-weight-bold"></h4>
-                    
-                    <p class="small">
-                        <a class="text-muted text-black font-weight-bold"
-                            href="">
-                            <i class="fas fa-hashtag"></i>
-                        </a>
-                    </p>
-                    
-                </div>
-                <!-- Buttons -->
-                <div class="text-center">
-                    <a class="btn btn-black" href="">
-                        <span class="text-uppercase font-weight-bold">Product Details</span>
-                    </a>
-                    <a class="btn btn-black" href="">
-                        <span class="text-uppercase font-weight-bold">Remove from wishlist</span>
-                    </a>
-                </div>
+            <div class="col">
+                <div class="table-responsive rounded d-none d-md-block">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-center">
+                            <tr class="text-black text-uppercase">
+                                <th scope="col">Product</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        {% if favourite.products.all %}
+                            {% for product in favourite.products.all %}
+                                <tr class="text-center bag_items">
+                                    <td class="py-3 w-25">
+                                        {% if product.image %}
+                                        <img class="img-fluid rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        {% endif %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ product.name }}</strong></p>
+                                        <p class="my-0"><strong>Size: </strong>{% if product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                        <p class="my-0 small text-dark">SKU: {{ product.sku|upper }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€{{ product.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                            <span class="text-uppercase">Product Details</span>
+                                        </a>
+                                    </td>
+                                    <td class="py-3">
+                                        <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                            <span class="text-uppercase">Remove</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                    </table>
+                        {% else %}
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center mt-3">
+                                    <h3 class="text-black text-uppercase">There are no products in your wishlist</h3>
+                                    <p class="lead color-pink">Feel free to add products you like into your wishlist and buy later!!</p>
+                                    <a class="btn btn-black btn-lg mt-5" href="{% url 'products' %}">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase text-black">Add Products</span>
+                                    </a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+            {% endif %}
             </div>
         </div>
-        <hr class="mt-4">
-
     </div>
+    
+
 {% endblock %}
