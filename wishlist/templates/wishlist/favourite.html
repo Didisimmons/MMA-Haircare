@@ -15,73 +15,74 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="header-text"> {{ user }}'s Wishlist Items</h2>
-                <p class="text-black lead text-center text-capitalize mb-4 d-md-block d-none">Summary of your Wishlist Items</p>
+                <p class="color-pink text-center mb-4 d-md-block d-none">We update our site with New In products to help you grow and rock your Afro hair <br> 
+                    but don't forget about your favourites - save them all here to buy whenever you can <br>
+                    we all need to treat ourselves.</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <div class="table-responsive rounded d-none d-md-block">
-                    <table class="table table-sm table-borderless">
-                        <thead class="text-center">
-                            <tr class="text-black text-uppercase">
-                                <th scope="col">Product</th>
-                                <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        {% if favourite.products.all %}
-                            {% for product in favourite.products.all %}
-                                <tr class="text-center bag_items">
-                                    <td class="py-3 w-25">
-                                        {% if product.image %}
-                                        <img class="img-fluid rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                        {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                        {% endif %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ product.name }}</strong></p>
-                                        <p class="my-0"><strong>Size: </strong>{% if product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                                        <p class="my-0 small text-dark">SKU: {{ product.sku|upper }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
-                                            <span class="text-uppercase">Product Details</span>
-                                        </a>
-                                    </td>
-                                    <td class="py-3">
-                                        <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
-                                            <span class="text-uppercase">Remove</span>
-                                        </a>
-                                    </td>
+                {% if favourite.products.all %}
+                    <div class="table-responsive rounded d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-center text-black">
+                                <tr>TOTAL ITEMS({{ favourite.products.all|length }})</tr>
+                                <tr class="text-black text-uppercase">
+                                    <th scope="col">Product</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
                                 </tr>
-                            {% endfor %}
-                    </table>
-                        {% else %}
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-center mt-3">
-                                    <h3 class="text-black text-uppercase">There are no products in your wishlist</h3>
-                                    <p class="lead color-pink">Feel free to add products you like into your wishlist and buy later!!</p>
-                                    <a class="btn btn-black btn-lg mt-5" href="{% url 'products' %}">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase text-black">Add Products</span>
-                                    </a>
-                                </div>
-                            </div> 
+                            </thead>
+                                {% for product in favourite.products.all %}
+                                    <tr class="text-center bag_items">
+                                        <td class="py-3 w-25">
+                                            {% if product.image %}
+                                            <img class="img-fluid rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                            {% else %}
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                            {% endif %}
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0"><strong>{{ product.name }}</strong></p>
+                                            <p class="my-0"><strong>Size: </strong>{% if product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                            <p class="my-0 small text-dark">SKU: {{ product.sku|upper }}</p>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0">€{{ product.price }}</p>
+                                        </td>
+                                        <td class="py-3 w-25">
+                                            <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                                <span class="text-uppercase">Product Details</span>
+                                            </a>
+                                        </td>
+                                        <td class="py-3">
+                                            <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-1 mt-2">
+                                                <span class="text-uppercase">Remove</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="row">
+                        <div class="col-12 col-md-6 text-center product-container">
+                            <div class="text-center mt-3">
+                                <h3 class="text-black text-uppercase">You have no products in your wishlist</h3>
+                                <p class="lead color-pink">Feel free to add products you like into your wishlist and buy later!!</p>
+                                <a class="btn btn-black btn-lg mt-5" href="{% url 'products' %}">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase text-black">Start Shopping</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
-    
-
 {% endblock %}
