@@ -30,7 +30,7 @@ def add_favorites(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     if request.user.is_authenticated:
-        favourite, _ = Wishlist.objects.get_or_create(user=request.user)
+        favourite, created = Wishlist.objects.get_or_create(user=request.user)
 
         if product not in favourite.products.all():
             favourite.products.add(product)
