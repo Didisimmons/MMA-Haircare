@@ -12,28 +12,102 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
+        <!-- header text -->
         <div class="row">
             <div class="col-12 ">
                 <div class="jumbotron">
                     <h1 class="about-headertext text-center"> MMÀ </h1>
                     <p class="text-center text-capitalize tag-line lead"> <strong>redefining beauty</strong></p>
-                    <p class="lead mt-5 text-black text-capitalize space text-center">Your number one shop for all your Afro hair needs</p>
+                    <p class="lead mt-4 text-black text-capitalize space text-center">Your number one shop for all your Afro hair needs</p>
                 </div>   
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="text-black mt-5">
-                        <h3 class="text-black header-text">
-                            ABOUT US  
-                        </h3>
-                        <br>
-                        <p class="about-us-text">  We're dismantling misogynistic body-shaming culture one waist bead at a time. Fitbeads is continuing the beautiful African tradition <br>
-                             of waist bead wearing as a culturally informed and body positive way to keep track of changes in a woman’s body (and life).</p>
-                       <p class= "about-us-text-2 mb-5">Join our community today and begin reading what other people have to say, or start your own topic. Don't forget to use the hashtag #jointheconversation to share your story or experience. The stories submitted are anonymous so feel free to share.</p>
-                    </div>   
+        <!-- introduction section -->
+        <div class="row intro-container">
+            <div class=" col-12 col-md-6 text-center pb-5">
+                <a href="{% url 'products' %}">
+                    <img src="{{ MEDIA_URL }}afrohair1.png " class="img-fluid" alt="black girl rocking her afrohair">
+                </a>   
+            </div>
+            <div class="col-12 col-md-6 text-center benefit-section">
+                <div class="text-center">
+                    <h2 class="text-black pb-2"> Hello Beautiful! </h2> 
                 </div>
+                <p class="about-text1 lead">We at MMÀ are here to provide our beautiful sistas with hair-strengthening, luscious products that will help your hair grow.
+                    We want our Afro hair sistas to be confident, bold, and unapologetic of their hair. 
+                    The beauty of Afro hair is its versatility!
+                </p>
+                <a href="{% url 'products' %}?category=clip_ins" class="btn btn-black secure-btn rounded-0">
+                    <span class="text-uppercase">View Extensions</span>
+                    <span class="icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="row trust-container">
+            <div class=" col-12 text-center">
+                <h2 class="text-black trust-text">Trust us, we've been there sis...</h2> 
+            </div>
+            <div class="col-12 text-center pb-3">
+                <p class="about-text1 lead">We know how difficult it is to find good natural hair products that strengthen and moisturise our hair without drying it out or causing it to break. 
+                    Here at MMÀ, we source a wide variety of the best natural hair products that will leave your Afro hair curly and luscious.
+                </p>
+                <a href="{% url 'products' %}" class="btn btn-black secure-btn rounded-0">
+                    <span class="text-uppercase">SHOP PRODUCTS </span>
+                    <span class="icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="row  about2-container">
+            <div class=" col-12 col-md-6 text-center benefit-section">
+                <p class="about-text1 lead">
+                    Most of these mainstream brands have struggled over the years to recognise the distinct needs of Black hair (Afro Textured), resulting in the creation of MMÀ beauty. We understand how frustrating it can be finding the right products for your 
+                    hair.We are here to assist everyone in achieving healthy Afro hair by providing best-in-class products and advice on how to rock your Afro hair.
+                </p>
+                <a href="{% url 'products' %}" target="_blank" class="btn btn-black mb-3 secure-btn rounded-0">
+                    <span class="text-uppercase"> VIEW AFRO STYLES </span>
+                    <span class="icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+                    
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <a href="{% url 'products' %}">
+                    <img src="{{ MEDIA_URL }}afrohair.png " class="img-fluid about-image" alt="black girl rocking her afrohair">
+                </a>
+            </div>
+        </div>
+        <div class="row trust-container">
+            <div class=" col-12 text-center">
+                <h2 class="text-black trust-text">We Got you covered, Girl </h2> 
+            </div>
+            <div class="col-12 text-center pb-3">
+                <p class="about-text1 lead pb-2">Our founders are hair specialists who can advise you on how to improve the health and appearance of your hair.
+                    The right products and foods to include in your daily routine to keep your hair healthy Check out our Blog for advice on how to manage your Afro-textured hair.
+                </p>
+                <a href="https://blackhairinformation.com/by-type/natural-hair/7-tips-managing-multiple-textures-natural-hair/" target="_blank" class="btn btn-black secure-btn rounded-0">
+                    <span class="text-uppercase"> HAIR TIPS </span>
+                    <span class="icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="row  about2-container">
+            <div class=" col-12 col-md-6 text-center benefit-section">
+                <p class="about-text1 lead">
+                    Join our community today by tagging us with your MMÀ purchases using the hashtag <strong class="text-black">#MMÀBeauty</strong> to share your experience and be entered to win a €500 shopping voucher in our raffle draw.
+                     Please share photos of you rocking your Afro for a chance to be featured on our weekly blog.
+                </p>     
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <a href="{% url 'products' %}">
+                    <img src="{{ MEDIA_URL }}afrohair3.png " class="img-fluid about-image" alt="quote of black girl rocking her afrohair">
+                </a>
             </div>
         </div>
     </div>
