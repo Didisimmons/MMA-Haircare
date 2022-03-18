@@ -611,12 +611,6 @@ a.admin-btn{
     padding-top: 2rem;
 }
 
-.img-fluid {
-    max-width: 70% !important;
-    height: auto;
-    border-radius: 5px;
-}
-
 .trust-container{
     background-color: #D2AB94;
     padding: 3rem 0;
@@ -650,6 +644,9 @@ a.admin-btn{
 
 .about-image{
     padding-top: 1rem;
+    max-width: 70% !important;
+    border-radius: 5px;
+    
 }
 
 .intro-container{
@@ -689,6 +686,10 @@ a.admin-btn{
      
     .header-container {
         padding-top: 52px;
+    }
+
+    .product-padding{
+        padding:0 0.5rem;
     }
 
 }
