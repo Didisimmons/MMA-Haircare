@@ -20,6 +20,7 @@ class ProductReview(models.Model):
 
     class Meta:
         verbose_name_plural = 'Product Reviews'
+        ordering = ['-date']
 
     def __str__(self):
         return self.rating

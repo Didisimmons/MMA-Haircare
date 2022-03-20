@@ -43,13 +43,13 @@
     <button class="primaryAction btn-black pt-2 pb-2 px-4 text-uppercase" type="submit">{% trans "Sign In" %}</button>
   </div>
   <div class="pt-3">
-    <p class="auth-text text-center">
-      Forgot Password ? Click
-      <a class="button secondaryAction pb-5 color-pink" href="{% url 'account_reset_password' %}">{% trans "HERE" %}</a>
-    </p>
-    <p class="pt-2"><strong> Return</strong>
-      <a class="text-black" href="{% url 'home' %}">Home</a>
-    </p>
+      <p class="auth-text text-center">
+        Forgot Password ? Click
+        <a class="button secondaryAction pb-5 color-pink" href="{% url 'account_reset_password' %}">{% trans "HERE" %}</a>
+      </p>
+      <p class="pt-2"><strong> Return</strong>
+        <a class="color-pink" href="{% url 'home' %}">Home</a>
+      </p>
   </div>
   
 </form>

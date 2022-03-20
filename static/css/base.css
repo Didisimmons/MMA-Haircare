@@ -654,6 +654,29 @@ a.admin-btn{
 }
 
 
+/* reviews page */
+.reviews-header{
+    text-align: center;
+}
+
+a.add-review:hover{
+    cursor:pointer;
+    color: #592715;
+    text-decoration: none !important;
+}
+
+.cancel-btn{
+    padding: 0 6px;
+    margin-right: 10px;
+}
+
+.cancel{
+    text-align: right;
+}
+
+
+
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */

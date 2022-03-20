@@ -35,10 +35,10 @@
                     {% else %}
                         <small class="rating rating-detail">No Rating</small>
                     {% endif %}
-                    <a class="add-wish" href="{% url 'add_favorites' product.id %}">
+                    <a class="add-wish admin-btn" href="{% url 'add_favorites' product.id %}">
                         <div class="text-center add-wish">
                             <div><i class="fas fa-heart fa-lg hvr-grow"></i></div> 
-                            <p class="my-0 d-none d-lg-block text-decoration-none">Add to Wishlist</p>
+                            <p class="my-0 d-none d-lg-block">Add to Wishlist</p>
                         </div>
                     </a>
                     {% if product.category %}
@@ -190,7 +190,47 @@
                 </div>
             </div>
         </div>
+
+        <!--Reviews -->
+        <div class="row">
+            <div class="col-12 product-container">
+                <div class="reviews-header">
+                    <h3 class="text-center text-black text-uppercase">Reviews ({{ reviews.count }})</h3>
+                        {% if request.user.is_authenticated %}
+                            {% include 'reviews/includes/add-review.html' %}
+                        {% endif %}
+                </div>
+                 <!-- Display users reviews -->
+                <div class="card mt-4 mb-4">
+                    <div class="card-body text-center">
+                        {% if reviews %}
+                            {% for review in reviews %}
+                            <blockquote>
+                                <small>{{review.text_review}}</small>
+                                <small class="rating rating-detail"><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</small>
+                                <small class="text-black">{{ review.date}}</small>
+
+                                <footer class="blockquote-footer">
+                                 
+                                </footer>
+                            </blockquote>
+                            <hr/>
+                            {% endfor %}
+                        {% else %}
+                            <p class="lead text-center text-black text-uppercase">No reviews</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
     </div>
+
+
+
+    
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}

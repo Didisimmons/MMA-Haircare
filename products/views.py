@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.db.models import Avg
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+
 from .models import Product, Category
 from django.db.models.functions import Lower
+from profiles.models import UserProfile
+
 from .forms import ProductForm
+from reviews.models import ProductReview
+from reviews.forms import ProductReviewForm
 
 
 def all_products(request):
@@ -63,9 +69,25 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = ProductReview.objects.filter(product=product)
+
+    if request.user.is_authenticated:
+        # Retrieve user's review for product
+        reviews_user = ProductReview.objects.filter(
+            product=product,
+            user=get_object_or_404(UserProfile, user=request.user)
+        )
+
+    form = ProductReviewForm()
+    ratings = reviews.aggregate(Avg('rating'))['rating__avg']
+    product.save()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'form': form,
+        'ratings': ratings,
+        'reviews_user': reviews_user
     }
 
     return render(request, 'products/product_detail.html', context)
