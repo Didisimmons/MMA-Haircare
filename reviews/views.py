@@ -36,12 +36,15 @@ def add_reviews(request, product_id):
 
 
 @login_required
-def delete_reviews(request, product_id):
+def delete_reviews(request, review_id):
     """ Delete review from the store"""
 
-    review = get_object_or_404(ProductReview, pk=product_id)
+    review = get_object_or_404(ProductReview, pk=review_id)
     product = review.product
 
     review.delete()
     messages.success(request, 'Review deleted!')
     return redirect(reverse('product_detail', args=[product.id]))
+
+
+
