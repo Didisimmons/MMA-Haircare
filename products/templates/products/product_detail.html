@@ -45,7 +45,7 @@
                         <p class="small mt-2 mb-2">
                             <a href="{% url 'products' %}?category={{ product.category.name }}"
                                 class="category-button">
-                                <i class="fas fa-tag mr-1"> {{product.category.friendly_name }}</i>
+                                <i class="fas fa-tag mr-1"> {{ product.category.friendly_name }}</i>
                             </a>
                         </p>
                     {% endif %}
@@ -195,37 +195,69 @@
         <div class="row">
             <div class="col-12 product-container">
                 <div class="reviews-header">
-                    <h3 class="text-center text-black text-uppercase">Reviews ({{ reviews.count }})</h3>
+                    {% if reviews.count %}
+                        <h3 class="text-center text-black text-uppercase">Reviews ({{ reviews.count }})</h3>
+                    {% else %}
+                        <h3 class="text-center text-black text-uppercase">Reviews (0)</h3>
+                    {% endif %}
+                    {% if reviews_user %}
+                        <p class="pt-2 text-center color-pink text-capitalize"> Thank you, you have already left a review post.</p>
+                        <br>
+                    {% else %}
                         {% if request.user.is_authenticated %}
                             {% include 'reviews/includes/add-review.html' %}
-                        {% endif %}
-                </div>
-                 <!-- Display users reviews -->
-                <div class="card mt-4 mb-4">
-                    <div class="card-body text-center">
-                        {% if reviews %}
-                            {% for review in reviews %}
-                            <blockquote>
-                                <small>{{review.text_review}}</small>
-                                <small class="rating rating-detail"><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</small>
-                                <small class="text-black">{{ review.date}}</small>
-
-                                <footer class="blockquote-footer">
-                                 
-                                </footer>
-                            </blockquote>
-                            <hr/>
-                            {% endfor %}
                         {% else %}
-                            <p class="lead text-center text-black text-uppercase">No reviews</p>
+                        <p class="text-center pt-2 color-pink text-uppercase"><a href="{% url 'account_login' %}" class="text-center color-pink review-highlight text-capitalize"> Leave a review</a></p>
                         {% endif %}
-                    </div>
+                    {% endif %}
                 </div>
-                
-                
+                 <!-- Display all users reviews -->
+                {% for review in reviews %}
+                    <div class="card mt-4 mb-4">
+                        <div class="card-body text-center">
+                            <div class="customer-review">
+                                <p class="text-black text-capitalize"> 
+                                    <span class="icon">
+                                        <i class="fas fa-user"></i>
+                                    </span> - {{review.user}} 
+                                </p>
+                                <div class="review-content">
+                                    <p class="rating">
+                                        <i class="fas fa-star mr-1"></i>{{ review.rating }} / 5
+                                        <small class="color-pink"> ({{ review.date | date:"d/m/Y" }}) </small>
+                                    </p>
+                                    <p class="text-black"> {{review.text_review}}</p>
+                                </div>
+                                {% if review.user %}
+                                    <small class="ml-3">
+                                        <a href="" class="text-black admin-btn">Edit</a> 
+                                        {% if request.user.is_superuser %}
+                                            | 
+                                            <a class="text-danger admin-btn" href="{% url 'delete_reviews' product.id %}">Delete</a>
+                                        {% endif %}
+                                    </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    {% empty %}
+                        {% if reviews_user == None %}
+                        <div class="card mt-4 mb-4">
+                            <div class="card-body text-center">
+                                <p class="text-center text-black "> No Reviews</p>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    <div class="card mt-4 mb-4">
+                        <div class="card-body text-center">
+                            <p class="text-center text-black pt-2 text-capitalize">Be the first to leave a review for this product</p>
+                        </div>
+                    </div>   
+                {% endfor %}  
             </div>
         </div>
-
     </div>
 
 

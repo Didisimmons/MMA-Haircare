@@ -70,6 +70,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
+    reviews_user = None
 
     if request.user.is_authenticated:
         # Retrieve user's review for product

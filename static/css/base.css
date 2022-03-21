@@ -271,7 +271,6 @@ a.category-badge > span.badge:hover {
 
 a.category-badge{
     color:black !important;
-    border: 1px solid #bf5f56!important;
     padding-top: 3px;
     padding-bottom: 5px;
 }
@@ -509,6 +508,10 @@ a.admin-btn{
     text-decoration: none;
 }
 
+a.admin-btn:hover{
+    color: #343a40;
+}
+
 .action{
     font-size: 1rem;
 }
@@ -554,7 +557,12 @@ a.admin-btn{
     animation-iteration-count: infinite;
     animation-fill-mode: none;
     animation-play-state: running;
+}
 
+.review-highlight:hover{
+    color: #592715;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @keyframes stretch{
@@ -668,7 +676,7 @@ a.add-review:hover{
 .cancel-btn{
     padding: 0 6px;
     margin-right: 10px;
-}
+} 
 
 .cancel{
     text-align: right;

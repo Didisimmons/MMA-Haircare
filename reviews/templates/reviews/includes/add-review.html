@@ -1,6 +1,15 @@
-<a class="text-center add-review color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
-    <span class="text-capitalize"> ( Add a Review ) </span>
-</a>
+                    {% if reviews.count %}
+                        <a class="text-center add-review pt-2 color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
+                            <span class="text-uppercase">Leave a review</span>
+                        </a>
+                    {% else %}
+                        <a class="text-center add-review color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
+                            <span class="text-capitalize"> ( Add a Review ) </span>
+                        </a>  
+                    {% endif %}
+            </div>
+        </div>
+
 
 <!--modal to allow user add review -->
 <div class="modal fade" id="modaladdreview{{ product.id }}" tabindex="-1" aria-labelledby="modalreview{{ product.id }}" aria-hidden="true">

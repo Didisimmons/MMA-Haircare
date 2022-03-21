@@ -9,16 +9,6 @@ from .forms import ProductReviewForm
 
 
 @login_required
-def reviews(request):
-    """ A view to display users review  """
-    review = ProductReview.objects.filter(user=request.user).order_by('-id')
-
-    context = {
-        'review': review,
-    }
-    return render(request, 'reviews/reviews.html', context)
-
-
 def add_reviews(request, product_id):
     """
     Allow user to add review to product
@@ -43,3 +33,18 @@ def add_reviews(request, product_id):
     }
 
     return render(request, context)
+
+
+@login_required
+def delete_reviews(request, product_id):
+    """ Delete review from the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin has access.')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(ProductReview, pk=product_id)
+    product = review.product
+    
+    review.delete()
+    messages.success(request, 'Review deleted!')
+    return redirect(reverse('products'))
