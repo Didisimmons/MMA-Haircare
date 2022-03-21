@@ -201,7 +201,7 @@
                         <h3 class="text-center text-black text-uppercase">Reviews (0)</h3>
                     {% endif %}
                     {% if reviews_user %}
-                        <p class="pt-2 text-center color-pink text-capitalize"> Thank you, you have already left a review post.</p>
+                        <p class="pt-2 text-center color-pink text-capitalize"> Thank you for leaving a Review.</p>
                         <br>
                     {% else %}
                         {% if request.user.is_authenticated %}
@@ -213,7 +213,7 @@
                 </div>
                  <!-- Display all users reviews -->
                 {% for review in reviews %}
-                    <div class="card mt-4 mb-4">
+                    <div class="card mt-3 mb-4">
                         <div class="card-body text-center">
                             <div class="customer-review">
                                 <p class="text-black text-capitalize"> 
@@ -229,18 +229,19 @@
                                     <p class="text-black"> {{review.text_review}}</p>
                                 </div>
                                 {% if request.user.is_authenticated %}
-                                    <small class="ml-3">
-                                        <a href="" class="text-black admin-btn">Edit</a> 
+                                <small class="text-black">
+                                    {% if reviews_user or request.user.is_superuser  %}
+                                        {% include 'reviews/includes/edit-reviews.html' %}
+                                    {% endif %}
                                         {% if request.user.is_superuser %}
                                             | 
-                                            <a class="text-danger admin-btn" href="{% url 'delete_reviews' review.id %}">Delete</a>
+                                            {% include 'reviews/includes/delete-reviews.html' %}
                                         {% endif %}
                                     </small>
                                 {% endif %}
                             </div>
                         </div>
                     </div>
-                    <hr/>
                     {% empty %}
                     <div class="card mt-4 mb-4">
                         <div class="card-body text-center">
