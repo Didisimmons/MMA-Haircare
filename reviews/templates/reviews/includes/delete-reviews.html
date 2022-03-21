@@ -1,0 +1,28 @@
+    <a class="text-danger admin-btn" data-toggle="modal" data-target="#modaldeletereview{{ review.id }}">DELETE</a>
+
+    <!-- Modal to allow superuser to delete user reviews -->
+    <div class="modal fade" id="modaldeletereview{{ review.id }}" tabindex="-1" aria-labelledby="deletereviewModalLabel{{ review.id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="text-center text-black mt-2">
+                    <h5 class="modal-title pt-2" id="modaldeletereview{{ review.id }}">
+                        DELETE REVIEW
+                    </h5>
+                </div>
+                <div class="modal-body text-black">
+                   <h6>Are you sure you would like to remove the review made by <strong class="color-pink"> {{ review.user }} </strong> for  <em> '{{ review.product }}' </em> ?<br></h6>
+                <br>
+                <p class="text-black action">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                     Please note that this action cannot be undone!
+                </p>
+                </div>
+                <div class="pb-3 ml-3">
+                    <button type="button" class="btn btn-outline-black text-uppercase rounded-0" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-black rounded-0" href="{% url 'delete_reviews' review.id %}">DELETE</a>
+                </div>
+            </div>
+        </div>
+    </div>

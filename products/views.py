@@ -80,14 +80,12 @@ def product_detail(request, product_id):
         )
 
     form = ProductReviewForm()
-    ratings = reviews.aggregate(Avg('rating'))['rating__avg']
     product.save()
 
     context = {
         'product': product,
         'reviews': reviews,
         'form': form,
-        'ratings': ratings,
         'reviews_user': reviews_user
     }
 

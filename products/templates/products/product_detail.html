@@ -207,7 +207,7 @@
                         {% if request.user.is_authenticated %}
                             {% include 'reviews/includes/add-review.html' %}
                         {% else %}
-                        <p class="text-center pt-2 color-pink text-uppercase"><a href="{% url 'account_login' %}" class="text-center color-pink review-highlight text-capitalize"> Leave a review</a></p>
+                        <p class="text-center pt-2 color-pink text-uppercase"><a href="{% url 'add_reviews' product.id %}" class="text-center color-pink review-highlight text-capitalize"> Leave a review</a></p>
                         {% endif %}
                     {% endif %}
                 </div>

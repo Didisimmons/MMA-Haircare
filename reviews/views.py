@@ -47,4 +47,32 @@ def delete_reviews(request, review_id):
     return redirect(reverse('product_detail', args=[product.id]))
 
 
+@login_required
+def edit_reviews(request, review_id):
+    """
+    Allow user to edit their reviews
+    """
+    review = get_object_or_404(ProductReview, pk=review_id)
+    product = review.product
+    if request.method == 'POST':
+        form = ProductReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            review.save()
+            messages.success(request, 'Successfully updated Product review')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Sorry we cannot update Product review. \
+                                     Please ensure all fields are completed.')
+    else:
+        form = ProductReviewForm(instance=review)
+        messages.info(request, f'You are editing {product}')
 
+    template = 'products/product_detail.html'
+
+    context = {
+        'form': form,
+        'review': review,
+        'product': product
+    }
+
+    return render(request, template, context)
