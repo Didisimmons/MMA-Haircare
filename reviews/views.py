@@ -38,13 +38,10 @@ def add_reviews(request, product_id):
 @login_required
 def delete_reviews(request, product_id):
     """ Delete review from the store"""
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only admin has access.')
-        return redirect(reverse('home'))
 
     review = get_object_or_404(ProductReview, pk=product_id)
     product = review.product
-    
+
     review.delete()
     messages.success(request, 'Review deleted!')
-    return redirect(reverse('products'))
+    return redirect(reverse('product_detail', args=[product.id]))

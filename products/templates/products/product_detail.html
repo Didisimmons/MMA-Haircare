@@ -228,7 +228,7 @@
                                     </p>
                                     <p class="text-black"> {{review.text_review}}</p>
                                 </div>
-                                {% if review.user %}
+                                {% if request.user.is_authenticated %}
                                     <small class="ml-3">
                                         <a href="" class="text-black admin-btn">Edit</a> 
                                         {% if request.user.is_superuser %}
@@ -242,14 +242,6 @@
                     </div>
                     <hr/>
                     {% empty %}
-                        {% if reviews_user == None %}
-                        <div class="card mt-4 mb-4">
-                            <div class="card-body text-center">
-                                <p class="text-center text-black "> No Reviews</p>
-                            </div>
-                        </div>
-                        {% endif %}
-
                     <div class="card mt-4 mb-4">
                         <div class="card-body text-center">
                             <p class="text-center text-black pt-2 text-capitalize">Be the first to leave a review for this product</p>
