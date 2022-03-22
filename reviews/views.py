@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
-from profiles.models import UserProfile
+from profiles.models import User
 from django.contrib import messages
 
 from .models import ProductReview
@@ -13,13 +13,12 @@ def add_reviews(request, product_id):
     """
     Allow user to add review to product
     """
-    user = get_object_or_404(UserProfile, user=request.user)
     product = Product.objects.get(pk=product_id)
     if request.method == 'POST':
         form = ProductReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.user = user
+            review.user = request.user
             review.product = product
             review.save()
             messages.success(request, 'Successfully added Product review')

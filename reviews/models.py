@@ -1,5 +1,5 @@
 from django.db import models
-from profiles.models import UserProfile
+from profiles.models import User
 from products.models import Product
 
 
@@ -12,7 +12,7 @@ class ProductReview(models.Model):
         (5, '5'),
     ]
 
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     text_review = models.TextField()
     rating = models.IntegerField(choices=RATING)
