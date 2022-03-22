@@ -77,7 +77,6 @@ def product_detail(request, product_id):
             product=product,
             user=get_object_or_404(UserProfile, user=request.user)
         )
-        print(reviews_user.username)
     form = ProductReviewForm()
     product.save()
 
