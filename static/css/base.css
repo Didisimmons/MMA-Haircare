@@ -71,6 +71,10 @@ body{
     text-transform: capitalize;
 }
 
+.auth-footer{
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+}
 /* Navigation bar */
 .dropdown-menu{
     text-align: center;
@@ -433,9 +437,8 @@ a.category-badge{
     padding:20px 0 10px;
     color:black;
     font-family: 'Belleza', sans-serif;
-    bottom: 0;
     width: 100%;
-    height: 15rem; 
+    
 }
 
 .community-button{
