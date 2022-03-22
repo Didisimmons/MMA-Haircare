@@ -85,7 +85,6 @@ def dit_reviews(request, review_id):
         'text_review': review.text_review,
         'rating': review.rating,
     })
-       
 
     if request.method == 'POST':
         form = ProductReviewForm(review_form, instance=review)
