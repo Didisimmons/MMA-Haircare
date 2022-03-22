@@ -27,4 +27,3 @@ class TestCategoryProductModel(TestCase):
             rating="5",
             )
         self.assertEqual(str(products), "test")
-

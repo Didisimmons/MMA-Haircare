@@ -13,6 +13,14 @@ html{
     text-decoration: none;
 }
 
+a.black{
+    text-decoration: none !important;
+}
+
+a.black:hover{
+   color:#592715;
+}
+
 body{
     background: url('/media/hero1.jpeg') no-repeat center center fixed;
     background-size: cover;
@@ -427,6 +435,7 @@ a.category-badge{
     font-family: 'Belleza', sans-serif;
     bottom: 0;
     width: 100%;
+    height: 15rem; 
 }
 
 .community-button{

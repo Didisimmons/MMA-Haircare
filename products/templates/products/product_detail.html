@@ -229,8 +229,8 @@
                                     <p class="text-black"> {{review.text_review}}</p>
                                 </div>
                                 {% if request.user.is_authenticated %}
-                                <small class="text-black">
-                                    {% if reviews_user or request.user.is_superuser  %}
+                                    <small class="text-black">
+                                    {% if reviews_user == request.user.username or request.user.is_superuser  %}
                                         {% include 'reviews/includes/edit-reviews.html' %}
                                     {% endif %}
                                         {% if request.user.is_superuser %}

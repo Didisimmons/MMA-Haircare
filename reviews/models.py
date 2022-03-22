@@ -23,4 +23,4 @@ class ProductReview(models.Model):
         ordering = ['-date']
 
     def __str__(self):
-        return self.rating
+        return self.text_review

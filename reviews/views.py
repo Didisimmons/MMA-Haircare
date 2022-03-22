@@ -30,6 +30,7 @@ def add_reviews(request, product_id):
 
     context = {
         'form': form,
+
     }
 
     return render(request, context)
@@ -58,7 +59,7 @@ def edit_reviews(request, review_id):
         form = ProductReviewForm(request.POST, instance=review)
         if form.is_valid():
             review.save()
-            messages.success(request, 'Successfully updated Product review')
+            messages.info(request, 'Successfully updated Product review')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Sorry we cannot update Product review. \
@@ -72,37 +73,6 @@ def edit_reviews(request, review_id):
         'form': form,
         'review': review,
         'product': product,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
-def dit_reviews(request, review_id):
-
-    review = ProductReview.objects.get(user=request.user)
-    review_form = ProductReviewForm(initial={
-        'text_review': review.text_review,
-        'rating': review.rating,
-    })
-
-    if request.method == 'POST':
-        form = ProductReviewForm(review_form, instance=review)
-        if form.is_valid():
-            review.save()
-            messages.success(request, 'Successfully updated Product review')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Sorry we cannot update Product review. \
-                                    Please ensure all fields are completed.')
-    else:
-        form = ProductReviewForm(instance=review)
-
-    template = 'products/product_detail.html'
-
-    context = {
-        'form': form,
-        'review': review,
     }
 
     return render(request, template, context)

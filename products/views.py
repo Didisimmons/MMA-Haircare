@@ -70,14 +70,14 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
     reviews_user = None
-
+    
     if request.user.is_authenticated:
         # Retrieve user's review for product
         reviews_user = ProductReview.objects.filter(
             product=product,
             user=get_object_or_404(UserProfile, user=request.user)
         )
-
+        print(reviews_user.username)
     form = ProductReviewForm()
     product.save()
 
@@ -90,35 +90,6 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
-
-def roduct_detail(request, product_id):
-    """ A view to show individual product details """
-
-    product = get_object_or_404(Product, pk=product_id)
-    reviews = ProductReview.objects.filter(product=product)
-    form = ProductReviewForm
-    review = None
-
-    if request.method == 'POST':
-        form = ProductReviewForm(data=request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.save()
-            messages.success(request, 'Successfully added Product review')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            form = ProductReviewForm()
-
-    form = ProductReviewForm(instance=review)
-
-    context = {
-        'product': product,
-        'reviews': reviews,
-        'form': form
-    }
-
-    return render(request, 'products/product_detail.html', context)
 
 
 @login_required
