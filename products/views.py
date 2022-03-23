@@ -6,6 +6,8 @@ from django.db.models import Q
 from .models import Product, Category
 from django.db.models.functions import Lower
 
+from profiles.models import UserProfile
+
 from .forms import ProductForm
 from reviews.models import ProductReview
 from reviews.forms import ProductReviewForm
@@ -68,6 +70,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
+    profile = UserProfile.objects.get(user=request.user)
 
     form = ProductReviewForm()
     product.save()
@@ -75,7 +78,8 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
-        'form': form
+        'form': form,
+        'profile': profile
     }
 
     return render(request, 'products/product_detail.html', context)

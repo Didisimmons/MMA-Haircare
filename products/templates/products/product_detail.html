@@ -200,16 +200,15 @@
                     {% else %}
                         <h3 class="text-center text-black text-uppercase">Reviews (0)</h3>
                     {% endif %}
-                    {% if reviews_user %}
-                        <p class="pt-2 text-center color-pink text-capitalize"> Thank you for leaving a Review.</p>
-                        <br>
+                    <!-- conditional rendering to allow user either add a review or provide a thank you message -->
+                    {% if request.user.is_authenticated %}
+                            {% if profile.user  %}
+                                {% include 'reviews/includes/add-review.html' %}
+                            {% endif %}
                     {% else %}
-                        {% if request.user.is_authenticated %}
-                            {% include 'reviews/includes/add-review.html' %}
-                        {% else %}
-                        <p class="text-center pt-2 color-pink text-uppercase"><a href="{% url 'add_reviews' product.id %}" class="text-center color-pink review-highlight text-capitalize"> Leave a review</a></p>
-                        {% endif %}
+                    <p class="text-center pt-2 color-pink text-uppercase"><a href="{% url 'add_reviews' product.id %}" class="text-center color-pink review-highlight text-capitalize"> Leave a review</a></p>
                     {% endif %}
+                    
                 </div>
                  <!-- Display all users reviews -->
                 {% for review in reviews %}
