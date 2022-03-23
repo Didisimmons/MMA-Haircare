@@ -901,5 +901,10 @@ a.add-review:hover{
      .lead{
          font-size: 1rem;
      }
+
+    .auth-footer {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
    }
  
