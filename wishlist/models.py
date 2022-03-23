@@ -5,7 +5,7 @@ from products.models import Product
 
 class Wishlist(models.Model):
     """
-    displays product items in users wishlist
+    allow user to add item to wishlist
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product,

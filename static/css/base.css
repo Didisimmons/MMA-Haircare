@@ -72,8 +72,8 @@ body{
 }
 
 .auth-footer{
-    margin-top: 1rem;
-    margin-bottom: 7rem;
+    margin-top: 7rem;
+    margin-bottom: 10rem;
 }
 /* Navigation bar */
 .dropdown-menu{
@@ -721,6 +721,11 @@ a.add-review:hover{
     .tag-line{
         font-size:1.2rem;
     }
+
+    .auth-footer {
+        margin-top: 14rem;
+        margin-bottom: 28rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -741,6 +746,15 @@ a.add-review:hover{
     }
 
 }
+
+@media only screen and (max-width: 768px){
+    .auth-footer {
+        margin-top: 11rem;
+        margin-bottom: 13rem;
+    }
+
+}
+
 
 @media only screen and (max-width: 760px){
     .general{
@@ -815,6 +829,11 @@ a.add-review:hover{
     .intro-container{
         padding-bottom: 1rem;
     }
+
+    .auth-footer {
+        margin-top: 6rem;
+        margin-bottom: 11rem;
+    }
     
 
 }
@@ -848,6 +867,15 @@ a.add-review:hover{
 
     .trust-container{
         padding: 2rem 0;
+    }
+
+    .auth-footer{
+        margin-top: 3rem;
+    }
+
+    .auth-footer {
+        margin-top: 5rem;
+        margin-bottom: 6rem;
     }
 
 }
