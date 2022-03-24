@@ -13,6 +13,14 @@ def add_reviews(request, product_id):
     Allow user to add review to product
     """
     product = Product.objects.get(pk=product_id)
+    reviews = list(ProductReview.objects.filter(product=product))
+
+    if reviews is not None:
+        for review in reviews:
+            if review.user == request.user:
+                messages.info(request, "It looks like you've  already added a review for this product")
+                return redirect(reverse('product_detail', args=[product.id]))  # noqa: E501
+
     if request.method == 'POST':
         form = ProductReviewForm(request.POST)
         if form.is_valid():
@@ -20,18 +28,13 @@ def add_reviews(request, product_id):
             review.user = request.user
             review.product = product
             review.save()
-            messages.success(request, 'Successfully added Product review')
+            messages.info(request, 'Successfully added Product review')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Sorry we cannot add Product review. \
-                                     Please ensure all fields are completed.')
+                                   Please ensure all fields are completed.')
 
-    context = {
-        'form': form,
-
-    }
-
-    return render(request, context)
+    return redirect(reverse('product_detail', args=[product.id]))
 
 
 @login_required

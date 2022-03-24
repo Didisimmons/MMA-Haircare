@@ -3,6 +3,7 @@ from django.shortcuts import (
 )
 from django.contrib.auth.decorators import login_required
 from products.models import Product
+from django.contrib.auth.models import User
 
 from django.contrib import messages
 
@@ -18,6 +19,7 @@ def favorites(request):
         'favourite': favourite,
     }
     return render(request, 'wishlist/favourite.html', context)
+
 
 
 @login_required
@@ -62,3 +64,21 @@ def remove_favorites(request, product_id):
             messages.error(request,
                            (f'{product.name} already removed'))
     return redirect(reverse('favorites'))
+
+
+
+
+def avorites(request):
+    """ A view to return users wishlist """
+    favourite = Wishlist.objects.filter(user=user)
+    profile = None
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+
+    print(favourite)
+    context = {
+        'favourite': favourite,
+        'profile': profile
+    }
+    return render(request, 'wishlist/favourite.html', context)

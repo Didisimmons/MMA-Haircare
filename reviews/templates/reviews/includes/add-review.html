@@ -4,6 +4,7 @@
                         <a class="text-center add-review color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
                             <span class="text-capitalize"> ( Add a Review ) </span>
                         </a>  
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     {% endif %}
 
 

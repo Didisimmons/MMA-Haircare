@@ -51,7 +51,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "No search criteria inputed !")
                 return redirect(reverse('products'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(brand__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(brand__icontains=query)  # noqa: E501
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -70,7 +70,10 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
-    profile = UserProfile.objects.get(user=request.user)
+    profile = None
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
 
     form = ProductReviewForm()
     product.save()
