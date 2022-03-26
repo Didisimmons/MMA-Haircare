@@ -18,7 +18,8 @@ def add_reviews(request, product_id):
     if reviews is not None:
         for review in reviews:
             if review.user == request.user:
-                messages.info(request, "It looks like you've  already added a review for this product")
+                messages.info(request, "It looks like you've already added a review \
+                for this product.")
                 return redirect(reverse('product_detail', args=[product.id]))  # noqa: E501
 
     if request.method == 'POST':
