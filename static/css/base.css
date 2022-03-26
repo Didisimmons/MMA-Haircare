@@ -441,6 +441,14 @@ a.category-badge{
     
 }
 
+.subscribe a{
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.subscribe a:hover{
+    color:#592715;
+}
 .community-button{
     padding: 0 3px;
 }
