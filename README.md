@@ -363,30 +363,54 @@ MongoDB was chosen as the database for this project due to the flexibility it of
    * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)   
    * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))   
 
-### **FRAMEWORKS,LIBRARIES AND PROGRAM USED**   
-   * [BOOTSTRAP 4.0](https://getbootstrap.com/docs/4.0/):  This was utilized to help with the website's structure, style, and responsiveness for all devices.
+### **FRAMEWORKS & LIBRARIES**   
+   * [Django Template](https://jinja.palletsprojects.com) : This was used by Django as a templating language to display backend data in the frontend.
 
-   * [jQuery 3.6.0](https://jquery.com/) : This is a JavaScript library that is used to help us write less JavaScript code.
+   * [BOOTSTRAP 4.0](https://getbootstrap.com/docs/4.0/):  This was used to help with the structure, style, and responsiveness of the website across all devices.
 
-   * [Fontawesome](https://fontawesome.com/) : This was used to convey information through the use of icons and to improve the site's appearance.
+   * [jQuery 3.6.0](https://jquery.com/) : This is a JavaScript library that allows us to write less JavaScript code.
 
-   * [Flask](https://flask.palletsprojects.com) : This is the python web application framework that is used.
+   * [Fontawesome](https://fontawesome.com/) : This was used to convey information through the use of icons and to improve the appearance of the site.
 
-   * [FIGMA](https://www.figma.com/) : This was used to create wireframes for Ayo Recipes (mobile and desktop devices).
+   * [Google Fonts](https://fonts.google.com/) : The fonts Belleza and Source Sans Pro have been imported into the stylesheet for this project's design.
 
-   * [Google Fonts](https://fonts.google.com/) : For this project's design, the fonts Belleza and Source Sans Pro have been imported into the stylesheet.
+   * [GITHUB](https://github.com/) : This was where the project's code was kept.
+
+
+### **PACKAGES/ DEPENDENCIES INSTALLED** 
+   * [Django Countries](https://pypi.org/project/django-countries/) : This was used to provide country options for forms as well as a country field for models.
+
+   * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) : This was used to authenticate users, register them, and manage their accounts.  
+
+   * [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/) : This was used to manage forms on the website, allowing us to change the properties of the forms.
+
+   * [Gunicorn](https://gunicorn.org/) : This is an HTTP server for WSGI applications that will be used to help with the project's deployment.
+
+   * [Pillow](https://pypi.org/project/Pillow/) : This is a python imaging library that was used to process and manipulate images.
+
+### **DATABASE MANAGEMENT **
+
+   * [SQLite](https://www.sqlite.com/index.html) : This served as our development database.   
+
+   * [Heroku Postgres](https://www.heroku.com/postgres) :  This was used in production for our Heroku database.  
+
+### **PAYMENT SERVICE ** 
+   * [Stripe]https://dashboard.stripe.com/): This was used on the website to process payments. 
+
+### **STORAGE & HOSTING **  
+   * [Amazon Web Service S3](https://aws.amazon.com/s3/) :In production, this was used to host all of our static and media files.
+
+   * [Heroku](https://en.wikipedia.org/wiki/Heroku) : This was the cloud platform of choice for deploying our project.
+
+   * [GITHUB](https://github.com/) : This was where our project's code was stored.
+
+### **OTHER TOOLS **  
+
+   * [FIGMA](https://www.figma.com/) : This was used to create wireframes for MMÀ-HAIRCARE (mobile and desktop devices).
 
    * [GIT](https://git-scm.com/) : This was the preferred version control method. We used the gitpod to commit and publish our project to GitHub.
 
-   * [GITHUB](https://github.com/) : This was where the project's code was store.
-
-   * [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/) : This serves as a communication link between Flask and PyMongo.
-
-   * [Jinja](https://jinja.palletsprojects.com) : This is a Python templating language that is used to display backend data in the frontend.
-
-   * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#module-werkzeug.security) : Werkzeug was used for password hashing and authentication. 
-
-   * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon generator that was used to create our Ayo Recipes favicon.  
+   * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon generator that was used to create MMÀ-HAIRCARE favicon.  
 
    * [JSHint](https://jshint.com/) : This was used to analyse the JavaScript code and ensure that all errors were reduced to a minimum. 
 
@@ -394,12 +418,9 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
    * [CHROME DEV TOOLS]() : This was used to test the responsiveness of our website across various screen devices.
 
-   * [Heroku](https://en.wikipedia.org/wiki/Heroku) : This was the preferred cloud platform for deploying our project, which hosts our Python project MMÁ.
+   * [dbdiagram.io](dbdiagram.io) : This was used to create the database schema for MMÁ- HAIRCARE. 
 
-   * [MongoDB](https://www.mongodb.com/) : This is a document-based database where we keep our Recipe database.
-
-   * [Werkzeug](https://pypi.org/project/Werkzeug/) : This was used to hash passwords and authenticate users.
-
+   * [Adobe Color](https://color.adobe.com/): This was used 
 
 
 # **Testing**  
@@ -500,37 +521,37 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 # **Credits**  
 ### **CONTENT**  
-1. The site's design was inspired by extensive research conducted on recipe sharing websites such as [yummly](https://www.yummly.co.uk/), [bbcgoodfood](https://www.bbcgoodfood.com/) , [epicurious](https://www.epicurious.com/) and other MS3 peer's project(slack channel).  
+1. The site's design was inspired by research conducted on black beauty websites such as [LipBar](https://thelipbar.com/), [Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/) [BlackBeautyCosmetics](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and other MS4 peer's project(slack channel).  
 
-2. Photoshop was used to create the Ayo Recipes brand logo.
+2. The code from Code Institute's Full stack framework with Django called "Boutique Ado" was primarily used as a reference and guide for developing the MMÀ ecommerce store using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage. 
+
+3. Photoshop was used to resize and edit the images used all over the site.
       
-3.	The animation effect used on the hero image header text was obtained from the [CSS tricks](https://css-tricks.com/almanac/properties/a/animation/)  website. 
+4.	The animation effect used on the header of the about page text was obtained from [CSS tricks](https://css-tricks.com/almanac/properties/a/animation/)  website. 
 
-4. Abdul Basit's [Youtube](https://www.youtube.com/watch?v=MLBLsxcB3Dc) assistance was used to create the dynamic form fields in the add-recipe page code.
+5. Code inspiration design for the navigation bar was inspired by another code institute peer’s website [Jira](https://jiira.herokuapp.com/).
 
-5. The code from Code Institute's mini project lesson on Task Manager Application was primarily used as a reference and guide for developing the basic CRUD (Create, Read, Update, and Delete) functionalities for this project. 
+6. The code used to force resize some images while maintaining the same aspect ratio was obtained from [stackoverflow](https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio). 
 
-6. Another peer's [project](https://github.com/dissyulina/cookle-cookbook/blob/main/app.py#L433) here at code institute provided code assistance for the creation of the edit profile and add recipe functions.
+7. The external links relating to haircare tips and afro styles  on the about page were obtained from [Black Beauty Bombshell](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and [BlackHairInformation](https://blackhairinformation.com/by-type/natural-hair/7-tips-managing-multiple-textures-natural-hair/). 
 
-7. Research on StackOverflow and Jinja documentation aided in the creation of some  Python functions and the application of the Jinja template. 
+8. Majority of the products information added to MMÀ-HAIIRCARE database were from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/) [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) and [Sheamoisture](https://www.sheamoisture.com/). 
 
-8. [Code pen](https://codepen.io/t_afif/pen/eYWJNBd) was used to generate the html and CSS code for the star rating applied on the add recipe page.  
+9. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), Shoe's and More readMe [sample](https://github.com/dissyulina/), Jira's readMe [sample](https://github.com/johnroutledge/milestone-project-4), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and Ayo Recipe's readME [file](https://github.com/Didisimmons/Ayo-Recipes#deployment). 
 
-9. The code for the star rating on the single page was also obtained from another peer's project here at [code institute](https://github.com/mosull20/dark-side-ms3/blob/main/templates/profile.html) which aided in the design.
+10. Research on StackOverflow and Django documentation aided in the creation of functions.
 
-10. The code used to force resize some images while maintaining the same aspect ratio was obtained from [stackoverflow](https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio). 
-
-11. The external links relating to kitchenware discounts included in the tips & tricks page were obtained [Countryliving](https://www.countryliving.com/food-drinks/g32869067/chef-pantry-staples/?slide=1), [Delish](https://www.delish.com/food/a52476/kitchen-pantry-organization-ideas/) , [Buzzfeed](https://www.buzzfeed.com/michelleno/cooking-tips-for-beginners) and [Bbcgoodfood](http://www.bbcgoodfood.com/). 
-
-12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like [yummly](https://www.yummly.co.uk/), [delicious](delicious.com.au), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
-
-13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readme [sample](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [sample](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
+11. The quote used on the product page was obtained from [Trace Ellis Ross](https://www.stylerave.com/wp-content/uploads/2020/06/fullsizeoutput_2832.jpeg)
 
  
 ### **MEDIA**   
-* The majority of the images on the website were obtained from image free providers such as [unsplash](https://unsplash.com/), with the exception of the food recipe images, which were obtained from [Bbcgoodfood](http://www.bbcgoodfood.com/) and [delicious](delicious.com.au).
+* The majority of the images on the website were obtained from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/) and [Sheamoisture](https://www.sheamoisture.com/).
 
-* The homepage's hero image is a photo by Brooke Lark from [unsplash](https://unsplash.com/photos/of0pMsWApZE).
+* The homepage's hero image was obtained from Efik Zara's [Youtube](https://unsplash.com/photos/of0pMsWApZE) account and edited with Photoshop.
+
+* The images used for the category "Clips" were obtained from the [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) website.
+
+* The images used in the about page were obtained from [Black Beauty Bombshells](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/)  and edited with Photoshop.
 
 * Ryan Christodoulou from [unsplash](https://unsplash.com/photos/68CDDj03rks) provided the kitchen decor image used at the bottom of the homepage to depict the proper kitchen décor.
 
@@ -560,7 +581,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 # **Acknowledgements**   
    * I'd like to thank my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project.  
-   * The tutor support team for answering all of my questions and providing helpful problem-solving guidelines.  
-   * Code institutes the Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
+   * The tutor support team for their support and providing helpful problem-solving guidelines.  
+   * Code institutes Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
 
 <br/> 
