@@ -2,13 +2,13 @@
 
 ![overview of MMÁ Haircare on all devices](static/readme/images/general-overview.png)
 
-Ayo Recipes is a modern recipe sharing website that caters to people of all ages. Its mission is to provide users with luxury cuisine food recipes in the comfort of their own home, eliminating the stress associated with pre-cooking.  At Ayo Recipes, we understand the hassle of cooking as well as the thought process involved in deciding on a specific meal to prepare .
+MMÁ which means “Beauty” is an Irish hair supply shop that was launched successfully in Black History Month to celebrate and cater to the needs of the  Afro – Caribbean hair. 
 
-Ayo Recipes provides users with simple recipes shared by our members, as well as coupons for kitchenware that makes cooking easier and more enjoyable. The user can easily search for a recipe category/recipe name, view its content, and order the meal from the page; however, the user must login/register to the site in order to see the order button, access cooking tips and tricks, and create their own recipe.
+The aim of MMA is to provide people with Afro- centric hair ,quality luxurious products that adds intensive hydration and softness to their hair which can be subjected to different harsh conditions every day. As well as provide suggestions for natural hairstyles that can be worn every day. 
 
-The goal of the site is for the user to be able to perform basic CRUD functionality(Create, Read, Update, and Delete) on the site and interact with it intuitively, having  a positive experience.   
+The ecommerce store allows users to perform some basic operations such as purchasing products, adding reviews, and adding items to their wish list, with some limitations for unregistered users. The super user has access to all of the site's basic CRUD (Create, Read, Update, and Delete) functions related to products and reviews.
 
-[View deployed site](http://ayo-recipes.herokuapp.com/)
+[View deployed site](https://mma-beauty.herokuapp.com/)
 
 # **Table of Contents**   
 1. [UX Development](#ux-development)
@@ -29,6 +29,7 @@ The goal of the site is for the user to be able to perform basic CRUD functional
         * [Imagery](#imagery)
         * [Wireframes](#wireframes)
         * [Database Structure](#database-structure)
+        * [Other Tools](#other-tools)
 
       
 2. [Features](#features)  
@@ -36,18 +37,25 @@ The goal of the site is for the user to be able to perform basic CRUD functional
         * [General Features On All Pages](#general-features-on-all-pages)
         * [Features Of Each Page](#features-of-each-page)
         * [Features To Implement In Future](#features-to-implement-in-future)
-
       
 3. [Technology Used](#technology-used)  
     * [Language Used](#language-used) 
-    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used)  
-   
+    * [Frameworks & libraries](#frameworks-libraries)
+    * [Packages/Dependencies Installed](#packages-dependencies-installed)
+    * [Database Management](#database-management)
+    * [Payment Service](#payment-service)
+    * [Storage & Hosting](#storage-hosting)
+
+
 4. [Testing](#testing)   
     * [TEST.md](#testing)   
 
-5. [Deployment](#deployment)  
-    * [Deployment Heroku](#deployment-heroku) 
-    * [Steps To Use This Project](#steps-to-use-this-project)  
+5. [DEPLOYMENT](#deployment)
+    * [How to Use Project](#how-to-use-project)
+    * [Project Set Up](#project-set-up)
+    * [Deployment To Heroku](#deployment-to-heroku)
+    * [AWS And S3 Bucket Setup](#aws-and-s3-bucket-setup)
+    * [Connect Django To AWS Bucket](#connect-django-to-aws-bucket)
 
 7. [Credits](#credits)  
     * [Content](#content) 
@@ -149,13 +157,34 @@ The entire site's wireframe can be found below. This depicts the site on a deskt
 
 
 ### **Database Structure** 
-MongoDB was chosen as the database for this project due to the flexibility it offers for non-relational data. [Diagram.io](https://dbdiagram.io/home) was used to create the data schema for this project. Our schema had three collections: 
-* Users
-* Categories
-* Recipes 
-   
-![Database structure](static/images/readme/database-schema.png "Database schema")   
+The database schema for MM was created using [Diagram.io](https://dbdiagram.io/home) and was derived from the app models. The screenshot shows the schema, which depicts the relationship between the apps. The user can only have one user profile and add items to their Wishlist. The available categories have a one-to-many relationship with the product.
+ ![The database schema](readme-files/readme/databasechema.png " Database schema") 
  
+These apps are 
+-  **User** 
+   - User model: This is built with Django allauth and contains the user's name, email address, and password.
+
+- **Checkout App**   
+   - Order model:  This contains the user's order information as well as their delivery information. 
+   - OrderLineItem: This contains information about each product item that is related to a specific order.  
+   
+- **Product App**   
+   - Product: This contains information about all of the products available at MMÀ.
+
+   - Category: This section contains all of the product categories available at MMÀ.    
+
+- **UserProfile App**   
+   - User Profile: This is where the user's default delivery information is kept.
+
+   - Category: This section contains all of the product categories available at MMÀ.    
+ 
+- **Wishlist App**   
+   - Wishlist: This contains the product that the user wishes to add to their Wishlist.
+
+   - WishlistItem : This contains information about the products on the user's wishlist.    
+
+- **ProductReview App**   
+   - Product Review: This contains information about user reviews for specific products.
     
 <br /> 
   
@@ -356,7 +385,7 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
 <br/>   
   
-# **Technology Used**
+# **TECHNOLOGY USED**
 ### **LANGUAGE USED** 
    * [HTML5](https://en.wikipedia.org/wiki/HTML5)   
    * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)   
@@ -364,130 +393,441 @@ MongoDB was chosen as the database for this project due to the flexibility it of
    * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))   
 
 ### **FRAMEWORKS & LIBRARIES**   
-   * [Django Template](https://jinja.palletsprojects.com) : This was used by Django as a templating language to display backend data in the frontend.
+   * [Django Template](https://jinja.palletsprojects.com) : Django used this as a templating language to display backend data on the frontend.
 
-   * [BOOTSTRAP 4.0](https://getbootstrap.com/docs/4.0/):  This was used to help with the structure, style, and responsiveness of the website across all devices.
+   * [BOOTSTRAP 4.0](https://getbootstrap.com/docs/4.0/):  This was used to help with the website's structure, style, and responsiveness across all devices.
 
-   * [jQuery 3.6.0](https://jquery.com/) : This is a JavaScript library that allows us to write less JavaScript code.
+   * [jQuery 3.6.0](https://jquery.com/) : This is a JavaScript library that makes it possible to write less JavaScript code.
 
-   * [Fontawesome](https://fontawesome.com/) : This was used to convey information through the use of icons and to improve the appearance of the site.
+   * [Fontawesome](https://fontawesome.com/) : This was used to convey information using icons and to improve the site's appearance.
 
-   * [Google Fonts](https://fonts.google.com/) : The fonts Belleza and Source Sans Pro have been imported into the stylesheet for this project's design.
+   * [Google Fonts](https://fonts.google.com/) : For this project's design, the fonts Belleza and Source Sans Pro have been imported into the stylesheet.
 
-   * [GITHUB](https://github.com/) : This was where the project's code was kept.
+   * [GITHUB](https://github.com/) : This was the location of the project's code.
 
 
 ### **PACKAGES/ DEPENDENCIES INSTALLED** 
-   * [Django Countries](https://pypi.org/project/django-countries/) : This was used to provide country options for forms as well as a country field for models.
+   * [Django Countries](https://pypi.org/project/django-countries/) : This was used to provide form country options as well as a model country field.
 
-   * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) : This was used to authenticate users, register them, and manage their accounts.  
+   * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) : This was used to verify users' identities, register them, and manage their accounts.  
 
-   * [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/) : This was used to manage forms on the website, allowing us to change the properties of the forms.
+   * [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/) : This was used to manage forms on the website, allowing us to modify their properties.
 
-   * [Gunicorn](https://gunicorn.org/) : This is an HTTP server for WSGI applications that will be used to help with the project's deployment.
+   * [Gunicorn](https://gunicorn.org/) : This is an HTTP server for WSGI applications that will be used to aid in the deployment of the project.
 
-   * [Pillow](https://pypi.org/project/Pillow/) : This is a python imaging library that was used to process and manipulate images.
+   * [Pillow](https://pypi.org/project/Pillow/) : This is a Python imaging library for processing and manipulating images.
 
-### **DATABASE MANAGEMENT **
+### **DATABASE MANAGEMENT**
 
-   * [SQLite](https://www.sqlite.com/index.html) : This served as our development database.   
+   * [SQLite](https://www.sqlite.com/index.html) : This served as our database for development.  
 
-   * [Heroku Postgres](https://www.heroku.com/postgres) :  This was used in production for our Heroku database.  
+   * [Heroku Postgres](https://www.heroku.com/postgres) :  This was used for our Heroku database in production.  
 
-### **PAYMENT SERVICE ** 
-   * [Stripe]https://dashboard.stripe.com/): This was used on the website to process payments. 
+### **PAYMENT SERVICE** 
+   * [Stripe]https://dashboard.stripe.com/): This was used to process payments on the website. 
 
-### **STORAGE & HOSTING **  
-   * [Amazon Web Service S3](https://aws.amazon.com/s3/) :In production, this was used to host all of our static and media files.
+### **STORAGE & HOSTING**  
+   * [Amazon Web Service S3](https://aws.amazon.com/s3/) :This was used in production to host all of our static and media files.
 
-   * [Heroku](https://en.wikipedia.org/wiki/Heroku) : This was the cloud platform of choice for deploying our project.
+   * [Heroku](https://en.wikipedia.org/wiki/Heroku) : This was our preferred cloud platform for deploying our project.
 
-   * [GITHUB](https://github.com/) : This was where our project's code was stored.
+   * [GITHUB](https://github.com/) : This was our preferred cloud platform for deploying our project.
 
-### **OTHER TOOLS **  
+### **OTHER TOOLS**  
 
-   * [FIGMA](https://www.figma.com/) : This was used to create wireframes for MMÀ-HAIRCARE (mobile and desktop devices).
+   * [FIGMA](https://www.figma.com/) : This was used to create wireframes for MMÀ-HAIRCARE (mobile, ipad and desktop devices).
 
-   * [GIT](https://git-scm.com/) : This was the preferred version control method. We used the gitpod to commit and publish our project to GitHub.
+   * [GIT](https://git-scm.com/) : This was the preferred method of version control. To commit and publish our project to GitHub, we used the gitpod.
 
-   * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon generator that was used to create MMÀ-HAIRCARE favicon.  
+   * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon maker that was used to create the MMÀ-HAIRCARE favicon. 
 
-   * [JSHint](https://jshint.com/) : This was used to analyse the JavaScript code and ensure that all errors were reduced to a minimum. 
+   * [JSHint](https://jshint.com/) : This was used to analyse the JavaScript code and ensure that all errors were minimised. 
 
-   * [PEP8](http://pep8online.com/) : This was used to run our Python code to ensure it was error-free.
+   * [PEP8](http://pep8online.com/) : This was used to run our Python code to ensure it was free of errors.
 
-   * [CHROME DEV TOOLS]() : This was used to test the responsiveness of our website across various screen devices.
+   * [CHROME DEV TOOLS]() : This was used to test the responsiveness of our website across different screen sizes.
 
-   * [dbdiagram.io](dbdiagram.io) : This was used to create the database schema for MMÁ- HAIRCARE. 
+   * [dbdiagram.io](dbdiagram.io) : This was used to create the MMÀ- HAIRCARE database schema. 
 
-   * [Adobe Color](https://color.adobe.com/): This was used 
+   * [Adobe Color](https://color.adobe.com/): This was used to select the site's colour scheme.
 
 
 # **Testing**  
-The testing documentation can be found [here](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#cookle---testing). 
+The testing documentation can be found [here](). 
 
 <br/>   
   
-# **Deployment**   
-This project was created with Gitpod as the IDE and is hosted on Github because Github Pages cannot host a Python project. This project was deployed using a free hosting service (Heroku).  
+# **DEPLOYMENT**   
+This project was created with Gitpod as the IDE, committed to git as its local repository, and is hosted on Github because Github Pages cannot host Python projects. The project is deployed using a free hosting service (Heroku), and the static and media files are stored in AWS S3.
 
-## **Deployment to Heroku**   
-To deploy our project to Heroku we linked our GitHub repository to Heroku ands followed the following steps.    
-
-1. **Create a new Heroku App**   
-   * Sign in or create an account with Heroku. Select "Create new app" in the top right corner of your dashboard after logging in   
-   * Provide a unique app name and use a hyphen between words.   
-   * Choose a region that is close to you and then click Create App.  
-
-2. **Create the following important files**   
-   * Return to your project's Gitpod IDE and create a gitignore and an env.py file.
-   * The env.py file would contain all of the environment variables required to connect our MongoDB database to our Heroku App.
-   * To hide the sensitive information it contains, such as the secret key and our unique mongo DB URI, the env.py file must be added to the gitignore file.
-   * Make a file called **"requirements.txt"** that contains a list of all the Python dependencies for our project. This tells Heroku what language is being used. To make this file, type the following into the terminal.   
-      ```pipi3 freeze --local > requirements.txt```   
-   * Next, in the terminal, type the following to create a "Procfile" that instructs Heroku on how to run our project:   
-      ```echo web: python run.py > Procfile```
-   * This tells Heroku that our application will be a web process, and the command to run it is **"python app.py."**  
-
-3. **Link our Git repository to Heroku**   
-   * Return to our Heroku Dashboard and choose "deploy" from the top options. 
-   * Select "GitHub" from the deployment method from section.   
-   * This gives you an input field where you can search for your GitHub repository by name. When the correct repository, in our case "Ayo Recipes," is found, click "Connect."   
-   * After that, we need to set up the necessary environment variables in our Heroku App's env.py file.
-   * Click "Settings" on the Heroku Dashboard and then the "Reveal Config Vars" button.
-   * The following key value pairs should be  added:   
-      |Key|Value|
-      |----|----|
-      |IP|0.0.0.0|
-      |PORT|5000|
-      |SECRET_KEY|```<your_secret_key>```|
-      |MONGO_URI|```mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority```|
-      |MONGO_DBNAME|```<database_name>```|
-      
-4. **Enable Automatic Deployment**   
-   * Return to the dashboard and click "Deploy" once we've configured our environment variables. Scroll down to "Automatic Deployments" and click "Enable Automatic Deployment."  
-   * We have the "Manual deploy" section under "Automatic deploys." From our main branch, click the "Deploy Branch" button.   
-   * Once this is completed, Heroku will build our app with all of the necessary packages. To view the website, go to the top right corner and select "Open App". 
+To Deploy MMÁ the following are needed 
+   -	A Heroku account  
+   -	An AWS Account 
+   -	A github account 
 
 
-### **STEPS TO USE THIS PROJECT** 
-The MongoDb atlas was used to store the data in this project. The steps below were taken to create our database and connect it to our Heroku App.
+### **How To Use Project**   
+In the event that a user wishes to fork the project or clone the project, the necessary steps are also provided below.
 
-### **1. Create database on MongoDB**  
-1. **Set Up MongoDB**   
-   * To begin visit the mongoDB website and creating an account/login.
-   * Create a cluster by selecting a shared cluster once you've logged in.
-   * Choose a cloud provider. AWS was chosen for this project and is ideal for its requirements.
-   * When that option is selected. Choose a "Cluster Tier" and the M0 Tier (Free forever tier).
-   * Once you've completed all of the preceding steps, click the "Create Cluster" button.
-   * To create our database user credentials, navigate to 'Database Access' under the Security section on our mongoDB dashboard.
-     - Create a username and password using the default SCRAM authentication method by clicking 'Add New Database User.' (It is recommended that you use a combination of letters and numbers to avoid any problems.  
-     - The username and password that we specify here will be used in our MONGO URI environment variable  
-     - Finally, configure the "Database User Privileges" to allow read and write access to any database, and then click "Add User."  
-   
-   * After we've added the user, Go to the dashboard's Security menu and select "Network Access" to whitelist our IP address and ensure that it has access to our database.    
-   *  Select "Allow Access from Anywhere" after clicking "Add IP Address." Normally, you would enter your website's IP address, but we chose this option because the database will be accessed via our gitpod workspace and Heroku
-   * Then press the "Confirm" button.
+#### **Forking the repository**  
+By forking the GitHub repository, you can create a copy of the original repository on your GitHub account to view and/or make changes to without affecting the original repository, as shown below: 
+
+1. Sign in to your GitHub account.  
+2. Locate the repository to be duplicated, in this case MMÁ – Haircare.  
+3. Locate and click the “Fork” button at the top of the  MMÁ – Haircare repository page. 
+4. This creates a copy of the repository in our account and allows us to make changes.
+
+#### **Making A Local Clone og Github Repository**   
+
+1. Please sign in to your GitHub account. 
+2. Locate the desired repository in this case  MMÁ – Haircare.
+
+3.	Locate the “Code” button at the top of the MMÁ – Haircare repository page. Click it and copy the HTTPS link that appears.
+
+4.	Activate your local IDE terminal.
+
+5.	Change the current working directory to the location where you wish the cloned file to be saved.
+
+6.	In the terminal, type “git clone” and then paste the link copied from HTTPS.  
+```$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY```
+
+7. Press Enter and  your local clone is created.
+
+8. Create a new env.py file in the base directory and include the following code.
+```
+import os
+#Django
+os.environ.setdefault( 'DEVELOPMENT', 'True')
+os.environ.setdefault('SECRET_KEY', '<YOUR_KEY>')
+
+#Stripe
+os.environ.setdefault('STRIPE_PUBLIC_KEY', '<YOUR_KEY>')
+os.environ.setdefault('STRIPE_SECRET_KEY', '<YOUR_KEY>')
+os.environ.setdefault('STRIPE_WH_SECRET', '<YOUR_KEY>')
+```
+9. Ensure that the env.py file is located in the .gitignore file.
+
+10. Type the following into the terminal to install our required dependencies and modules.
+```pip3 install -r requirements.txt```
+
+11. To create our first database, enter the following commands into the terminal.
+```
+python3 manage.py makemigrations 
+python3 manage.py migrate 
+``` 
+
+12. Create a super user : 
+``` python3 manage.py create superuser ```
+
+13. To run our site locally type the following to the CLI : 
+``` python3 manage.py runserver ```
+
+#### **Project Set Up** 
+After forking or cloning the MMÀ-HAIRCARE repository, the following steps must be completed in order for our github repository to be deployed to Heroku.
+1.  Ensure that all MMÀ- Haircare dependencies are installed and operational. The gitignore file contains all of the necessary hidden files.
+
+2. Go to your gitpod workspace after installing the necessary dependencies. Variables can be found under Settings - --> Variables. Enter the following project environment variables:
+   Varables | Key   
+   ---| ---   
+   DEVELOPMENT | TRUE   
+   SECRET_KEY | <your_secret_key>  
+   STRIPE_PUBLIC_KEY | <your_secret_key>  
+   STRIPE_SECRET_KEY | <your_secret_key>   
+   STRIPE_WH_KEY | <your_secret_key>
+
+   These keys can be obtained from  
+      -	The SECRET_KEY from [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) 
+      -	By creating an account, you can obtain the STRIPE PUBLIC KEY and STRIPE SECRET KEY. This is located in the 'Developers' section (API KEY). 
+      - The STRIPE WH KEY can be obtained from the 'Webhooks' section of the 'Developers' section. After you've navigated to 'Webhooks,' click "Add new endpoint." Insert your endpoint URL here ``` https://<your_host_url>/checkout/wh/. ``` 
+      To listen to events, select payment.intent.success and payment.intent.failed, and then create an endpoint. STRIPE WH KEY can be revealed once it has been created.
+
+3. Make migrations to keep our database up to date.
+
+4. We can now run the server and deploy after it has been updated.
+
+### **Deployment To Heroku**
+
+1. Create a new Heroku App
+   - Sign in or create a Heroku account. After logging in, click "Create new app" in the top right corner of your dashboard.
+
+   - Give your app a unique name and use a hyphen between words.
+
+   - Select a region near you and then click Create App.
+
+2. Navigate to the resources tab on the app dashboard, search for "Heroku Postgres" under Add-ons, select it, and then select the free plan.
+
+3. On Heroku's Dashboard, Under settings, click the "Reveal Configure vars" button and enter the required configuration variables, including those whose values may not yet be present. The unavailable values would be updated as you progress through the steps.
+      Varables | Key   
+      ---| ---   
+      AWS_ACCESS_KEY_ID | your access aws key 
+      AWS_SECRET_ACCESS_KEY| Your secret access aws key  
+      DATABASE_URL| Your database url   
+      EMAIL_HOST_PASS | Your app password
+      EMAIL_HOST_USER | Your email address  
+      SECRET_KEY | Your secret key
+      STRIPE_PUBLIC_KEY | Your stripe public key 
+      STRIPE_SECRET_KEY | Your stripe secret key
+      USE_AWS | True
+
+4. Return to your project's Gitpod IDE and use the CLI to install the following important files: 
+   ```
+   pip3 install dj_database_url
+   pip3 install psycopg2-binary
+   ```
+   - Once the requirements have been created, we must freeze them in our CLI pip3 freeze > requirements.txt to ensure that Heroku instals our app when it is deployed.
+
+   - Create a new database for MMÀ- Haircare by importing dj database url into our settings.py file and commenting out our default configuration. We would need to replace the default database with a call to dj database url.parse and pass it the database URL from Heroku (which can be found in our app settings tab's config variables).
+      ```
+      DATABASES = {
+      'default': dj_database_url.parse('YOUR_DATABASE_URL_FROM_HEROKU')
+      }
+      ```
+   - Run migrations
+      ```
+      python3 manage.py migrate
+      ```
+5. To load our product data from the fixtures folder to our deployed MMÀ site, we must first load the category data before the product data because the products rely on the existing category.
+   ```
+   python3 manage.py loaddata categories
+   python3 manage.py loaddata products
+   ```
+
+6. Create a new super user to log in with and provide details for the username and password.
+   ```
+   python3 manage.py create superuser
+   ```
+
+7. Remove the Heroku database URL from our settings.py file and uncomment the default database configuration. Add an if statement to specify that if the app is running on Heroku, it should connect to Postgres; otherwise, it should connect to Sqlite.
+
+```
+   if 'DATABASE_URL' in os.environ:
+      DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+      }
+   else:
+      DATABASES = {
+         'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+         }
+      }
+   ```  
+
+8. Once we've created our conditional statement, we'll need to install Gunicorn, which will serve as our webserver.  
+   ```
+   pip3 install gunicorn 
+   ```
+
+9. Freeze our requirements after installation to ensure that all of our app's required packages are installed.
+   ```
+   pip3 freeze > requirements.txt 
+   ```
+
+10. Create a Procfile that instructs Heroku to create a web dyno that will run gunicorn and our app.
+   ```
+   web: gunicorn mma.wsgi:application 
+   ```
+11. Log in to Heroku via the CLI and temporarily disable collectstatic so that Heroku does not attempt to collectstatic files when it deploys.
+   ```
+   heroku config:set DISABLE_COLLECTSTATIC=1 --app mma-beauty
+   ```
+
+12. After we have completed the preceding steps, we must add the hostname of our Heroku app (MMÀ-beauty) to the list of allowed hosts in our settings. py and also include localhost so that Gitpod can continue to function:
+   ```
+   ALLOWED_HOSTS = [‘mma-beauty.herokuapp.com’, 'localhost']
+   ```
+
+13. Save all files, commit, and push to github, then Heroku. We would need to initialise git remote because we created our app via the heroku  website rather than the terminal.
+   ```
+   heroku git:remote -a mma-beauty 
+   ```
+   and then push to Heroku using 
+   ```
+   git push heroku main 
+   ```
+
+14. Link our Git repository to Heroku
+   - Return to the Heroku Dashboard and select "deploy" at the top.
+
+   - Choose "GitHub" as the deployment method from the section.
+
+   - This provides you with an input field in which you can search for your GitHub repository by name. When you find the correct repository, in our case "MMÀ – HAIRCARE," click "Connect."
+
+   - To ensure that all configuration variables on Heroku are updated with the required values, click the "Reveal Config Vars" button.
+
+
+15. Enable Automatic Deployment
+
+   - Once we've configured all of our environment variables, return to the dashboard and click "Deploy." Scroll down to "Automatic Deployments" and press the "Enable Automatic Deployment" button.
+
+   - When we push to github, Heroku will automatically build our app with all of the required packages. Go to the top right corner and select "Open App" to view the website.
+
+16. Return to our MMÀ-settings.py file and replace the secret key setting with the call to get it from the environment, with an empty string as the default.
+``` SECRET_KEY = os.environ.get('SECRET_KEY', '') ```
+
+   Then, set debug to true only if the environment contains a variable called development.
+
+   ``` DEBUG = 'DEVELOPMENT' in os.environ ```
+
+
+### **AWS AND S3 BUCKET SETUP**
+
+Amazon web services s3 is a cloud-based storage service where we would store our static files and images.
+
+1. Go to aws.amazon.com and sign up for an AWS account.
+
+2. Log in to your account, go to the AWS management console, and then search for s3 to access its dashboard.
+   - Click the "Create new bucket" button. It is preferable if you provide a bucket name that is the same as your app name. Then choose a region near you.
+
+   - Select ACLS enabled and Bucket Owner Preferenced in the 'Object Ownership' section.
+
+   - Uncheck the "block all public access" box and check the "I acknowledge that the current settings may result in this bucket and its contents becoming public" box.
+
+   - Uncheck the "block all public access" box and check the "I acknowledge that the current settings may result in this bucket and its contents becoming public" box.
+
+3. To configure our bucket, click on the newly created bucket. Select the "properties tab." Scroll down to the "Static Website Hosting" section at the bottom of the page. When you've found it, click edit and then enable.Set the 
+   -	Hosting type: choose Host a Static Website
+   -	Index document: index.html
+   -	Error document: error.html and then Save Changes
+
+4.  Scroll down to find Cross-origin resource sharing (CORS) on the permissions tab. Click edit and paste our CORS configuration to establish the necessary access between our Heroku app and this S3 bucket. Once copied, save the changes.
+   ```
+      [
+         {
+            "AllowedHeaders": [
+               "Authorization"
+            ],
+            "AllowedMethods": [
+               "GET"
+            ],
+            "AllowedOrigins": [
+               "*"
+            ],
+            "ExposeHeaders": []
+         }
+      ]
+   ``` 
+   To create a security policy for this bucket, go to "bucket policy" and select "policy generator" while still on the permissions tab.
+      - Select Type of Policy: choose S3 Bucket Policy
+      - Effect: choose Allow
+      - Principal: *
+      - Actions: select GetObject
+      - Retrieve the Amazon Resource Name (ARN) from the Bucket ARN, which can be found in the "Bucket Policy" section.
+      - Select "Add Statement," then "Generate Policy." Copy and paste the policy into the bucket policy editor.
+      - To allow access to all resources in the new bucket, however, we must add a slash star at the end of the resource key. Then click the Save button. This is how the resource key should look.
+      ``` "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*" ```
+      - Still on the permissions tab, navigate to the "Access Control List (ACL)" section, click Edit, and then enable List for Everyone (public access), and accept the warning box.
+
+
+#### **IAM SETUP**
+
+1. To access the dashboard, navigate to the AWS management console and search for 'IAM,' which stands for Identity and Access Management.
+
+2. Create a user group by selecting "User Groups" from the sidebar and clicking "Create New Group," then providing a name related to your application.
+
+3. Create a group for the user by selecting "User Groups" from the sidebar and clicking "Create New Group," then providing a name related to your application.
+   - Look for s3 and then import "Amazon s3 full access policy.
+   - To grant full access to our bucket in the policy, copy the ARN from the "bucket policy" page in S3, and our JSON editor should look like this.
+
+   {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<YOUR-ARN>",
+                "arn:aws:s3:::<YOUR-ARN>/*"
+            ]
+        }
+    ]
+   }
+
+   - Click on the next page, which contains tags that are not required but must be clicked in order to access the "review policy page."
+
+   - On the policy review page, enter a name and a description, then click "Create Policy." The policy is now in place.
+
+4. To add the user to a newly created group so that the user can access its policy.
+   - We begin by attaching the policy to the group by clicking on "User Groups" and then selecting the previously created group.
+
+   - To add a user to that group, Click "User" in the sidenav bar and then "Add Users."
+
+   - To add a user to that group, Click "User" in the sidenav bar and then "Add Users."
+
+   - Make a username, grant programmatic access, and then click "Next:Permissions."
+
+   - Check for the group that has our policy attached, select it, and then click "Next:Tags," "Next:Review No Need for Changes," and finally "Create User."
+
+   - Download the CSV file containing the user's access key and the secret access key required for deployment in our Heroku app.
+
+
+### **CONNECT DJANGO TO AWS BUCKET**
+To connect Django to our S3 bucket, we must first perform the following steps:
+
+1. Boto3 and django-storages are two new packages to install. Freeze the new packages in our requirements.txt file.
+   ```
+   pip3 install boto3
+   pip3 install django-storages
+   pip3 freeze > requirements.txt
+   ```
+2. Add storages to the installed Apps in  our MMÀ- Haircare settings.py.
+
+3. To connect our s3 bucket in MMÀ- Haircare settings.py, we need to include an if statement that states:
+   ```
+   if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'jiira'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+   ```
+
+4. Once those settings are in place, return to Heroku settings and include the following information from our AWS policy in "Reveal Config Vars."
+
+   Variables | Value
+   --- | ---
+   AWS_ACCESS_KEY_ID | access key id from aws csv file
+   AWS_SECRET_ACCESS_KEY | your secret access key from aws csv file
+   USE_AWS | True
+
+5. Remove the variable "DISABLE COLLECTSTATIC" from Reveal Config Vars.
+
+6. Return to your Gitpod IDE and create a file called "custom storages.py" to tell Django that in production, we need to use S3 to store our static files and images whenever collectstatic is run. Included in that file are the following:
+   ```
+   from django.conf import settings
+   from storages.backends.s3boto3 import S3Boto3Storage
+ 
+
+   class StaticStorage(S3Boto3Storage):
+      location = settings.STATICFILES_LOCATION
+
+
+   class MediaStorage(S3Boto3Storage):
+      location = settings.MEDIAFILES_LOCATION
+   ``` 
+
+7. Push all changes to github to ensure that everything listed above is properly installed.
+
+
 
 We can now create our database after we have set up MongoDB. The database was built using the Ayo Recipes [Data Scheme](static/images/readme/database-schema.png "Database schema").    
 
@@ -521,67 +861,38 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 # **Credits**  
 ### **CONTENT**  
-1. The site's design was inspired by research conducted on black beauty websites such as [LipBar](https://thelipbar.com/), [Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/) [BlackBeautyCosmetics](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and other MS4 peer's project(slack channel).  
+1. The design of the site was inspired by research on black beauty websites such as [LipBar](https://thelipbar.com/), [Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/) [BlackBeautyCosmetics](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and another code institute peer’s website [Jira](https://jiira.herokuapp.com/). 
 
-2. The code from Code Institute's Full stack framework with Django called "Boutique Ado" was primarily used as a reference and guide for developing the MMÀ ecommerce store using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage. 
+2. The code from Code Institute's "Boutique Ado" Full stack framework with Django was primarily used as a reference and guide for developing the MMÀ ecommerce store using the following: HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage.
 
-3. Photoshop was used to resize and edit the images used all over the site.
+3. Photoshop was used to resize and edit the images that appear throughout the site.
       
-4.	The animation effect used on the header of the about page text was obtained from [CSS tricks](https://css-tricks.com/almanac/properties/a/animation/)  website. 
+4. The animation effect used on the about page text header was obtained from the [CSS tricks](https://css-tricks.com/almanac/properties/a/animation/)  website. 
 
-5. Code inspiration design for the navigation bar was inspired by another code institute peer’s website [Jira](https://jiira.herokuapp.com/).
+5. The external links on the about page relating to haircare tips and afro styles were obtained from [Black Beauty Bombshell](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and [BlackHairInformation](https://blackhairinformation.com/by-type/natural-hair/7-tips-managing-multiple-textures-natural-hair/). 
 
-6. The code used to force resize some images while maintaining the same aspect ratio was obtained from [stackoverflow](https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio). 
+6. Majority of the products information added to MMÀ-HAIIRCARE database were from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/), [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) and [Sheamoisture](https://www.sheamoisture.com/). 
 
-7. The external links relating to haircare tips and afro styles  on the about page were obtained from [Black Beauty Bombshell](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and [BlackHairInformation](https://blackhairinformation.com/by-type/natural-hair/7-tips-managing-multiple-textures-natural-hair/). 
+7. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), Shoe's and More readMe [sample](https://github.com/dissyulina/), Jira's readMe [sample](https://github.com/johnroutledge/milestone-project-4), FLYBODY's readMe [file](https://github.com/Didisimmons/Flybody-gym) and Ayo Recipe's readME [file](https://github.com/Didisimmons/Ayo-Recipes#deployment). 
 
-8. Majority of the products information added to MMÀ-HAIIRCARE database were from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/) [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) and [Sheamoisture](https://www.sheamoisture.com/). 
-
-9. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), Shoe's and More readMe [sample](https://github.com/dissyulina/), Jira's readMe [sample](https://github.com/johnroutledge/milestone-project-4), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and Ayo Recipe's readME [file](https://github.com/Didisimmons/Ayo-Recipes#deployment). 
-
-10. Research on StackOverflow and Django documentation aided in the creation of functions.
-
-11. The quote used on the product page was obtained from [Trace Ellis Ross](https://www.stylerave.com/wp-content/uploads/2020/06/fullsizeoutput_2832.jpeg)
+8. The quote used on the product page was obtained from [Trace Ellis Ross](https://www.stylerave.com/wp-content/uploads/2020/06/fullsizeoutput_2832.jpeg)
 
  
 ### **MEDIA**   
-* The majority of the images on the website were obtained from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/) and [Sheamoisture](https://www.sheamoisture.com/).
+* The majority of the images on the website were obtained from hair supply websites such as [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/), [Sheamoisture](https://www.sheamoisture.com/) and [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins)
 
 * The homepage's hero image was obtained from Efik Zara's [Youtube](https://unsplash.com/photos/of0pMsWApZE) account and edited with Photoshop.
 
-* The images used for the category "Clips" were obtained from the [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) website.
+* Photoshop was used to create the image for the site's brand logo.
 
-* The images used in the about page were obtained from [Black Beauty Bombshells](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/)  and edited with Photoshop.
-
-* Ryan Christodoulou from [unsplash](https://unsplash.com/photos/68CDDj03rks) provided the kitchen decor image used at the bottom of the homepage to depict the proper kitchen décor.
-
-* The homepage's "Browse our categories" section is divided into four categories, and the images used were obtained from the following people: 
-   - Breakfast Recipes – Photo by Brooke Lark  from [unsplash](https://unsplash.com/photos/W9OKrxBqiZA).
-
-   - Snack Recipes  – Photo by Honey Fangs from [unsplash](https://unsplash.com/photos/-JU0sqGjeC0).
-
-   - Soup Recipes  –Photo by Ella Olsson from [unsplash](https://unsplash.com/photos/fxJTl_gDh28).
-
-   - Main Dish Recipes – Photo from Amna Akram from [unsplash](https://unsplash.com/photos/KIL9suHFp6s).
-
-   - Default category image – Photo from Toa Heftiba from [unsplash](https://unsplash.com/photos/tE9Ovti1gRI).
-
-* Some pages, such as the register page, profile header, and add recipe container, now have a background photo that was created in Photoshop
-
-* The following people provided photos for the tips and tricks page:
-   - Pantry Essentials – Photo by Jason Leung from [unsplash](https://unsplash.com/photos/jWU9FpLW7fI)
-
-   - Essential Kitchen Gadgets – Photo by Kevin McCutcheon from [unsplash](https://unsplash.com/photos/APDMfLHZiRA).
-
-   - Cleaning Pots & Pans – Photo by  Precious Plastic Melbourne from [unsplash](https://unsplash.com/photos/n5qirFAe6rQ).
-
-*	The images for the recipes were sourced from [yummly](https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676) ,[delicious](delicious.com.au) and [bbcgoodfood](http://goodfood.com/recipes/blackened-roast-salmon-avocado-mango-salsa). 
-
-<br/>  
-
-# **Acknowledgements**   
-   * I'd like to thank my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project.  
-   * The tutor support team for their support and providing helpful problem-solving guidelines.  
-   * Code institutes Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
+* [Black Beauty Bombshells](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) provided the images for the about page and Photoshop was used to edit.
 
 <br/> 
+
+# **Acknowledgements**   
+   * I'd like to express my gratitude to my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project. 
+   * I'd like to thank the Slack community as a valuable resource for their constant support and assistance with any issues that arose.
+   * The tutor support team for their assistance and helpful problem-solving guidelines.
+<br/> 
+
+[Back to top &uarr;](#mma-haircare)  
