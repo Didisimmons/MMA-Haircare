@@ -68,9 +68,9 @@ The ecommerce store allows users to perform some basic operations such as purcha
 # **UX Development**   
 
 ## **PROJECT GOAL**
-Ayo Recipe's primary goal is to provide a visually appealing and highly intuitive recipe sharing site for users of all ages. The user should be able to see all recipes and recipes in each category, as well as perform basic CRUD (Create, Read, Update, and Delete) functions on the site. 
+The goal of MMÀ is to provide people with Afro Caribbean hair safe natural products that are not highly chemically processed and were designed for afro – textured hair. To demonstrate to others that there is beauty in our Afro-textured hair when properly cared for, and that we should be proud to wear it.
 
-The user would be able to interact with the site in order to create, edit, delete, and add recipes to their profile, with some restrictions in place only for the admin user. The admin user has the ability to create, edit, and delete recipe categories, as well as perform basic user functions
+The site has been designed to be extremely user-friendly in order for the user to interact with the products and other features on the site( such as Login, purchase items , e.t.c). The administrator manages the site's information and products, which are regularly updated to ensure that our users receive the most up-to-date products and that the information is consistent across all pages. 
 
 #### **Business Goals** 
 As the site owner I want to :
@@ -109,31 +109,40 @@ As an Admin User, I want to:
 - Individuals who are interested in food and enjoy cooking. 
 
 ### **RESEARCH**   
-To get some UX inspiration for Ayo, I researched other recipe sharing websites like To get some UX inspiration for Ayo, I researched other recipe sharing websites like
-1. [Yummly](https://www.yummly.co.uk/)
-2. [Bbcgoodfood](https://www.bbcgoodfood.com/)
-3. [Epicurious](https://www.epicurious.com/) 
-4. Similar recipe sharing sites created by other Code Institute peers (searched in the Slack channel peer-code-review) were examined. 
+To get some UX inspiration for MMÀ-Beauty, I researched other afro-carribean hair care supply/beauty supply websites online, such as
+1. [Carol's Daughter](https://www.carolsdaughter.com/)
+2. [Aunt Jackie’s](https://shop.auntjackiescurlsandcoils.com/)
+3. [SheaMoisture](https://www.sheamoisture.com/)
+3. [Love Afro Cosmetics](https://www.loveafrocosmetics.com/)
+4. [FitBeads](https://fitbeads.co/)
+5. [Natural Wigs](https://naturalgirlwigs.com/products/afro-kinky-clip-ins)
+6. [Toffieshop](https://www.toffieshop.com/)
+7. [TheLipBar](https://thelipbar.com/)
 
-To gain a design understanding of what these sites have in common and how Ayo Recipes can improve their own service by addressing the problems associated with recipe sharing sites. According to research, these sites appeared to be a bit overwhelming and were packed with a lot of information that bombarded the user as to where to start, potentially leading to users abandoning the site.
+To gain a design understanding of what these sites have in common and how MMÀ can improve their own products and services by addressing the issues associated with hair supply websites. 
 
-Ayo Recipes is a fun modern recipe sharing platform that considers the aforementioned issues. The site has been evenly spaced and kept clean in order for the user to easily navigate through the various pages without feeling overwhelmed. The admin manages the site's information, which is regularly updated to keep it up to date and to ensure that the UX is consistent across all pages and that all links work
+According to research, there aren't many hair supply stores that cater to Afro-Caribbean hair in Europe, with a particular emphasis on Ireland. The afro Caribbean hair supply market is underserved in Europe, with only a few players.
+
+Most Afro Caribbean hair products are sold in America and Africa, providing an opportunity for MMÀ to enter the European market and cater to the needs of our Afro Caribbean sisters who would love to have the right natural products for their hair locally.
+
+MMÀ is a modern Afro hair care supply ecommerce store that was founded to meet the needs of Afro – Caribbean hair. The store specialises in providing users with genuine natural products that can help strengthen and restore the lusciousness of their hair. The site has been kept clean, with neutral colours that represent the skin tone of the underrepresented, in order for them to feel connected to the brand/for the brand to resonate with them.
+
 
 ## **DESIGN**   
-### **Color Scheme**   
-The colours used in the design of Ayo Recipes were created using the [Adobe Color site](https://color.adobe.com/search?q=recipe&t=term). The colours were handpicked and researched to ensure that they communicated to our users subconsciously. 
+### **Color Scheme**  
+The colours used in the design of MM were obtained from the [Adobe Color website](https://color.adobe.com/search?q=recipe&t=term). The colours were inspired by the skin tone and hair of people of Black African descent in order to provide them with a sense of belonging and representation in order to build trust with our brand and stimulate their curiosity by using aesthetically pleasing images that catch our users' attention and provide a welcoming safe hair care environment. 
 
-[Jen David](https://jenndavid.com/colors-that-influence-food-sales-infographic/) has provided us with a colour chart that can influence your gourmet industry business and has been used in the colour selection for Ayo Recipes. The colours reflect the Ayo Recipes brand in order to build trust with users and stimulate their taste buds by using bright colours (yellow and orange) to catch our users' attention and brown/white to give it a warm, welcoming, and clean look. <br/>
-![The color scheme](static/images/readme/colorpalette.png "The color scheme")  
+   ![The color scheme](readme-files/readme/color-pallete.png "The color Pallete")  
 
 ### **Typography**  
-The fonts were sourced from .   
-The [Google Fonts](https://fonts.google.com) Dancing Script and Poppins are used on the website to ensure consistency and to give the site a distinct and friendly look similar to other recipe sharing websites. The two fonts are appealing to our target audience, and a backup font has been included called sans-serif
+The [Google Fonts](https://fonts.google.com) Belleza and Source sans Pro were chosen for their delicate and feminine nature to give the site a friendly clean minimalist design. A backup font has also been included sans-serif.
 
 ### **Imagery**  
-The photos on the site were obtained from a free image provider [Unsplash](https://unsplash.com/), and the recipe images were obtained from bbcgoodfood, Yummly, and epicurious. 
+The photos on the site were obtained from [Carol's Daughter](https://www.carolsdaughter.com/), [Aunty Jackie's](https://shop.auntjackiescurlsandcoils.com/),[Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/), [NaturalCurly](https://naturalgirlwigs.com/products/afro-kinky-clip-ins) and [Sheamoisture](https://www.sheamoisture.com/).
 
-The photographs depict modern cuisine dishes that can be prepared in the comfort of one's own home. The images' purpose is to attract users' attention to the Ayo Recipe website, where they can login/register to create their own recipes.
+Photoshop was used to create the brand logo as well as the background image on the homepage. 
+
+The photographs show women proudly wearing their afro-textured hair, demonstrating to users that their natural hair can grow as long as western hair if properly cared for. The purpose of the images is to draw users' attention to our natural hair care website, where they can shop for and view natural hairstyles..
 
 ### **Wireframes**
 The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
