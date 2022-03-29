@@ -77,6 +77,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <!--Wishlist -->
+                    {% if request.user.is_authenticated %}
                     <li class ="list-inline-item">
                         <a class="nav-link text-black" href="{% url 'favorites' %}">
                             <div class="text-center">
@@ -85,6 +86,7 @@
                             </div>
                         </a>
                     </li>
+                    {% endif %}
 
                     <!--User profile -->
                     <li class="list-inline-item dropdown">

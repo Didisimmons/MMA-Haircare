@@ -103,10 +103,11 @@ As an Admin User, I want to:
 4.	Be able to edit , delete and update any recipes listed on the site.
 
 #### **TARGET AUDIENCE**
-- Those looking for festive recipes to make. 
-- People who appreciate the ease of ordering food via technology and social media. 
-- Individuals who are willing to post their own recipes on the internet.
-- Individuals who are interested in food and enjoy cooking. 
+- People looking to buy natural hair products for 3a, 3b, 3c, 4a, 4b, and 4c hair types. 
+- Individuals looking for new natural hairstyles to wear on a daily basis 
+- Individuals who want to learn more about Afro-textured hair products 
+- People of colour aged 16 to 50.
+
 
 ### **RESEARCH**   
 To get some UX inspiration for MMÀ-Beauty, I researched other afro-carribean hair care supply/beauty supply websites online, such as
