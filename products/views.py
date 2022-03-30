@@ -70,7 +70,8 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
-    profile = None
+    reviews_from_user = ProductReview.objects.filter(product=product,
+                                                     user=request.user)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -81,6 +82,7 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
+        'reviews_from_user': reviews_from_user,
         'form': form,
         'profile': profile
     }
