@@ -1,10 +1,10 @@
-                    {% if reviews.count %}
-                        <p class="pt-2 pb-2 text-center color-pink text-capitalize"> Thank you for leaving a Review.</p>
+                    {% if reviews_from_user %}
+                        <p class="pt-2 pb-2r text-center color-pink text-capitalize"> Thank you for leaving a Review.</p> 
                     {% else %}
-                        <a class="text-center add-review color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
-                            <span class="text-capitalize"> ( Add a Review ) </span>
-                        </a>  
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <a class="text-center add-review color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
+                        <span class="text-capitalize"> ( Add a Review ) </span>
+                    </a> 
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     {% endif %}
 
 
@@ -32,7 +32,3 @@
         </div>
     </div>
 </div>
-
-<!-- <a class="text-center add-review pt-2 color-pink" data-toggle="modal" data-target="#modaladdreview{{ product.id }}">
-    <span class="text-uppercase">Leave a review</span>
-</a> -->
