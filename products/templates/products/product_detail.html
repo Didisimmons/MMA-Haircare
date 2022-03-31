@@ -28,8 +28,8 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details text-center mb-5 mt-md-5">
-                    <h3 class="">{{ product.name }}</h3>
-                    <p class="lead font-weight-bold">€{{ product.price }}</p>
+                    <h3 class="color-pink">{{ product.name }}</h3>
+                    <p class="lead text-black font-weight-bold">€{{ product.price }}</p>
                     {% if product.rating %}
                         <small class="rating rating-detail"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
@@ -37,8 +37,10 @@
                     {% endif %}
                     <a class="add-wish admin-btn" href="{% url 'add_favorites' product.id %}">
                         <div class="text-center add-wish">
-                            <div><i class="fas fa-heart fa-lg hvr-grow"></i></div> 
-                            <p class="my-0 d-none d-lg-block">Add to Wishlist</p>
+                            <div>
+                                <i class="fas fa-heart fa-lg hvr-grow"></i>
+                                <p class="my-0 d-none d-lg-block">Add to Wishlist</p>
+                            </div>  
                         </div>
                     </a>
                     {% if product.category %}
@@ -56,7 +58,7 @@
                             {% with product.has_sizes as s %}
                                 {% if s %}
                                     <div class="col-12">
-                                        <p class="pt-2"><strong>Size:</strong></p>
+                                        <p class="pt-2 text-black"><strong>Size:</strong></p>
                                         <select class="form-control rounded-0  mx-auto w-25" name="product_size" id='id_product_size'>
                                             <option value="s" selected>S -8oz</option>
                                             <option value="m">M -16oz</option>
@@ -65,7 +67,7 @@
                                     </div>
                                 {% endif %}
                                 <div class="col-12">
-                                    <p class="mt-3"><strong>Quantity:</strong></p>
+                                    <p class="mt-3 text-black"><strong>Quantity:</strong></p>
                                     <div class="form-group mx-auto w-50">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -152,7 +154,7 @@
                           </div>
                       
                           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
+                            <div class="card-body color-pink">
                                 {{ product.description }}
                             </div>
                           </div>
@@ -166,7 +168,7 @@
                             </h5>
                           </div>
                           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
+                            <div class="card-body color-pink">
                              {{ product.usage }}
                             </div>
                           </div>
@@ -180,7 +182,7 @@
                             </h5>
                           </div>
                           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
+                            <div class="card-body color-pink">
                               {{ product.ingredients }}
                             </div>
                           </div>
