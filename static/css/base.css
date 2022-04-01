@@ -734,6 +734,11 @@ a.add-review:hover{
         margin-top: 14rem;
         margin-bottom: 28rem;
     }
+
+    .profile-footer{
+        padding-bottom: 8rem;
+        padding-top: 3rem;
+    }
 }
 
 @media (min-width: 992px) {
