@@ -1,6 +1,6 @@
-# **MMÁ - Haircare**
+# **MMÁ**
 
-![overview of MMÁ Haircare on all devices](static/readme/images/general-overview.png)
+![overview of MMÁ on all devices](static/readme/images/general-overview.png)
 
 MMÁ which means “Beauty” is an Irish hair supply shop that was launched successfully in Black History Month to celebrate and cater to the needs of the  Afro – Caribbean hair. 
 
@@ -461,6 +461,8 @@ These apps are
 
    * [Adobe Color](https://color.adobe.com/): This was used to select the site's colour scheme.
 
+   * [TinyPNG](https://tinyjpg.com/): This is an image compressor that is used to compress all images.
+
 
 # **Testing**  
 The testing documentation can be found [here](). 
@@ -871,7 +873,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 # **Credits**  
 ### **CONTENT**  
-1. The design of the site was inspired by research on black beauty websites such as [LipBar](https://thelipbar.com/), [Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/) [BlackBeautyCosmetics](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/) and another code institute peer’s website [Jira](https://jiira.herokuapp.com/). 
+1. The design of the site was inspired by research on black beauty websites such as [LipBar](https://thelipbar.com/), [Loveafrocosmetics](https://www.loveafrocosmetics.com/africas-best-37-c.asp) , [Kiyo Beauty](https://www.kiyobeauty.com/) and [BlackBeautyCosmetics](https://blackbeautybombshells.com/40-actual-4c-natural-hair-hairstyles/)
 
 2. The code from Code Institute's "Boutique Ado" Full stack framework with Django was primarily used as a reference and guide for developing the MMÀ ecommerce store using the following: HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage.
 
@@ -905,4 +907,4 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
    * The tutor support team for their assistance and helpful problem-solving guidelines.
 <br/> 
 
-[Back to top &uarr;](#mma-haircare)  
+[Back to top &uarr;](#mma)  
