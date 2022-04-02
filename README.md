@@ -182,7 +182,7 @@ The entire site's wireframe can be found below. This depicts the site on a deskt
 * [Wireframe for Side Nav](static/images/readme/tablet-view.png)
 * [Wireframe for View Each Category](static/images/readme/view-category-wireframe.png)
 * [Wireframe for Delete Category](static/images/readme/delete-category-wireframe.png)
-* [Wireframe for Tips & Tricks](static/images/readme/wireframe-for-tips-page.png)
+* [Wireframe for About Page](readme-files/readme/wireframes/aboutpage.png) 
 * [Wireframe for Login](static/images/readme/login-page.png)
 
 
