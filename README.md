@@ -74,38 +74,58 @@ The site has been designed to be extremely user-friendly in order for the user t
 
 #### **Business Goals** 
 As the site owner I want to :
-1.	Create a visually appealing site that users are able to interact with and perform all the CRUD functions. 
-2.	Create a highly intuitive website that promotes brand awareness and is user friendly.
-3.	Be able to collect data from various users once they register/login to assist with more business informed decisions. 
-4.	Attract new users to the site to  boost online traffic.
+1.	Create a visually appealing site that is responsive on all devices, promotes brand awareness, and is easy to use . 
+2.	Be able to manage the site (add, modify, and delete products).
+3.	Prevent fraudulent activities by ensuring  that a secure payment system for the user is implemented on the site.
+4.	Attract new users to the site to boost online traffic.
 
 ### **USER STORIES**
 #### **NEW USER**
-As a new/ unregistered user, I want to:
-1.	Easily understand the purpose of the site and how it works 
-2.	View all the recipes available with directions on how to prepare and cook the recipe. 
-3.	Easily search for recipes and be able to view the full details of the recipe interested in.
-4.	Easily locate the call to action buttons on the site to allow the user either register or Sign up .
+As a new/ unregistered shopper, I want to:
+1. Quickly grasp the  purpose of the site. 
+2.	Navigate the site easily to explore all of the site's features, such as product search. 
+3.	View all of the products available on the site and be able to view each product individually to learn more about it. 
+4.	Navigate the menu items to find products in various categories and other sections of the website.  
+5.	Be able to sort products by price, brand or rating.
+6.	Be able to add items to my shopping bag for purchase. 
+7.	Be able to view my shopping bag with products for purchase. 
+8.	View the total of my shopping cart at any time on the site to ensure I am not spending more than I intended.
+9.	Easily checkout as a guest user without having to create an account, and receive an order confirmation once I have completed your purchase.. 
+10. Be able to read product reviews for products. 
+11. Join their community to stay up to date on afro textured hair products and information.. 
+12. Be able to find information about their return policies, FAQs, shipping and returns, and so on.
+13. Receive an email confirming my purchase. 
+14. Perform functions such as adding items to cart, editing the shopping cart, or deleting an item from the shopping cart, I would like to receive real-time useful feedback..
+15. Be able to personalise my shopping experience, I should be able to sign up on the website and save my information in my profile for future purchases.
+16. Locate the website's social media handles quickly to confirm their authenticity and build trust in the brand.
+17. Be  able to enter my payment information without difficulty during checkout, and the payment system is secure and safe. 
+
 
 #### **REGISTERED USER OR RETURNING USERS**
-As a returning/ registered user, I want to:
-1.	Easily Log In into my profile dashboard to explore recipes made by me.
-2.	Easily search for recipes either by recipe name or the recipe category.
-3.	Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
-4.	Easily edit my personal profile in case changes are needed. 
-5.	Be able to order recipes online.
+As a returning/ registered shopper, I want to:
+1.	Be able to access all of the functionalities that an unregistered user/shopper can.
+2.	Receive an email confirming the creation of my account after. registering. 
+3.	Easily Log in to my profile dashboard to view personal information like my default address and order history.
+4.	Easily Log out from my profile. 
+5.	Be able to recover my password if I forget it, to access my profile.
+6.	Be able to easily add product items to my Wishlist while browsing the website's products.
+7.	Be able to view my wishlist items and delete them when they're no longer needed.
+8.	Be able to add reviews for products purchased.
+9.	Be able to edit a review that has already been posted for a product in order to update its content.
+10. Be provided with real-time useful feedback when I perform functions such as adding a review, adding items to a wishlist, deleting items from a wishlist, and so on.Be able to update  my personal information such as default delivery address in my profile 
+
 
 #### **ADMIN USER**
 As an Admin User, I want to:
-1.	Be able to do all the functionalities assigned to a registered user .
-2.	Restrict access for certain features that can only be accessed by the admin 
-3.	Add, Edit, or Delete the category of recipes present.
-4.	Be able to edit , delete and update any recipes listed on the site.
+1.	Be able to perform all of the functions assigned to a registered user
+2.	Restrict access to certain features, such as product management (add, edit, and delete products) and review deleting.
+3.	Be able to access the admin portal in order to view all orders and users.
+
 
 #### **TARGET AUDIENCE**
 - People looking to buy natural hair products for 3a, 3b, 3c, 4a, 4b, and 4c hair types. 
-- Individuals looking for new natural hairstyles to wear on a daily basis 
-- Individuals who want to learn more about Afro-textured hair products 
+- Individuals looking for new natural hairstyles to wear on a daily basis.
+- Individuals who want to learn more about Afro-textured hair products.
 - People of colour aged 16 to 50.
 
 
@@ -202,200 +222,301 @@ These apps are
 ## **Existing Features** 
 
 ### **GENERAL FEATURES ON ALL PAGES :**  
-   - Each page is fully responsive on all pages and has been designed to be extremely user-friendly.
+   - **Fully Responsive**: Each page is fully responsive across all devices and has been designed to be user-friendly and intuitive.
 
-   - **Navigation Bar** - On all pages of Ayo Recipes, there is a fully responsive navigation bar. When the brand logo in the upper left corner is clicked, it takes the user to the homepage. The menu items on the left collapse to a hamburger icon when the width of the website is reduced to a smaller device, such as a mobile device. The user can easily click the icon to view Ayo Recipes' side nav bar and swipe left to hide it.
-      * When a guest user visits the site, they will notice the following menu items at the top right: (Recipes, Create Recipes, Login, Register ) 
-      * Members who are logged in can access the following menu items: (Recipes, Profile, Tips & Tricks, Logout), which allow them to create, edit, and delete recipes as well as receive discounts on kitchenwares.
-      * When an admin user logs in, they see the same menu items as registered users, but there is an additional menu item that states "Manage categories.".
+   - **Navigation Bar** - There is a fully responsive navigation bar on all pages of MMÀ-Beauty. 
 
-   - **Flash Messages** - When a user performs a basic CRUD function, flash messages appear on all pages to provide feedback on the action they performed. 
+      When the navbar is reduced to a small device (minimum width 320px), it transforms into a hamburger icon. It is also sticky, so the user can scroll down the page while still accessing the navbar menu items. Above the navigation bar on all pages, a promotional banner alerts the user to discounts that can be used when purchasing products on the site.
+      
+      The search bar is placed in the centre of the navigation bar to allow users to simply search for products  throughout the site.The brand logo is placed in the upper left corner, and when clicked, the user is directed to the homepage.
 
-   - **Recipe Card containers** - Throughout the site, recipe card containers have been used to display the recipe image, name, and description in an orderly and appealing manner. The user can view more information about the recipes by clicking on the images in the card
+      * When unregistered users access the site, they will see the following menu items on the right side (my account & shopping bag). The account menu link is a drop down link that, when clicked, allows the user to sign in or register for an MMÀ account.  
+          ![navbar unregistered user](readme-files/readme/pic1.png "navbar for unregistered user") 
 
-   - **Footer** - The footer section contains Ayo Recipes' social media handles, where users can learn more about them in order to build trust with the brand and confirm business legitimacy. It also includes some additional links to cooking-related information.
+      * Members who are logged in will see the following menu items on the right side (wishlist, myaccount & shopping bag). The account menu link is a dropdown menu that, when chosen, allows the user to view their profile or logout.
 
-   - **Defensive back-end programming** - There has been some back-end defensive programming to prevent users from accessing pages/functions that they are not permitted to access. For example, when a user views a single recipe, they cannot see the " ORDER NOW " button but can see the "BACK" button; however, if the user registers/logs in, they can see the "ORDER NOW" button if they are viewing a recipe that was not created by them.  
+           ![navbar registered user](readme-files/readme/pic2.png "navbar for registered user")
+      
+      * There are five navigation links under the search bar and top menu items that lead the user to different categories, products, and areas of the page.
+          ![navbar for menu links](readme-files/readme/pic3.png "navbar for menu links")
 
-   - **Modal** - A modal appears on some pages for the user to perform the delete functionality.
+      * When an admin user logs in, they see the same menu items as registered users, but an additional menu item "Manage products" is added to the my account dropdown menu link, allowing the user to execute basic CRUD activities.
+
+          ![navbar menu manage products](readme-files/readme/pic4.png "navbar menu manage products")
+
+   - **Toast Messages** - When a user performs a simple activity, such as adding things to their shopping list, they are given the essential feedback on   whether their action was successful or not. 
+
+      These are color-coded messages that appear on all pages to provide feedback to users on the action they took. Red indicates error messages, green indicates success messages, yellow indicates caution messages, and blue indicates alert messages. 
+
+      For example, if a user adds an item to their shopping bag, a success message shows, as shown below. If the user selects to remove a product from their basket, they will receive an alert, as seen below.
+      
+      ![toast messages](readme-files/readme/pic5.png "toast messages")
+      ![toast messages](readme-files/readme/pic6.png "toast messages")
+
+ 
+
+   - **Custom Error Messages** - Custom error messages for 403,404, and 500 errors are available to improve the user experience if the user experiences any undesirable issues. If an error occurred, these pages would redirect the user to the home page. For example
+
+      ![custom error messages](readme-files/readme/pic7.png "custom error messages")
+
+   - **Footer** - This contains MMÀ social media accounts, where users may discover more about them and create trust with the brand. It also provides links to shipping and return policies, Terms of service, and so on, as well as a button that allows users to join the MMÀ community.
+
+      ![footer](readme-files/readme/pic8.png "footer")
+
+   - **Defensive back-end programming** - There has been some back-end defensive programming to prevent users from accessing pages/functions that they are not authorised to access. For example, when a user registers into their profile, they can see a "add a review “link, which when clicked opens a modal allowing the user to post a review. 
+
+      ![add review](readme-files/readme/pic9.png "add review") 
+   
+      Once added, they will receive a "thank you message" and will be limited to only one review per product. The user can amend their review, but they cannot add another review.
+         ![thank you for leaving a review ](readme-files/readme/pic10.png "thank you for leaving a review") 
+   
+      If the user logs out, they can see their review but cannot update it unless they login by clicking on “Leave a review”.
+         
+      ![leave a review ](readme-files/readme/pic11.png "leave a review") 
+
+   - **Modal** - On some sites, a modal appears to allow the user to conduct basic operations such as adding and editing reviews. When the admin user wants to conduct any delete functionality, a popup appears to verify their action.
+
+
 
 ### **FEATURES OF EACH PAGE**     
 
-   - **Home Page**
+   #### **1. Home Page**
 
-      The hero image is located beneath the responsive navigation bar and serves to draw the user's attention. The header text has a zoom in effect that welcomes the user to the site, as well as a static tag line text that is visually appealing. 
+   ![homepage MMÀ ](readme-files/readme/pic12.png "homepage MMÀ") 
 
-      Under the header is a festive container with a brief summary of Ayo Recipes and three recipe containers with the highest star-rated recipes.
+   To grab the user's attention, the hero picture is situated beneath the responsive navigation bar and occupies the whole view port height and width. 
+   
+   The site has been kept clean to ensure that users can easily navigate it while interacting with it. The header phrase, which welcomes the user to the site, is put in the centre of the left side of the image. 
 
-      The recipe containers allow the user to view the various categories of recipes available on the site. The user can view each recipe by clicking on any of the category names. 
+   A call to action button is located beneath the header phrase  and, when clicked, directs the user to the product page.
 
-      Following the categories section, the user can scroll down to see where they can buy cheaper kitchen decors that make cooking much easier. 
-      <br/>
+   <br/>
 
-   - **Recipes Page**   
-     * **Search Bar** : There is a search bar in the centre of the hero image header. The search bar allows the user to look up any recipe name or category.   
-     * **Search Icon** : The search icon button allows the user to query their search, which leads to the results of the user's query 
-     * **Clear Button** : The clear button resets the search query, allowing the user to return to the database's list of recipes rather than a search.  
-     * **Recipe Cards** : In alphabetical order, the recipe cards display all of the recipes created by our registered users. The user can view more information about any of the recipes by clicking on them.  
-     * **Back Button** : A back button is present at the bottom of the recipes page. This is placed before the footer to allow the user to return to the home page if they want to interact with another page.   
+   #### **2. Products Page**
+
+   ![products page MMÀ ](readme-files/readme/pic13.png "products page MMÀ") 
+
+   The  page begins with an enticing quotation from Trace Ellis Ross, which is positioned beneath the responsive navigation bar to bring the user's attention to the purpose of the MMÀ website. 
+
+   Under the enticing quotation is a welcoming statement that tells the consumer that MMA would offer them with the products they need to assist with their Afro-textured hair. 
+
+   The products  available at MMA-Beauty is displayed beneath the welcoming  statement. The products are shown in a card container that includes the product name, price, rating, add to wishlist icon, category tag, and “view details" button.
+
+   If the user selects "all products" from the navbar menu link, they will see the actual number of products listed at MMÀ at the top of the products offered.
+
+   ![total number of products on page MMÀ ](readme-files/readme/pic14.png "total number of products on page MMÀ")
+
+   However, if the user selects any of the categories from the navbar menu link, when the page reloads on the left side, the user will see the total products for each category, along with a link to return to the all products page. Kindly see the following:
+
+   ![total number of products on page MMÀ ](readme-files/readme/pic15.png "total number of products on page MMÀ")
+
+   On the right side of the products listed, there is also a sort drop-down box that allows the user to easily sort the products on the page by price, rating, name, and category.
+
+   When the user hovers over the add to wishlist icon, which is a heart, in the product card container, the border line for the icon changes colour. When the button under the add to wishlist icon is clicked, it takes the user to the product details page. 
+
+   On a large screen, the products are presented in four columns, three columns on a medium screen, and one column on a small screen. 
+
+   There is a "return to top arrow" button at the bottom right hand corner of the page that takes the user back to the top of the page for all pages.
+
+   ![back to top arrow ](readme-files/readme/pic16.png "back to top arrow")
+
+   <br/>
+
+   #### **3. Register Page**  
+   ![register page ](readme-files/readme/pic17.png "register page")
+
+   This page allows the user to register with MMÀ. In order for the user to register an account, they must submit the following information:
+   - Confirm Email 
+   - Username
+   -  Password
+   
+   **Sign Up  Button** : All of the above fields must be completed in order for the button to take the user to the verification page, where the user must verify their email address by clicking on the link delivered to their email. 
+
+   After clicking the link and verifying their email address, the user will be able to login to their new account and browse the website.  
   
    <br/>
 
-   - **Create Recipe/Login Page**
-      - This displays a card form container with the following information: 
-         * **Input Fields**: This enables the user to enter the information required to log into their account, such as (username and password). 
-         * **Login Button** : To login to their profile, the user must complete all required fields, and once completed, it logs the user into their profile.
-         * **Register Here Link** : If the user does not have an account with Ayo Recipes, there is a link under the card form container that redirects the user to the register page.
+  #### **4. Login Page** 
+  ![login page ](readme-files/readme/pic18.png "login page")
+
+  This page allows the user to sign in to their previously created account. To log back in, the user must provide their username and password.
+
+   **Sign In  Button** : If the user already has an account, a " SIGN IN " button appears beneath the input fields and, when clicked, takes the user to the home page. 
    
    <br/>
 
-   - **Register Page**
-      * A card container is also included, as are some mandatory input fields. The following inputs would be required from the user:
-         - Full Name  
-         - Username
-         - Password 
-         - Confirm Password
-         - Phone Number 
-         - Email
-         - About yourself
-      * **Sign Up Button** : All of the above fields must be filled out in order for the button to take the user to their profile once registered . 
-      * **Log In Link** :If the user already has an account, there is a "LOGIN" link under the card container that takes them to the login page. 
+   #### **5. Product Detail Page** 
+   ![login page ](readme-files/readme/pic20.png "login page")
+
+   The page displays a larger image of the product and offers the viewer with more extensive product information. 
+   - It includes the following elements: the product image, name, price, rating, add to Wishlist icon, category tag, quantity buttons, and shopping buttons. 
+
+   - If the user does not want to buy an item right away, they can add it to their wishlist. 
+
+   - The user can enter the quantity of product required in the quantity box or use the buttons alongside the box to increase or decrease the quantity 
+   
+   - If the user is an administrator, they will be able to see the edit & delete link under the buttons to either edit or delete the product. 
+   
+      ![edit & delete button ](readme-files/readme/pic19.png "edit & delete button ")
+
+   - Under the buttons is an accordion that, when clicked, provides further information about the product such as specifications, usage instructions, and ingredients. 
+
+   - The user can browse product reviews  at the bottom of the page. If the user is logged in, he or she can either add a review or amend their own review.
 
    <br/>  
 
-   - **Profile Page**
-   
-      * When a user logs in or registers with Ayo Recipes, they are taken to their profile page and greeted. 
-      * **Header Image** : A header image containing the user's username is present in a card container at the top of the page.
-      A profile container with the user's personal information is located beneath the header image. The information displayed on the profile is the information provided by the user when they registered.
-      * **Buttons** :To perform any of their desired functions, the user can click on any of the buttons under the profile details: "CREATE A RECIPE" or "UPDATE A PROFILE."
-      The user can view all of the recipes that have been created by clicking on the buttons. If no recipes are present, the user will see the message "No recipes added yet“.
+   #### **Reviews**
+   The review section is located beneath the product details and displays all of the product's reviews. If the user is not registered, they will see the message "Leave a review" under the reviews header.
+
+   ![leave a review ](readme-files/readme/pic21.png "leave a review")
+      
+   If the user is registered, they will see the message "Add a review" under the reviews header, which when clicked brings up a modal for the user to fill out. For example, if I am logged in as "cairo", 
+
+   ![add review ](readme-files/readme/pic22.png "leave a review")
+
+   If I  have already written a review, I would  receive a thank you message for submitting a review. By clicking on the edit link, I can also edit their review.
+
+   ![Thank you for leaving a review ](readme-files/readme/pic23.png "Thank you for leaving a review ")
 
    <br/>
  
-   - **Edit Profile Page**
-      * When a user logs in to their profile, they can access this page. When the user clicks on the "UPDATE PROFILE LINK," they will see the following pre-populated input fields.The input fields can be edited and must be filled out in order for the user profile to be updated. The fields are as follows:
-         - Username
-         - Phone Number
-         - About me 
-         - Email
-     * **Buttons** : There are two buttons under the edit profile form that either update the profile or redirect the user back to the profile page.  
+   #### **6.Wishlist Page** 
+
+   ![Wishlist page ](readme-files/readme/pic24.png "Wishlist page ")
+
+   This page displays all of the items that the user has added to their Wishlist. The product image, name, price, product details button, and delete button are all displayed on the page. The page is designed similarly to the bag page. 
+
+   By clicking the "product details" button, the user may simply return and view additional information about the product in case they need to refresh their minds on the product choice, or they can opt to delete an item from their wishlist by clicking the remove button.
 
    <br/>
 
-   - **Create A Recipe Page**  
-     * When the user clicks the "CREATE A RECIPE" button, the user is taken to an add recipe form, which the user must complete. The following fields must be completed: 
-       - Recipe Name 
-       - Recipe Description 
-       - Insert Ingredients
-       - Recipe Directions
-       - Recipe time
-       - Recipe category 
-       - Is vegetarian 
-       - Recipe image_url : If the user has a link to the recipe image, they can enter it in the provided space.
-       -	Recipe rating 
+   #### **7.Shopping Bag Page** 
 
-     * **Buttons** : The form includes two buttons under the input fields: "SUBMIT" and "CANCEL." When the submit button is pressed, the user's profile is updated with a new recipe, whereas when the cancel button is pressed, the user is redirected back to their profile page.  
-     
+   ![shopping bag page ](readme-files/readme/pic25.png "shopping bag page ")
+
+   The bag page displays all of the products that the customer has put to their shopping bag for  purchases. Displaying the grand total price of the products and, if applicable, the shipping fee. This page is designed similarly to the user's wishlist page.
+
+   It includes the product image, name, SKU, price, quantity, and subtotal, which is calculated by multiplying the product quantity by the price.By clicking on the “Update” link, the user can change the quantity of their products in their shopping bag, or they can remove the item from their bag by clicking on the “Remove” link .
+
+   To focus the user's attention to the pricing and delivery price information, some bold text relating to the total of the products is located at the bottom of the shopping bag contents on the right side. 
+
+   Under the grand total price of the products, there is a call to action button that, when clicked, takes the customer to the checkout page. If the consumer changes their mind, they can return to the all products page by clicking the "keep shopping" button.
+ 
    <br/>
 
-   - **Single Recipe Page**  
+   #### **8.Checkout Page**
 
-      When a user clicks on one of the recipe cards, they are taken to a single recipe page that contains all of the information for the individual recipes. 
+   ![checkout page ](readme-files/readme/pic26.png "checkout page") 
 
-      When a guest user views this page, they will notice a "BACK" button in the middle of the page content, which will take them to the login page.
+   This page displays the checkout form that will be used to process the user's order, as well as the user's order details. 
 
-      When registered users view single recipes that were not created by them, they will notice the "ORDER NOW" button in the middle of the page, which will take them to another site where they can conveniently order the meal if they do not feel like preparing the recipe being viewed.
+   The checkout form is divided into three sections: the user's personal information (name, email), delivery information (shipping address), and payment information (card details).
 
-      For registered users  viewing recipes created by them they can see two action buttons at the middle of the page. The two buttons are “EDIT RECIPE” & “DELETE RECIPE” .When the user clicks on the delete recipe button a modal appears to ask the user if they are sure of their action. If yes , the user can delete the recipe and if no, the user can click cancel and return back to the single-recipe page .  
+   Under the delivery information input areas, there is a save delivery checkbox that allows the user to save their delivery information to their profile in case of a future purchase on the site, making it easier for the user's future purchases. 
 
-      The admin user has access to all of the buttons that are available to registered users who have created recipes. The admin user has the ability to edit and delete recipes created by registered users as well as create new recipes.
-
-      * **Back Button** : Under the single recipe content, there is a back button that allows the user to return to the recipes page.
+   The order summary information, which includes the product name, price, quantity, and subtotal, is also displayed here.
    
    <br/>
 
-   - **Edit Recipe Page** 
+   #### **9.Checkout Success Page**
 
-      * When a user clicks the "EDIT RECIPE" button, they are taken to the edit recipe page, which contains pre-populated input fields for the previously created recipes. Some of the pre-populated input fields, such as the following , can be edited.
-         - Recipe Name 
-         - Recipe Description 
-         - Insert Ingredients
-         - Recipe Directions
-         - Recipe time
-         - Recipe category 
-         - Is vegetarian 
-         - Recipe image_url : The user can update their recipe image
+   ![checkout page ](readme-files/readme/pic27.png "checkout page")
 
-      * **Button** : Once the fields have been correctly filled out, the user can click on either the "EDIT RECIPE" or "CANCEL" buttons. When the "EDIT RECIPE" button is clicked, the recipe information is updated, and when the "CANCEL" button is clicked, the user is returned to the single recipe page.
-    
+   This page shows a summary of the user's confirmed order that was successfully processed at the checkout page. 
+
+   The order summary details, such as the order number, total price, and product names, are available to the user. The user can also examine the order's shipping information as well as the billing total for their debit card. 
+
+   Under the order summary information is a "Continue Shopping" call to action button that takes the user back to the all products page. 
+   
+
+   #### **10.Profile Page**
+
+   ![profile page ](readme-files/readme/pic28.png "profile page")
+
+   This page is only accessible if the user registers for an account on the website. The page includes the user's delivery information as well as their order history. 
+
+   The user can also edit their delivery address on their profile by filling out the delivery contact form and clicking "update information." 
+
+   The user can also view their order history, which includes the order number, order dates, order item, and subtotal. If the user wants to view the order summary information given on the checkout success page for each order, they can do so by clicking on the order number, which takes them to the confirmed order successfully processed.
+
    <br/> 
 
-   - **Tips & Tricks Page**
-      Tips & Tricks Page This page provides the user with everyday kitchen hacks that can be used to make the cooking process as simple as possible. The tips aspect has been divided into three sections, each with a brief summary of how the user can deal with the situation. Providing users with discount codes that can be used to purchase a variety of kitchenware hack items.
-    
-<br/>
+   #### **10. Manage Products Page (only available to admin)** 
 
-   - **View Category Page**(Admin)  
-     When a guest or registered user visits Ayo Recipes and navigates to the 'Browse our categories' section, they can click on the images or category names to view all of the recipes in that category.
+   ![manage products page ](readme-files/readme/pic29.png "manage products page")
 
-      When a user visits the page, a header image with the Category name and a brief description of the category appears.
+   This page can only be seen by the site's Admin user. When an administrator logs in and clicks on the My account menu link, a dropdown list displays, from which the administrator can choose the menu item "Manage Products." 
 
-      If there are recipes in the category clicked, the user can see the recipe cards below the header image, but if there are none, the user sees the message "No category results found."
+   When the administrator clicks this link, they are taken to the add products page, which displays a form that allows them to add products to the website. The admin user would need to fill out the following fields on the form:
+   * Product Category 
+   *	SKU
+   *	Product Name ( mandatory) 
+   *	Product Description 
+   *	Product Usage
+   *	Product Brand 
+   *	Has sizes 
+   *	Product Ingredients 
+   *	Product Price
+   *	Product Rating 
+   *	Product Image Url 
 
-     * **Button** : There is a back button at the bottom of the recipe card that, when clicked, takes the user back to the home page.  
+   **Button** : Once the fields have been correctly filled out, the admin user can choose between clicking "ADD PRODUCT" or "CANCEL." When the "ADD PRODUCT" button is hit, a new product is added to the MMÀ database and may be viewed when searched. When the "CANCEL" button is clicked, the admin is returned to the all products page.
    
    <br/>
 
-   - **Manage Categories** (only available to admin)  
-     This page is only accessible to the site's Admin user. When an administrator logs in, they will notice the "MANAGE CATEGORY" option among the menu line items. 
+   #### **11. Edit Products Page (only available to admin)**   
+   This page is only accessible to admin users and may be accessed by clicking on the edit link located beneath the "add to bag" button on the product description page. When an admin user hits the edit link, they are taken to the "Edit Product" page, which provides a pre-populated form with the following information: 
+      * Product Category 
+      *	SKU
+      *	Product Name ( mandatory) 
+      *	Product Description 
+      *	Product Usage
+      *	Product Brand 
+      *	Has sizes 
+      *	Product Ingredients 
+      *	Product Price
+      *	Product Rating 
+      *	Product Image Url
 
-      When the user clicks, they can see all of the categories that are currently available in our recipe database, which is represented by a card container. The category name and two buttons are included in the card container. The admin user can either "EDIT" or "DELETE" the category using the buttons. 
+   By clicking on the "update product" button, the admin can change the information in these input areas to their desire. If the fields are presently filled in and the user hits the "Update Product" button to update the data, the user will be routed to the product detail page of that product, which will display the updated data. If the admin changes their mind after modifying the product details, they can return to the all product page by selecting the "CANCEL" button.
 
-   <br/>
-
-   - **Add Category Page** (only available to admin)  
-     There is a 'ADD CATEGORY " button at the bottom of the manage category page that allows the admin to add new categories for the users. This takes the admin user to a new page where they must enter the following information:
-       - A category Name
-       -	Category description
-   
-      Before the admin user can add the category, these fields must be correctly filled out. If the admin user fills out the form correctly, he or she can click the "ADD CATEGORY" button, and the category will be added and the admin user will be redirected back to the manage category page.
-
-      If the admin user does not want to add a new category, they can simply click the "BACK" button to return to the manage category page.
-
-   <br/>
-
-   - **Edit Category Page** (only available to admin)  
-     The admin can change the category by clicking the "EDIT" button on the manage category page. When the button is pressed, the user is taken to the edit -category page, which contains a pre-populated form with the category name and description. 
-
-      The admin user can update the pre-populated data, and once the fields are properly filled, the user can click the "Update category" button to update the data and return to the manage category page. If the user changes their mind after editing the category information, they can return to the manage category page by clicking the other button "CANCEL.
+   ![edit button products page ](readme-files/readme/pic30.png "edit button products page")
 
    <br/>
 
-   - **Delete Category Page** (only available to admin)  
-     To delete a category, the user can simply click the "DELETE" button on the manage category page. When the admin user clicks this button, a modal appears asking the user to confirm their action.  The user can delete the category name and description from the manage - category dashboard by clicking the delete button. If the answer is no, the user can cancel and return to the manage-category page.
+   #### **Delete Products Page (only available to admin)**
 
-   <br/>  
+   This function is only accessible to admin users and can be found on the product detail page, next to the edit button. 
+
+   To delete a product, simply click the "DELETE" link, and a popup appears asking the user to confirm their action. If the admin user wants to delete the product, they can do so by clicking the delete button and being redirected to the all products page. If the administrator changes their mind, they can cancel the popup and return to the product detail page.
+
+   ![delete modal on products page ](readme-files/readme/pic31.png "delete modal on products page ")
+
+   <br/> 
+
+   [Back to top &uarr;](#mma)
 
 ### **FEATURES TO IMPLEMENT IN FUTURE**  
 
-1. Forgot password functionality: This would allow users to change their passwords if they forgot them without having to create a new account each time they forgot their password. 
+*  **More payment methods** : Currently, the user may only purchase with Stripe, however in order to improve the user's shopping experience, new payment options should be included so that the customer is not limited to one payment method. The consumer should be able to pay with Apple Pay, Klarna, or buy now pay later alternatives. 
 
-2. Pagination : As the number of recipes in the database grows, pagination should be added to the recipes and view category pages for a better user experience. 
+*  **Inventory management** : We are currently working under the assumption that these products are always readily available, but in a real ecommerce store, that would not be the case. As a result, it would be nice if a stock management function was added to inform the user if a product is low on stock or if a product has been sold out. By not wasting the user's time, this improves the purchasing experience.
 
-3. A save recipe function that allows registered users to save recipes created by other members to their profile would be ideal. The saved recipes would appear on the registered user's profile alongside recipes created by them.
+*  **Coupons** : When the user is about to enter their delivery and payment information on the checkout page, they should be able to add coupons to the order total to receive a discount on their purchase.
 
-4. Profile picture: When a user creates an account, there should be a dropdown of images from which the user can choose an Ayo Recipes profile image. When the image is selected and the user is logged in, the profile image and the user's name should appear at the top of the profile page.
+*  **Order tracking** : When a user logs in to their profile, they can see their order history; however, it would be a better user experience if the user could click on the order number and view the order tracking process, such as whether the product has left the warehouse, is with the shipping courier, or has arrived at the desired delivery address. This improves the user experience by assuring users that their order has been received and is on its way to them within the timeframe specified.
 
-5.  The admin user should be given more powers, such as the ability to manage user information by editing or deleting it.
+*  **Connecting social networking apps** : It would be easier for the user if they could login from their social media accounts, as everyone these days is on their phone, which would improve the user's experience. The company can also collect data analytics from consumers in order to better understand their customers and make more informed judgments.
 
-6. A public profile page where registered users can view information about other members as well as recipes they've created. Users should be able to leave reviews on each other's profile pages if any of the recipes they created have been attempted.
+*  **A public profile pages** : A page on which registered users can view information about other registered members who have left a product review . This allows the user to make a more informed decision about purchasing the product. However, registered users will not be able to see the delivery address and subtotal spent on purchasing products of other registered users. Rather, they should be able to see all of the user's reviews as well as the products that have those reviews.
 
-7. An e-cart that allows users to order recipes directly from the page rather than through a third-party link. On their profile page, registered users can post recipes and sell food items.
+*  **Create a Salon app** : The app would provide information on where to find experienced Afro hair braiders in Dublin/Ireland. Users can easily purchase products and book an appointment with one of the experienced Afro hair stylists through the website. This provides users with a smooth hair shopping experience because it is difficult for people of colour to find the right people to handle their hair. This removes the user's uncertainty and provides more reassurance to the user.
+
+* Add a direct third-party booking app to the Salon App that allows registered users to book an appointment directly with an experienced Afro hair stylist. The booking app would be updated on a regular basis with available appointments to ensure that people have the opportunity to get their hair done on time and not have to wait weeks/months.
 
 <br/>   
   
-# **TECHNOLOGY USED**
+# **Technology Used**
 ### **LANGUAGE USED** 
    * [HTML5](https://en.wikipedia.org/wiki/HTML5)   
    * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)   
@@ -907,4 +1028,4 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
    * The tutor support team for their assistance and helpful problem-solving guidelines.
 <br/> 
 
-[Back to top &uarr;](#mma)  
+[Back to top &uarr;](#mmà)  
