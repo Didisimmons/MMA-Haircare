@@ -166,24 +166,24 @@ Photoshop was used to create the brand logo as well as the background image on t
 The photographs show women proudly wearing their afro-textured hair, demonstrating to users that their natural hair can grow as long as western hair if properly cared for. The purpose of the images is to draw users' attention to our natural hair care website, where they can shop for and view natural hairstyles..
 
 ### **Wireframes**
-The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
+The entire site's wireframe can be found below. This depicts the site on a desktop , tablet and mobile device indicating when the screen view differs.
 
-* [Wireframe for Home Page](static/images/readme/homepage-wireframe.png)   
-* [Wireframe for Products Page](readme-files/readme/wireframes/productpage.png)   
+* [Wireframe for Home Page](readme-files/readme/wireframes/homepage.png) 
+* [Wireframe for Home Page for Unregistered User](readme-files/readme/wireframes/homepageforunregistereduser.png)   
+* [Wireframe for Products Page](readme-files/readme/wireframes/productpage.png)
+* [Wireframe for Products Page sorted by Category](readme-files/readme/wireframes/productpagewithcategory.png)    
 * [Wireframe for Product detail Page](readme-files/readme/wireframes/productdetail.png)
-* [Wireframe for Register Page](readme-files/readme/wireframes/registerpage.png)   
-* [Wireframe for Profile with recipes](static/images/readme/profile-with-recipe-wireframe.png)
-* [Wireframe for Profile without recipes](static/images/readme/profile-no-recipe-wireframe.png) 
-* [Wireframe for Edit Profile](static/images/readme/edit-profile-wireframe.png)  
-* [Wireframe for Add Recipe](static/images/readme/add-recipe-wireframe.png)   
-* [Wireframe for Edit Recipe ](static/images/readme/edit-recipe-wireframe.png)
-* [Wireframe for Manage Categories](static/images/readme/wireframe-for-managecategories.png)
-* [Wireframe for Edit Category](static/images/readme/edit-category-wireframe.png)
-* [Wireframe for Side Nav](static/images/readme/tablet-view.png)
-* [Wireframe for View Each Category](static/images/readme/view-category-wireframe.png)
-* [Wireframe for Delete Category](static/images/readme/delete-category-wireframe.png)
-* [Wireframe for About Page](readme-files/readme/wireframes/aboutpage.png) 
-* [Wireframe for Login](static/images/readme/login-page.png)
+* [Wireframe for Product detail Page with Sizes](readme-files/readme/wireframes/productdetailwithsize.png)
+* [Wireframe for Register Page](readme-files/readme/wireframes/signuppage.png)
+* [Wireframe for Login Page](readme-files/readme/wireframes/signinpage.png)    
+* [Wireframe for Profile](readme-files/readme/wireframes/profilepage.png)
+* [Wireframe for Shopping Bag](readme-files/readme/wireframes/shoppingbag.png)
+* [Wireframe for Edit Product Page](readme-files/readme/wireframes/editproductpage.png)
+* [Wireframe for Add Product Page](readme-files/readme/wireframes/addproductpage.png)   
+* [Wireframe for Wishlist Items](readme-files/readme/wireframes/wishlistpage.png)
+* [Wireframe for About Page](readme-files/readme/wireframes/aboutpage.png)
+* [Wireframe for Checkout Page](readme-files/readme/wireframes/checkoutpage.png)
+* [Wireframe for Checkout Success Page](readme-files/readme/wireframes/checkoutsuccesspage.png)
 
 
 ### **Database Structure** 
