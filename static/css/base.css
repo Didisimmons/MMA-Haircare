@@ -766,6 +766,11 @@ a.add-review:hover{
         margin-bottom: 13rem;
     }
 
+    .about-image{
+        padding-top:9rem;
+        
+    }
+
 }
 
 
@@ -782,6 +787,11 @@ a.add-review:hover{
 
     .tag-line{
         font-size:1rem;
+    }
+
+    .about-image{
+        padding-top:1rem;
+        
     }
 
 
