@@ -1,6 +1,6 @@
 # **MMÁ**
 
-![overview of MMÁ on all devices](static/readme/images/general-overview.png)
+![overview of MMÁ on all devices](readme-files/readme/overview.png)
 
 MMÁ which means “Beauty” is an Irish hair supply shop that was launched successfully in Black History Month to celebrate and cater to the needs of the  Afro – Caribbean hair. 
 
