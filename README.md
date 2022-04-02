@@ -169,9 +169,9 @@ The photographs show women proudly wearing their afro-textured hair, demonstrati
 The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
 
 * [Wireframe for Home Page](static/images/readme/homepage-wireframe.png)   
-* [Wireframe for Recipes Page](static/images/readme/wireframe-recipes-page.png)   
-* [Wireframe for Individual Single Recipe Page](static/images/readme/single-view-recipe.png)
-* [Wireframe for Register Page](static/images/readme/register-wireframe.png)   
+* [Wireframe for Products Page](readme-files/readme/wireframes/productpage.png)   
+* [Wireframe for Product detail Page](readme-files/readme/wireframes/productdetail.png)
+* [Wireframe for Register Page](readme-files/readme/wireframes/registerpage.png)   
 * [Wireframe for Profile with recipes](static/images/readme/profile-with-recipe-wireframe.png)
 * [Wireframe for Profile without recipes](static/images/readme/profile-no-recipe-wireframe.png) 
 * [Wireframe for Edit Profile](static/images/readme/edit-profile-wireframe.png)  
