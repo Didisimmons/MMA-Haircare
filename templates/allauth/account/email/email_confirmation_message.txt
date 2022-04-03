@@ -4,7 +4,7 @@
 {% autoescape off %}
 {% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
 
-Hi from {{ site_name }}!
+Hello from {{ site_name }}!
 
 Please note you are receiving this e-mail because we would like {{ user_display }} to confirm their email address to login to their new account. 
 
