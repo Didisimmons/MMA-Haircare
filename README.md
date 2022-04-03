@@ -95,7 +95,7 @@ As a new/ unregistered shopper, I want to:
 11. Join their community to stay up to date on afro textured hair products and information.. 
 12. Be able to find information about their return policies, FAQs, shipping and returns, and so on.
 13. Receive an email confirming my purchase. 
-14. Perform functions such as adding items to cart, editing the shopping cart, or deleting an item from the shopping cart, I would like to receive real-time useful feedback..
+14. Perform functions such as adding items to cart, editing the shopping cart, or deleting an item from the shopping cart, I would like to receive real-time useful feedback.
 15. Be able to personalise my shopping experience, I should be able to sign up on the website and save my information in my profile for future purchases.
 16. Locate the website's social media handles quickly to confirm their authenticity and build trust in the brand.
 17. Be  able to enter my payment information without difficulty during checkout, and the payment system is secure and safe. 
@@ -110,9 +110,9 @@ As a returning/ registered shopper, I want to:
 5.	Be able to recover my password if I forget it, to access my profile.
 6.	Be able to easily add product items to my Wishlist while browsing the website's products.
 7.	Be able to view my wishlist items and delete them when they're no longer needed.
-8.	Be able to add reviews for products purchased.
+8.	Be able to add reviews for products.
 9.	Be able to edit a review that has already been posted for a product in order to update its content.
-10. Be provided with real-time useful feedback when I perform functions such as adding a review, adding items to a wishlist, deleting items from a wishlist, and so on.Be able to update  my personal information such as default delivery address in my profile 
+10. Be provided with real-time useful feedback when I perform functions such as adding a review, adding items to a wishlist. 
 
 
 #### **ADMIN USER**

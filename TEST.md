@@ -206,140 +206,206 @@ The user can scroll down to the footer and click the Join now button to receive 
 
 At the bottom of the page the footer ,the user can view more information about the MMÀ policies
   
-![Footer on all pages](readme-files/readme/testing/test21.png "Footer on all pages")
+![Footer on all pages](readme-files/readme/testing/test22.png "Footer on all pages")
+
+13. Receive an email confirming my purchase.
+
+After the user has made their payment and been provided with an order summary page, they will be sent an email confirming the order has been processed.
+
+![email confirmation of order](readme-files/readme/testing/test23.png "email confirmation of order")
+
+
+14.	Perform functions such as adding items to cart, editing the shopping cart, or deleting an item from the shopping cart, I would like to receive real-time useful feedback.
+
+On the product detail page, the user can add an item to the bag by clicking on the buttons and receiving confirmation that the item has been added. They can also update the product quantity or remove an item from their shopping bag and receive feedback in their shopping bag. As the user interacts with the site, he or she will receive useful feedback. 
+
+![feedback notification for actions](readme-files/readme/testing/test24.png "feedback notification for actions")
+
+![feedback notification for actions](readme-files/readme/testing/test25.png "feedback notification for actions")
+
+If the user's shopping bag contains no items, the user will be notified.
+
+![shopping bag page with no products](readme-files/readme/testing/test15.png "shopping bag page with no products")
+
+
+15. Be able to personalise my shopping experience, I should be able to sign up on the website and save my information in my profile for future purchases.
+
+When a user is on the checkout page, entering their personal information and payment information, there is a link (login or create an account) under the delivery information input fields that allows the user to save their delivery information for future use.
+
+16.	Locate the website's social media handles quickly to confirm their authenticity and build trust in the brand.
+
+![social icons on footer](readme-files/readme/testing/test26.png "social icons on footer")
+
+17.	Be  able to enter my payment information without difficulty during checkout, and the payment system is secure and safe.
+
+When a user clicks the "secure checkout" button on the shopping bag page, they are directed to a checkout page with a secure payment system (Stripe). The user must enter their name, email address, delivery address, card number, CVC, and expiry date.
+
+![payment system on checkout page](readme-files/readme/testing/test27.png "payment system on checkout page")
 
 
 #### **Registered User Goals** 
 As a returning/ registered user, I want to:
-1.	Easily Log  into my profile dashboard to explore recipes made by me.
+1. Be able to access all of the functionalities that an unregistered user/shopper can.
 
-When a user arrives at the home page, he or she can either register to create a profile or log in by clicking on any of the menu options shown in the image above. When a user logs in, they are taken to their profile, where they are greeted, as shown below. When the user is a guest, the menu bar looks different.
+When a registered user logs into their account, they can see all of the pages that an unregistered user can see, as well as access to Wishlist items from the navbar, which unregistered users do not have. 
 
-![proifle greeting user](static/images/readme/test/fig10.png "proifle greeting user ")
+![navbar for registered user](readme-files/readme/testing/test28.png "navbar for registered user")
 
-If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See below.
+When the navbar collapses to a hamburger icon, the user can access the navbar items in the same way that an unregistered user would access the links.
 
-![add recipe in profile](static/images/readme/test/fig11.png "recipe in profile page ")
+![navbar for mobile](readme-files/readme/testing/test29.png "navbar for mobile")
 
-2.	Easily search for recipes either by recipe name or the recipe category.
+2.	Receive an email confirming the creation of my account after. registering. 
 
-When a user is logged in, they can view all of the recipes at Ayo Recipes by going to the homepage or the recipes page. 
-If the user wants to search for recipes by category names, they can easily do so by clicking on the images or category names on the index.html page.
+When a user registers to create an account with MM- Beauty, they are sent a confirmation email with a link to verify their email address in order to login to the new account.
 
-![browse categories](static/images/readme/test/fig12.png "browse categories in profile ")
+![email for creating new account](readme-files/readme/testing/test30.png "email for creating new account")
 
-This takes the user to the "view category.html" page, where they can see all of the recipes in that category.
+3.	Easily Log in to my profile dashboard to view personal information like my default address and order history.
 
-![view categories page](static/images/readme/test/fig13.png "view categories page ")
+When a user logs into their newly created account, they can access their profile by clicking the "my account" icon and then selecting "my profile," which takes them to their profile account. 
 
-The user can also view all of the recipes on the website by selecting the "recipes" menu option. The search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
+If the user has previously purchased an item from the site, they can view their default delivery address and order history. If they only created the account, the user would only be able to see the order history header and the empty fields for delivery address. 
 
-![No results found in the search engine](static/images/readme/test/fig14.png "No results found in the search engine")
+![profile page for new registered user](readme-files/readme/testing/test31.png "profile page for new registered user")
 
+If the user decides to change or remove the delivery address from their profile, they can update the information in their profile. 
 
-3. Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
+![profile page updated with no address](readme-files/readme/testing/test32.png "profile page updated with no address")
 
-When the user logs into their profile, two buttons appear under their personal information. These two buttons allow the user to "Create Recipe" or "Update Profile." When a user clicks the "Create Recipe" button, they are taken to the add recipe page, where they can add a new recipe. If the user clicks the submit button, the recipe is saved to their profile; if the user clicks the "Cancel" button, they are returned to their profile page. 
+If they buy something, they will be able to see the delivery address used for their most recent purchase and  order history items. 
 
-![add recipe](static/images/readme/test/fig15.png "add recipe")
+![profile page address and order history ](readme-files/readme/testing/test33.png "profile page address and order history")
 
-Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the image below.
+4. Easily Log out from my profile. 
 
-![add recipe to profile](static/images/readme/test/fig16.png "add recipe to profile")
+The user can log out by clicking on the "my account" icon and selecting "logout" from the dropdown menu.
 
-To learn more about the recipe, the user can click on the recipe card, which takes them to the single-recipe.html page.
+![my account icon drop down menu ](readme-files/readme/testing/test34.png "my account icon drop down menu")
 
-![view single recipe created by user](static/images/readme/test/fig17.png "view single recipe created by user ")
+When a user clicks the logout link, they are directed to the account logout page, where they are asked to confirm that they want to sign out of the page. 
 
-When the user views the recipe they created, they will notice the "EDIT" and "DELETE" recipe buttons, allowing them to perform either function. When a user clicks the "EDIT" button, they are taken to the "edit-recipe.html" page, which displays a form field with prepopulated data containing the recipe details. When finished, the user can update the fields of their choice by clicking the "Update Recipe" button. If they want to cancel the update, they can do so by clicking the "CANCEL" button and then being diverted back to the single -recipe page.
+![sign out confirmation page ](readme-files/readme/testing/test35.png "sign out confirmation page")
 
-![edit recipe created by user](static/images/readme/test/fig18.png "edit recipe created by user ")
+If the user chooses to continue, they will be easily logged out of their account and will receive an alert.
 
-If the user changes the fields and then clicks the "Update Recipe" button, a flash message appears and the user is redirected back to their profile page, with a feedback at the top.
-
-![flash message for update ](static/images/readme/test/fig19.png "flash message for update")
-
-If a user wants to delete a recipe, they can do so by clicking the "DELETE" button on the single-recipe page. When the button is clicked, a modal appears asking the user to confirm their action.
-
-![modal for delete ](static/images/readme/test/fig20.png "modal for delete")
-
-The user can confirm their decision to delete the recipe by clicking the "DELETE" button, or they can return to the single recipe page by clicking "CANCEL." If the delete button is pressed, the recipe is deleted, and the user is notified that their action was successful.
-
-![recipe deleted feedback ](static/images/readme/test/fig21.png "recipe deleted feedback ")
+![logout notification to user  ](readme-files/readme/testing/test36.png "logout notification to user")
 
 
-4. Easily edit my personal profile in case changes are needed.
+5. Be able to recover my password if I forget it, to access my profile.
 
-The user can update their personal information in their profile by clicking on the "UPDATE PROFILE" button, which takes them to the edit-profile page. The edit-profile page contains the user's prepopulated data, allowing the user to easily make changes to any fields.
+On the login page, the user can click the "forgot password" link, which is located beneath the sign in button. If the user clicks the button, they are taken to the password reset page, where they must enter the email address they used to register in order to receive the forgot password link.
 
-![edit profile](static/images/readme/test/fig22.png "edit profile ")
-
-After updating the fields, the user can either click "UPDATE PROFILE" or "CANCEL." If the user clicks the "UPDATE PROFILE" button, they will receive confirmation that their action was successful.
-
-![profile updated ](static/images/readme/test/fig23.png "profile updated ")
-
-If the user does not want to update their profile information, they can click the "CANCEL" button and be taken back to their profile page, which displays all of the recipes they have created.
+![password reset page ](readme-files/readme/testing/test37.png "password reset page")
 
 
-5. Be able to order recipes online.
+6. Be able to easily add product items to my Wishlist while browsing the website's products.
 
-If the user is registered or has an account with Ayo Recipes, they can order recipes online. After logging into their profile and visiting the home page, the user can see the "ORDER NOW" button by clicking on any of the recipes created by other users. This takes the user to a third-party site where they can order the recipe takeaway directly. 
+On the products page, the user can click the heart icon to add a product to their Wishlist basket while remaining on the products page. 
 
-![view single recipe created by other users](static/images/readme/test/fig24.png "view single recipe created by other users")
+![add to wishlist icon ](readme-files/readme/testing/test38.png "add to wishlist icon")
 
-If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different.
+On the product detail page, the user can also click the add to Wishlist link or the heart icon, and the item will be added to their Wishlist basket and notified. When a product is added, the user is returned to the all product page.
+
+![add to wishlist icon on product detail page ](readme-files/readme/testing/test39.png "add to wishlist icon product detail page")
+
+7.	Be able to view my wishlist items and delete them when they're no longer needed.
+
+When a user clicks the wishlist icon in the navbar, they are taken to their wishlist basket, which displays all of their favourite items. 
+
+![ wishlist icon on navbar ](readme-files/readme/testing/test40.png " wishlist icon on navbar")
+
+This display allows the user to either remove the desired item from the basket or view additional product information. Either of the actions is simple for the user to carry out.
+
+![ wishlist basket for user ](readme-files/readme/testing/test41.png " wishlist basket for user")
+
+
+8.	Be able to add reviews for products.
+
+As the user scrolls down the product detail page, they can view reviews about the product, if there are any. If there are no reviews, the user will be given the option to "Add a review." 
+
+![ add review for registered user ](readme-files/readme/testing/test42.png "add review for registered user")
+
+When the link is clicked, a pop-up modal appears, prompting the user to enter their review and rating. 
+
+![ add review pop up modal ](readme-files/readme/testing/test43.png "add review pop up modal ")
+
+When the user clicks submit, they will receive a feedback message thanking them for leaving a review. The user can also make changes to their review.
+
+![ thank you review message  ](readme-files/readme/testing/test44.png "thank you review message")
+
+
+9.	Be able to edit a review that has already been posted for a product in order to update its content.
+
+When a user leaves a review for a product, a thank you message appears above the reviews. The registered user can only edit their review, and they can only add one review per product. The edit modal appears when the user clicks the edit button. 
+
+![ edit review pop up modal ](readme-files/readme/testing/test45.png "edit review pop up modal ")
+
+After editing, the user would receive the necessary feedback. 
+
+![ edit review edited on product detail page ](readme-files/readme/testing/test46.png "edit review edited on product detail page ")
+
+
+10. Be provided with real-time useful feedback when I perform functions such as adding a review, adding items to a Wishlist, deleting items from a Wishlist, and so on.
+
+As the user performs basic functions on the site, he or she will receive feedback. This notifies the user of their actions.
+
+![ feedback notification for user](readme-files/readme/testing/test47.png "feedback notification for user")
+![ feedback notification for user ](readme-files/readme/testing/test48.png "feedback notification for user")
+
 
 #### **Admin User Goals**
 As an Admin User, I want to:
 
-1.	Be able to do all the functionalities assigned to a registered user.
-
-When an administrator logs into Ayo recipes, they see the same menu navigation bar as a registered user. The admin user has access to all recipes and can search for them. Like a registered user, the admin user can create a recipe and edit their profile.
-
-![admin profile ](static/images/readme/test/fig25.png " admin profile")
-
-The buttons that appear for a user who created a recipe appear on the single -recipe page when the admin user wants to view each recipe card to see more information about each recipe. All recipes created by users can be edited and deleted by the admin user. The recipe below, for example, was created by a user named "Heidi," and the admin user has access to all functions as Heidi.
-
-![admin user viewing single recipe page ](static/images/readme/test/fig26.png " admin user viewing single recipe page")
-
-2. Restrict access for certain features that can only be accessed by the admin. 
-
-When the admin user logs in to Ayo Recipes, they can see all of the menu items that the registered user can see, but there is an additional menu item "MANAGE CATEGORIES" that is only available to the admin user. 
-
-![menu bar for admin user ](static/images/readme/test/fig27.png " menu bar for admin user")
-
-The admin user also has access to all recipes created by users, allowing the admin user to edit or delete each recipe's information.
+1.	Be able to perform all of the functions assigned to a registered user
+When logged in as the admin user, I would see all of the navbar items that the registered user would see, which are easily accessible. I can look through the products page, search for products, leave a review, and edit a review.
 
 
-3. Add, Edit, or Delete the category of recipes present.
+2.	Restrict access to certain features, such as product management (add, edit, and delete products) and review deleting.
 
-When an administrator logs into Ayo Recipes, the menu item "MANAGE CATEGORIES" allows the administrator to add a new category, edit existing categories, and delete any unwanted categories.
+The user can easily access the "manage products" link on the navbar by clicking on the my account icon.
 
-![manage category page ](static/images/readme/test/fig28.png " manage category page")
+![ manage products link on navbar ](readme-files/readme/testing/test49.png "manage products link on navbar")
 
-When the admin clicks the "ADD CATEGORY" button, the user is taken to the add-category page, where the admin can enter the category name and description.
- 
-![add new category page ](static/images/readme/test/fig29.png " add new category page")
+This takes the user to the add product form, where they can add products to the MMÀ database. 
 
-The category would be added to the manage-category page if the user clicked the "ADD CATEGORY" button.
+![ add product form ](readme-files/readme/testing/test50.png "add product form")
 
-![new category added displaying flash message ](static/images/readme/test/fig30.png "new category added displaying flash message")
+The user can return to the all products page by clicking the cancel button, and to add a product, the user must click the "add product" button.
 
-If the admin user wants to delete the newly added category, they must click the "DELETE" button, which will open a modal asking the admin user to confirm their action. 
+![ add product button  ](readme-files/readme/testing/test51.png "add product button")
 
-![delete category ](static/images/readme/test/fig31.png "delete category")
+The admin user can navigate to the product detail page to access the  edit link which when clicked directs the admin user to the edit form. 
 
-The new category would be removed once the admin user confirms their action and clicks the delete button.
+![ edit product button  ](readme-files/readme/testing/test52.png "edit product button")
 
-![ category deleted with feedback ](static/images/readme/test/fig32.png "category deleted with feedback")
+The edit product form automatically populates the product data. 
+
+![ edit product form ](readme-files/readme/testing/test53.png "edit product form")
+
+The user can update the new information by clicking the "update product" button and being directed to the product detail page, or they can cancel and be directed back to the all products page. 
+
+![ update product button ](readme-files/readme/testing/test54.png "update product button")
+
+The admin user has the ability to delete reviews left by other users. 
+
+![ add review with delete link ](readme-files/readme/testing/test55.png "add review with delete link")
+
+The admin user has the ability to add a review as well as delete their own review.
+
+![ admin user leaving a review with delete and edit link  ](readme-files/readme/testing/test56.png "admin user leaving a review with delete and edit link")
+
+When an admin user attempts to delete a review or a product, a modal appears asking them to confirm their action. This prevents the admin from accidentally deleting an item. 
+
+![ pop up modal for delete review](readme-files/readme/testing/test57.png "pop up modal for delete review")
+
+![ pop up modal for delete product](readme-files/readme/testing/test58.png "pop up modal for delete product")
+
+3. Be able to access the admin portal in order to view all orders and users. 
+
+The admin user can access the Django admin site to manage the site's orders and products.
 
 
-4. Be able to edit , delete and update any recipes listed on the site.
-
-When an admin user logs into their profile, they can see the same buttons that a registered user sees, which are "create recipe" and "edit profile." 
-The admin user has the ability to create new recipes as well as edit existing recipes on the website that were created by other users. The admin user has the ability to delete all of the recipes created by different users.
-
-![ single recipe page ](static/images/readme/test/fig33.png "single recipe page")
 
 
 ### **MANUAL TESTING**
