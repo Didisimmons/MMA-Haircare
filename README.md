@@ -151,7 +151,7 @@ MMÀ is a modern Afro hair care supply ecommerce store that was founded to meet 
 
 ## **DESIGN**   
 ### **Color Scheme**  
-The colours used in the design of MM were obtained from the [Adobe Color website](https://color.adobe.com/search?q=recipe&t=term). The colours were inspired by the skin tone and hair of people of Black African descent in order to provide them with a sense of belonging and representation in order to build trust with our brand and stimulate their curiosity by using aesthetically pleasing images that catch our users' attention and provide a welcoming safe hair care environment. 
+The colours used in the design of MMÀ were obtained from the [Adobe Color website](https://color.adobe.com/search?q=recipe&t=term). The colours were inspired by the skin tone and hair of people of Black African descent in order to provide them with a sense of belonging and representation in order to build trust with our brand and stimulate their curiosity by using aesthetically pleasing images that catch our users' attention and provide a welcoming safe hair care environment. 
 
    ![The color scheme](readme-files/readme/color-pallete.png "The color Pallete")  
 
@@ -187,7 +187,7 @@ The entire site's wireframe can be found below. This depicts the site on a deskt
 
 
 ### **Database Structure** 
-The database schema for MM was created using [Diagram.io](https://dbdiagram.io/home) and was derived from the app models. The screenshot shows the schema, which depicts the relationship between the apps. The user can only have one user profile and add items to their Wishlist. The available categories have a one-to-many relationship with the product.
+The database schema for MMÀ was created using [Diagram.io](https://dbdiagram.io/home) and was derived from the app models. The screenshot shows the schema, which depicts the relationship between the apps. The user can only have one user profile and add items to their Wishlist. The available categories have a one-to-many relationship with the product.
  ![The database schema](readme-files/readme/databasechema.png " Database schema") 
  
 These apps are 
@@ -460,7 +460,7 @@ These apps are
    *	Product Rating 
    *	Product Image Url 
 
-   **Button** : Once the fields have been correctly filled out, the admin user can choose between clicking "ADD PRODUCT" or "CANCEL." When the "ADD PRODUCT" button is hit, a new product is added to the MMÀ database and may be viewed when searched. When the "CANCEL" button is clicked, the admin is returned to the all products page.
+   **Button** : Once the fields have been correctly filled out, the admin user can choose between clicking "ADD PRODUCT" or "CANCEL." When the "ADD PRODUCT" button is clicked, a new product is added to the MMÀ database and may be viewed when searched. When the "CANCEL" button is clicked, the admin is returned to the all products page.
    
    <br/>
 
