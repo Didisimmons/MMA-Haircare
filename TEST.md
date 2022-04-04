@@ -64,16 +64,19 @@
 <br/>
 
 #### **CSS**
-* [W3C CSS validation](https://jigsaw.w3.org/css-validator/): This is used to validate the CSS code used on all webpages created. Our code is found to be error-free by the validator.
+* [W3C CSS validation](https://jigsaw.w3.org/css-validator/): This is used to validate the CSS code that is used on all webpages . The validator finds our code to be error-free.
 
-![css_validation](readme-files/readme/testing/homepage.png) 
+ ![css validation for base.css](readme-files/readme/testing/cssvalidation.png)
+
+ ![css validation for checkout.css](readme-files/readme/testing/cssvalidationcheckout.png)
 
 <br/>
 
 #### **JAVASCRIPT**
-* [JSHint validation ](https://jigsaw.w3.org/https://jshint.com/): This was used to validate the JavaScript and Jquery code used on Ayo Recipes to ensure that it was error-free. The script.js file was added to all pages, and the addscript.js file was added to the recipe add/edit page. It was discovered that some semi-colons were missing when this was first run. This was fixed by inserting the necessary semicolons.
+* [JSHint validation ](https://jigsaw.w3.org/https://jshint.com/): This was used to ensure that the JavaScript and Jquery code used on MMÀ was error-free. There were a few mistakes, such as missing semi-columns, which were corrected by inserting the necessary semicolons. 
+Stripe was one of the undefined variables. This variable is referenced by the function.
 
-![JSHint validation for script.js](static/images/readme/test/jshint-validation.png "JSHint validation for script.js")
+![JSHint validation for stripe_elements.js](readme-files/readme/testing/jscript.png "JSHint validation for stripe_elements.js")
 ![JSHint validation for addscript.js](static/images/readme/test/jshint-validation2.png "JSHint validation for addscript.js")
 
 <br/>
