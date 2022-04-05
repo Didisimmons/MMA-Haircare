@@ -53,11 +53,15 @@
 
 Some errors were discovered when we ran our product detail page through the validator. 
 
-![error foor modal](readme-files/readme/testing/prob2.png "error for modal")
+![error for modal](readme-files/readme/testing/prob2.png "error for modal")
+
+This was corrected by adding the aria-labelledby id to the h5 heading. When this was added, the errors were no longer visible.However some erros could still be found
 
 ![heading with spinner](readme-files/readme/testing/prob1.png "heading with spinner")
+The heading here was used to enlarge the spnner icon on the chekout page. 
 
-This was corrected by adding the aria-labelledby id to the h5 heading. When this was added, the errors were no longer visible.
+![error for shopping bag](readme-files/readme/testing/prob9.png "error for shopping bag") 
+The page still renders the hidden file, hence why it flags duplicate ID this was ignored. 
  
 * [Homepage](readme-files/readme/testing/htmlvalidation/home.png)
 * [Profile](readme-files/readme/testing/htmlvalidation/profile.png)
@@ -1014,4 +1018,6 @@ Some feedbacks were provided.
     ![New quantity box on product detail](readme-files/readme/testing/man55.png "New quantity box on product detail")
 
     ![New quantity box on shopping bag page](readme-files/readme/testing/man56.png "New quantity box on shopping bag page")
+
+    ![New quantity box on shopping bag page number centred](readme-files/readme/testing/centeredqty.png "New quantity box on shopping bag page number centred")
 
