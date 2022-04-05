@@ -103,7 +103,7 @@ Stripe was one of the undefined variables. This variable is referenced by the fu
 As a new/ unregistered user, I want to:
 1. Quickly grasp the  purpose of the site
 
-When a user arrives at the home page, the header image greets them and draws their attention to the site, keeping them interested. The user can easily navigate to the site's products by clicking on the "shop products" button. 
+When a user arrives on the home page, the header image greets them and draws their attention to the site, keeping them interested. The user can easily navigate to the site's products by clicking on the "shop products" button. 
 
    ![Home page for unregistered user](readme-files/readme/testing/test1.png "Home page for unregistered use")
 
@@ -115,7 +115,7 @@ The website was created with the goal of being extremely user-friendly. When a u
 
    ![feedback for unregistered user](readme-files/readme/testing/test3.png "feedback for unregistered use")
 
-The user can learn more about what MM is about and why it was created by clicking the "about" link in the navbar. This gives the user a better understanding of how to improve their Afro texture hair and how to style their hair. 
+The user can learn more about what MMÀ is about and why it was created by clicking the "about" link in the navbar. This gives the user a better understanding of how to improve their Afro texture hair and how to style their hair. 
 
    ![about page](readme-files/readme/testing/test4.png "about page")
 
@@ -128,7 +128,7 @@ The user can easily navigate to their desired page by clicking on any of the nav
 
 3.	View all of the products available on the site and be able to view each product individually to learn more about it.
 
-When a user clicks the "shop products" button on the home page, they are taken to the all products page, which displays all of the products in the MM database. On the navbar, there are three main categories: haircare, extensions, and accessories. When any of the categories is selected, subcategories within that category are displayed, directing the user to the various products available.
+When a user clicks the "shop products" button on the home page, they are taken to the all products page, which displays all of the products in the MMÀ database. On the navbar, there are three main categories: haircare, extensions, and accessories. When any of the categories is selected, subcategories within that category are displayed, directing the user to the various products available.
 
 ![navbar with selected category](readme-files/readme/testing/test5.png "navbar with selected category")
 
@@ -270,7 +270,7 @@ When the navbar collapses to a hamburger icon, the user can access the navbar it
 
 2.	Receive an email confirming the creation of my account after. registering. 
 
-When a user registers to create an account with MM- Beauty, they are sent a confirmation email with a link to verify their email address in order to login to the new account.
+When a user registers to create an account with MMÀ- Beauty, they are sent a confirmation email with a link to verify their email address in order to login to the new account.
 
 ![email for creating new account](readme-files/readme/testing/test30.png "email for creating new account")
 
@@ -417,11 +417,6 @@ When an admin user attempts to delete a review or a product, a modal appears ask
 3. Be able to access the admin portal in order to view all orders and users. 
 
 The admin user can access the Django admin site to manage the site's orders and products.
-
-
-
-
-
 
 ### **MANUAL TESTING**
 
@@ -735,7 +730,7 @@ Date: Future Date
 
      ![verify email address page](readme-files/readme/testing/man32.png "verify email address page") 
 
-4. Confirm that when a user registers for a new account at MMA, they will receive an email with a confirmation link that, when clicked, will take them back to the confirmation email page on the MMA website.
+4. Confirm that when a user registers for a new account at MMÀ, they will receive an email with a confirmation link that, when clicked, will take them back to the confirmation email page on the MMA website.
 
      When a user registers for an account with MMA on any device, a confirmation email is sent to the user. 
 
@@ -904,14 +899,16 @@ Date: Future Date
 
 4. Confirm that the admin user has permission to view and delete other user reviews. The admin should also be able to add reviews, edit their reviews, and delete reviews.
      When an admin user logs in, they can view reviews just like any other unregistered or registered user. When the admin clicks the add review link, a modal appears, allowing the admin to add a review. Once added, the administrator has access to the edit and delete links. If the user clicks the edit link, the edit review modal appears, just like it does for other users, allowing the administrator to make changes.
-        ![admin able to add review and delete other users review ](readme-files/readme/testing/man52.png "admin able to add review and delete other users review")
+
+     ![admin able to add review and delete other users review ](readme-files/readme/testing/man52.png "admin able to add review and delete other users review")
 
      When an admin user clicks the delete link, a modal window appears, asking the user to confirm that they want to perform the desired function. 
     
       ![delete review modal](readme-files/readme/testing/man53.png "delete review modal")
 
      When a user clicks the delete button, the product is removed and the user is notified.
-        ![delete review notification](readme-files/readme/testing/man53.png "delete review notification")
+     
+     ![delete review notification](readme-files/readme/testing/man53.png "delete review notification")
 
 <br/>
 
@@ -971,8 +968,6 @@ Some feedbacks were provided.
 
     ![overview of MMÁ on all devices](readme-files/readme/overview.png)
 
-4.  When manually testing all pages, it was discovered that some notifications, such as adding a review, editing a review, deleting a product, and editing a product, displayed the bag contents as they provided feedback to the user, which was a bit crowded and unnecessary because the user can still view the shopping bag total price from the navbar. To remove the contents of the bag, the message notification for these functions was changed.
-
 <br/>
 
 
@@ -1011,8 +1006,12 @@ Some feedbacks were provided.
 
      This new fix increased the visibility of the text for users ```color-pink: color:#dc3545)```.
 
-7
-#### **Unresolved Bug** 
-* On the register and login pages, the error shown below appeared, requesting that the autocomplete attribute be added to the input field. However, when this was added in accordance with the examples provided [here](https://goo.gl/9p2vKq), the problem persisted.
+4.  When manually testing all pages, it was discovered that some notifications, such as adding a review, editing a review, deleting a product, and editing a product, displayed the bag contents as they provided feedback to the user, which was a bit crowded and unnecessary because the user can still view the shopping bag total price from the navbar. To remove the contents of the bag, the message notification for these functions was changed.
 
-![ console error in login and register page ](static/images/readme/test/unresolved.png " console error in login and register page")
+5. Manual testing revealed that the quantity box on the shopping bag page allowed the user to order products in minus numbers. This was changed by modifying the shopping bag quantity form and removing the duplicated form from the bag.html file for larger devices. This modification had an impact on the design of the product detail page and the shopping bag page. This new fix allows the user to order items in positive numbers, and the decreases button is disabled when the user is down to one. 
+
+     When the new buttons are tested on the quantity box, they function as expected. The decrease button is disabled once the quantity is reduced to one.
+    ![New quantity box on product detail](readme-files/readme/testing/man55.png "New quantity box on product detail")
+
+    ![New quantity box on shopping bag page](readme-files/readme/testing/man56.png "New quantity box on shopping bag page")
+
