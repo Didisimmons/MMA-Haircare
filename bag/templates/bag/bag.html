@@ -94,37 +94,7 @@
                                             <p class="my-0">€{{ item.product.price }}</p>
                                         </td>
                                         <td class="py-3 w-25">
-                                            <form class="form update-form w-50 mx-auto" method="POST" action="{% url 'adjust_bag' item.item_id%}">
-                                                {% csrf_token %}
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <button aria-label="decrease" class="decrement-qty btn btn-sm decrement-qty_{{ item.item_id }}" 
-                                                                data-item_id="{{ item.item_id }}">
-                                                                <span>
-                                                                    <i class="fas fa-minus fa-sm"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                        <input class="form-control form-control-sm qty_input text-center id_qty_{{ item.item_id }}" type="number"
-                                                            name="quantity" value="{{ item.quantity }}" min="1" max="6"
-                                                            data-item_id="{{ item.item_id }}">
-                                                        <div class="input-group-append">
-                                                            <button aria-label="decrease" class="increment-qty btn btn-sm increment-qty_{{ item.item_id }}"
-                                                                data-item_id="{{ item.item_id }}" id="">
-                                                                <span>
-                                                                    <i class="fas fa-plus fa-sm"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                        {% if item.product.has_sizes %}
-                                                            <input type="hidden" name="product_size" value="{{ item.size }}">
-                                                        {% endif %}
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <a class="update-link text-info bag-btn"><small>Update</small></a>
-                                            <a class="remove-item text-danger bag-btn" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                            {% include "bag/quantity-form.html" %}
                                         </td>
                                         <td class="py-3">
                                             <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>

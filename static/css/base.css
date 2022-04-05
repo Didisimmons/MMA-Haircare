@@ -424,6 +424,9 @@ a.category-badge{
     color:#592715;
 }
 
+.qty-center{
+    margin: 0 auto;
+}
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
