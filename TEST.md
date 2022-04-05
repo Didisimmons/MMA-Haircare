@@ -20,16 +20,20 @@
    - [ADMIN USER GOALS](#admin-user-goals)  
     
 3. [Manual Testing](#manual-testing)   
-   - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
-   - [RECIPES PAGE](#recipes-page)   
-   - [LOGIN](#login-page)   
-   - [REGISTER PAGE](#register-page)  
-   - [SIDE NAVIGATION](#side-navigation)
-   - [TIPS & TRICKS](#tips-tricks-page)      
-   - [PROFILE](#profile-page)
-   - [ALL ADD FORMS](#all-add-forms)
-   - [ALL EDIT FORMS](#all-edit-forms)
-   - [ALL DELETE FORMS](#all-delete-forms)
+   - [HOMEPAGE](#homepage)   
+   - [PRODUCTS PAGE](#products-page)   
+   - [PRODUCT DETAIL PAGE](#product-detail-page)   
+   - [SHOPPING BAG PAGE](#shopping-bag-page)  
+   - [CHECKOUT PAGE](#checkout-page)
+   - [CHECKOUT SUCCESS PAGE](#checkout-success-page)
+   - [REGISTER PAGE](#register-page)     
+   - [PROFILE PAGE](#profile-page)
+   - [LOGIN PAGE](#login-page)
+   - [WISHLIST PAGE](#wishlist-page)
+   - [SIGN OUT PAGE](#sign-out-page)
+   - [ADD PRODUCT FORM](#add-product-form)
+   - [EDIT PRODUCT FORM](#edit-product-form)
+   - [DELETE MODAL](#deletemodal)
 
 4. [Defensive Programming](#defensive-programming)
 
@@ -45,21 +49,22 @@
 
 ### **VALIDATOR TESTING**
 #### **HTML**
-* [W3C Markup Validation](https://validator.w3.org/): This is also used to validate the HTML code for all newly created webpages. Our code was discovered to have some errors as a result of the jinja template used when you paste the direct html code. However, this was resolved by obtaining the source code by right-clicking on our page and selecting "View page source." The errors are removed when checked again. 
-* [Homepage](static/images/readme/html/homepage.png) 
-* [Profile](static/images/readme/html/profile.png) 
-* [Recipes](static/images/readme/html/recipes.png)  
-* [Tips & Trick](static/images/readme/html/tips&tricks.png)  
-* [Manage Categories](static/images/readme/html/manage-categories.png)  
-* [Add Category](static/images/readme/html/addcategory.png)  
+* [W3C Markup Validation](https://validator.w3.org/): This is also used to validate all newly created webpages' HTML code. Because of the django template used when you paste the direct html code, our code was discovered to have some errors. However, by right-clicking on our page and selecting "View page source," we were able to obtain the source code.
+
+Some errors were discovered when we ran our product detail page through the validator. 
+
+![error foor modal](readme-files/readme/testing/prob2.png "error for modal")
+
+![heading with spinner](readme-files/readme/testing/prob1.png "heading with spinner")
+This was corrected by adding the aria-labelledby id to the h5 heading. When this was added, the errors were no longer visible.
+ 
+* [Homepage](readme-files/readme/testing/htmlvalidation/home.png)
+* [Profile](readme-files/readme/testing/htmlvalidation/profile.png)) 
+* [All Product](readme-files/readme/testing/htmlvalidation/allproductspage.png)  
+* [Checkout Success Page](readme-files/readme/testing/htmlvalidation/checkoutsuccess.png)
+* [Product Detail Page](readme-files/readme/testing/htmlvalidation/productdetailpage.png)
 * [Edit Category](static/images/readme/html/edit-category.png) 
-* [Single-recipe](static/images/readme/html/single-recipe.png)  
-* [Login page](static/images/readme/html/login.png)
-* [Edit profile](static/images/readme/html/edit-profile.png)
-* [View_category](static/images/readme/html/view_category.png)
-* [Register](static/images/readme/html/register.png)
-* [Add Recipe](static/images/readme/html/addrecipe.png)
-* [Edit Recipe](static/images/readme/html/edit-recipe.png)
+* [Wishlist Item](readme-files/readme/testing/htmlvalidation/wishlistitem.png)
 
 <br/>
 
@@ -77,14 +82,17 @@
 Stripe was one of the undefined variables. This variable is referenced by the function.
 
 ![JSHint validation for stripe_elements.js](readme-files/readme/testing/jscript.png "JSHint validation for stripe_elements.js")
-![JSHint validation for addscript.js](static/images/readme/test/jshint-validation2.png "JSHint validation for addscript.js")
 
 <br/>
 
 #### **PYTHON**
-* [Pep8 Online validator](http://pep8online.com/): This was used to run our Python code in the app.py file to ensure that all errors were removed, such as whitespace, trailing whitespace, and so on. When this was run through the validator, it was discovered that there were some whitespaces that were removed. 
+* [Pep8 Online validator](http://pep8online.com/): This was used to run our Python code to ensure that all errors, such as trailing whitespace, were removed. When this was run through the validator, it was discovered that some whitespaces had been removed and that some variables had been flagged. Such as 
 
-![Pep8 Online validation](static/images/readme/test/pep8-validation.png "Pep8 Online validation")
+ - On the checkout /webhooks.py file the local variable 'e' is assigned to but never used which is used in our try block. 
+
+ - The following is marked as imported ```checkout.signals' imported but unused``` but unused in the checkout apps.py file, but it is used on the website.
+ 
+ - Long characters in the projects folder ```settings.py file (Line 136-145) ```have been ignored in order not to break the functionality line.
 
 <br/>
 
@@ -415,377 +423,484 @@ The admin user can access the Django admin site to manage the site's orders and 
 
 #### TESTING ALL FEATURES ON EACH PAGE 
 
-#### **HOMEPAGE AS A GUEST USER** 
+#### **HOMEPAGE** 
 
  1. Navigation bar 
 
-     1. Navigate to the Index page (Home) on a desktop by clicking the Ayo Recipes brand logo in the upper left corner. 
+    1. Navigate to the Index page (Home) on a desktop by visiting the website. 
 
-     2. Change the desktop's screen size to that of a tablet device to ensure that the navigation bar is responsive and changes to a hamburger icon as the screen width decreases to that of a tablet or mobile device. The navigation bar should be fixed, and menu items should be hidden in the side navigation bar that appears on medium to small devices.
+    2. Change the screen size of the desktop to that of a tablet device to ensure that the navigation bar is responsive and changes to a hamburger icon as the screen width decreases to that of a tablet or mobile device. Menu items should be hidden in the hamburger icon for medium to small devices, and the navigation bar should be sticky. 
 
-         When testing responsiveness across different devices, there was no overflow of the navbar. On a tablet and a mobile device, the navigation bar menu changed to a hamburger icon, and the menu items were displayed in the side navigation as expected. The menu items are in place, and the navigation bar is fixed, with the brand logo image in the centre.
+         When testing responsiveness across different devices, there was no overflow of the navbar. The navbar did not overflow when tested for responsiveness across multiple devices. The navbar functions as expected. 
+         
+         The navigation bar menu changes to a hamburger icon on a tablet or mobile device, with the menu icons appearing on the right side of the navbar. The user can access the page's five different navbar links by clicking the hamburger icon. The links in the navigation bar are centred and, when clicked, display the expected categories and subcategories. 
 
-    3. Hover your mouse over the navbar menu items and click on each link to ensure that you are taken to the correct page.
+        ![tablet navbar](readme-files/readme/testing/man1.png "Tablet navbar")
 
-          When tested on all devices, the menu links work as expected. The user is directed to the appropriate sites, which are recipes, login and the registration page for a guest user.
+        The navigation bar remains visible as the user scrolls down the page, allowing the user to.
 
-    4. Hover over the menu items to ensure that a white background box appears with a box shadow on the menu when the mouse is hovered.
+    3. Hover your mouse over the navbar menu items and icons, then click on each link to be taken to the correct page.
 
-         When testing the effect on a desktop device by hovering the mouse over the menu item in the navigation bar, the white backdrop appears with a box shadow when the mouse is hovered over the menu item.
+          The menu links work as expected across all devices when tested. The user is directed to the appropriate pages that display the various products and categories. When the user hovers over the menu icons and clicks them, a dropdown box for "my account" icon appears, allowing the user to access their profile or logout page, register/sign In page. When the various links are clicked, the user is directed to the appropriate page, as expected.
 
-    5. When you click on the Ayo Recipes logo, make sure it takes you to the home page. 
+          ![navbar unregistered user ](readme-files/readme/testing/man2.png "navbar unregistered user")
 
-         When tested on all devices by adjusting the screen width, the brand logo for Ayo Recipes actually takes the user to the home page when clicked.
+          ![navbar registered user ](readme-files/readme/testing/man3.png "navbar registered user")
 
-    6. On a tablet or mobile device, ensure that the Ayo Recipes Brand Logo is centred on the navigation bar.
+          ![navbar admin user ](readme-files/readme/testing/man4.png "navbar admin user")
 
-         When the device's screen width is reduced to that of a tablet or mobile device, the Ayo Recipes Brand Logo is centred on the navigation bar, as expected.
+    4.	Make sure the banner is at the top of the navigation bar and that it is responsive on all devices. 
 
-    7. Change the screen size to that of a tablet or mobile device and verify that the side navigation appears when the user clicks the hamburger icon. The menu items should be displayed in the side navigation. Additionally, ensure that the menu links from the hamburger icon have a background overlay when hovered over and that they all lead to the appropriate pages.
+         When tested on all devices, the banner appears at the top of the navigation bar and adjusts to different screen sizes. The banner does disappear as the user scrolls down the page, and the user can only see the navigation bar as they interact with other sections of the page.
 
-         When the width of the navigation bar is changed to that of a tablet device, the hamburger icon appears as expected. When you click the hamburger icon, a side navigation bar menu appears, displaying the menu links. When hovered, the menu links have a white background overlay and link to the appropriate pages when clicked. The menu items have been centred to improve the appearance of the navigation bar on a tablet and mobile device. When the image brand logo is also clicked, the user is taken to the homepage. 
+    5. Hover the mouse over the menu items to ensure that a white underline appears and that the menu item text expands when hovered. The font colour       should change when the mouse is hovered over a menu icon.
 
-         ![ side navigation ](static/images/readme/test/fig34.png "side navigation")
+         When tested on a desktop device by hovering the mouse over the menu item in the navigation bar, the text expands with a white underline. The same effect occurs on tablets and mobile devices. When the user hovers the mouse over the menu icons in the navigation bar, the font colour changes to white, as expected on all devices.
+
+    6. On a desktop screen, confirm that when the MMÀ logo is clicked, the user is directed to the home page.
+
+         The stated effect occurs on a desktop device; when the logo is clicked, the user is directed to the home page.
+
+    7. Verify that the search bar in the navigation bar is responsive and located in the centre of the page. The user should also be able to use the search function on a tablet or mobile device.
+
+         On a desktop device, the search bar is centred as expected and responsive to changes in screen width. When the device's screen width is reduced to that of a tablet or mobile device, the search bar collapses and is represented by a search icon. When the user clicks the icon, the search bar appears, and the user can use the search functionality. 
+
+         ![searchbar ](readme-files/readme/testing/man5.png "searchbar")
+    
+    8. Change the screen size to that of a tablet or mobile device and check that clicking the hamburger icon displays the navbar menu links in a dropdown box with the links in the centre. The navbar links should have the same effect as if they were on a desktop device.
+
+         The hamburger icon appears as expected when the width of the navigation bar is changed to that of a tablet device. When you click the hamburger icon, the navlinks appear in a dropdown box that is centred and behaves exactly like a desktop device when hovered over.
+
+    9. Confirm that the navigation bar menu icons is different for a guest user and a registered user. 
+
+         When tested on a desktop device, the navbar menu icons for a guest user and a registered user actually differ. The wishlist icon is not visible to the guest user, but it is visible to the registered user at the top of the navbar on a desktop device. The wishlist page can be accessed from the my account icon dropdown box on a mobile or tablet device for a registered user.
+
+         ![mobile homepage ](readme-files/readme/testing/man6.png "mobile homepage")
 
 
 2. Hero image  
 
-    1.	Navigate to the Index page (Home) on a desktop by clicking the Ayo Recipes brand logo in the upper left corner. 
+    1.	On all devices, ensure that the hero image is visible and takes up the entire width of the screen. 
+         The hero image fills the entire screen width on a desktop with no overflow issues. The same effect occurs when the screen size is changed to a tablet or mobile device; the hero image takes up the entire screen width, but the image on a mobile device differs from that on a desktop or tablet device.
 
-    2. Check that the hero image is visible and occupies the entire width of the screen on all devices.
 
-         On a desktop, the hero image fills the entire screen width with no overflow issues. When the screen size is changed to a tablet or mobile device, the same effect occurs; the hero image takes up the entire screen width.
 
-    3. Confirm that when the home page (index page) loads on all devices, the hero image text header has an animation effect and that the tagline text is hidden on all small devices such as mobile.
+  
 
-         The hero image text header has a stretch animation effect when tested on a desktop device. The same thing happens on a tablet and a mobile device. However, certain text in the hero image, such as the tagline text, is hidden on a mobile device to keep the mobile screen clean and visually appealing.
+3. Button
 
-         ![ mobile view of hero image ](static/images/readme/test/fig35.png "mobile view of hero image")
+    1. Confirm that when hovered over, the button under the header text changes colour and directs the user to the correct page when clicked.
+        
+         When this is tested, it can be seen that when the button is hovered over, a light box shadow appears and the background colour of the button changes. When the user clicks the button, he or she is taken to the all products page. 
 
-3. Explore Festive section    
+4. Footer 
 
-    1. Navigate to the Home page, which is the Index page on a desktop.
-     
-    2. Confirm that the brief summary of Ayo Recipes and the three recipe cards below the summary adjust responsively as the screen width changes .From a medium breakpoint point upwards, the recipe cards should occupy three columns per row, whereas on a smaller device, such as a mobile, the recipe cards should only occupy one column per row. 
+    1. Scroll to the  bottom of the page to access the footer. 
 
-         When tested on a desktop device, the festive container adjusts to fit the width of the screen. On a tablet device, the recipe cards appear as expected.
+    2. Adjust the device's screen width to see if the footer content is responsive. On a mobile device, ensure that the join our community section in the desktop footer is hidden. All links in the footer should take the user to the right page.
          
-         ![ festive recipes with high ratings ](static/images/readme/test/fig36.png "festive recipes with high ratings")
-         
-         When viewing the recipe cards on a mobile device, they appear on top of each other, one card per row, as expected. The font size and images adjust as needed, and are responsive on all devices.
+         When tested on a desktop device, the footer content is displayed in three columns, with the text visible in each column. The second column contains customer service links, which, when clicked, take the user to the desired page, in this case, the about page.
 
-         ![ festive recipes with high ratings on mobile view ](static/images/readme/test/fig37.png "festive recipes with high ratings on mobile view ")
+         All of the customer service links function properly, directing users to the appropriate pages. The third column allows the user to join the MMÀ community by clicking on the "join now" button, which, as expected, takes the user to the about page. 
 
-    3. Confirm that the recipe card container design includes a picture, a title, and some engaging text. When the screen width is changed, the recipe cards should change to fit the size of the screen, with the fonts also changing to fit the size of the screen. On a mobile device, each container should take up the entire width of the screen, yielding one recipe card per row.
-
-        When tested on a desktop device, the recipe card container contains an image, title, and engaging text that is responsive to the screen as it is changed in the dev tools. The font size is also screen-responsive. The same effect occurs on a tablet device, where the recipe cards adjust responsively to the screen width, fitting well on the screen. When viewed on a mobile device, the three recipe cards appear on top of each other, occupying the entire screen width, creating a clean and visually appealing appearance.
+         The footer content adjusts to fit as the width of the screen changes. The size of the text and icons has been reduced. On a mobile device, however, the third column with the join now button  is hidden, making the footer appear cleaner and less crowded
 
 
-    4. Hover your mouse over the image of the recipe cards and confirm if the alt text appears.
-
-         When the mouse is hovered over the images, the alt text appears as expected.
-
-    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings. 
-    
-        Clicking on each of the recipe cards demonstrates that the recipes displayed in the festive container have high ratings. The recipes with the highest ratings appear first.
-
-
-
-4. Browse our Categories Section 
-   
-    1. Navigate to the Home page, which is the Index page on a desktop.
-
-    2. Confirm that the categories have been divided into four distinct image pills, each with its own heading text. The image pills should adjust to the screen size so that they look good on all devices. 
-
-         When tested on a desktop device, the categories occupy two rows, with one row containing two images and two heading text of the category names. When the screen width is changed to a tablet device, the image pills retain their structure, but the images and font size adjust to fit the size of the screen, making it visually appealing to the user.
-
-         ![ category section  ](static/images/readme/test/fig38.png "category section ")
-
-         ![ category section mobile view](static/images/readme/test/fig39.png "category section  mobile view ")
-
-    3. Hover your mouse over the image pills in the category to see the alt text.
-
-         When tested, the alt text is visible when the mouse is hovered over the image.
-
-    4. Confirm that when the category image pill is clicked or the header text beside the image pill  is clicked the user is directed to the correct page. 
-
-         When the category image is clicked on the dev emulator, the user is indeed directed to the view category page.
-
-         ![ view category page tablet view](static/images/readme/test/fig40.png "view category page tablet view ") 
-    
-5. Kitchen Décor 
-
-    1. Go to the Home page (the Index page on a desktop) and scroll down to the page. 
-       
-    2. Ensure that the image is responsive on all devices and that the font size adjusts to fit the width of the screen.
-
-        When tested on a desktop device, the image is responsive. As the screen width is reduced, the image, as well as the font used on the text, shrinks. On a mobile device, the text appears above the image to fit the size of the screen and appear clean and organized and less clustered.
-
-         ![mobile view oof kitchen decor image](static/images/readme/test/fig41.png "mobile view oof kitchen decor image ")   
-
-
-    3. Confirm that the button under the kitchen décor text enlarges when hovered over and directs the user to the correct page when clicked.
-
-        When this is tested, it can be seen that when the button is hovered over, a light box shadow appears on the button. When the button is pressed, a new page appears, which directs the user to the third-party site as expected.
-
-        ![kitchen decor buy now button](static/images/readme/test/fig42.png "kitchen decor buy now button")
-
-6. Footer 
-
-    1. Navigate to the Home page, also known as the Index page on a desktop, and scroll down to the footer.
-
-    2. Adjust the screen width of the device to see if the footer content is responsive. Check that the image in the desktop footer is hidden on a mobile device.
-
-         When tested on a desktop device, the footer content is displayed in three columns, with the text in each column visible as expected. The second column contains the brand image logo, which, when clicked, takes the user to the website's homepage. As the width of the screen changes, the footer content adjusts to fit. The text and icons have been shrunk in size. However, on a mobile device, the second column with the brand logo is hidden, making the footer appear cleaner and less crowded.
-
-
-    3. Hover your mouse over the social media icons in the third column of the footer section to see if they have a background overlay. 
+    3. Hover your mouse over the social media icons in the first column and confirm that if the mouse is hovered over the menu icons, the colour changes and the user is directed to the appropriate MMÀ social media page.
 
         When testing this on all devices and hovering over the social network icons, each icon has a background overlay with a box shadow when hovered. This informs the user of which icon is currently selected. The outcome is as expected.
 
-        ![hover effect on social media icons](static/images/readme/test/fig43.png "hover effect on social media icons")
-
-    4.	Ensure that clicking on the social media icons takes you to the correct page.
-
-         When tested by clicking on the social media links in the footer, it is clear that all of the social media icons, as expected, lead to Ayo Recipes social accounts.
-
-    5.	Confirm that the links in the first column of the footer take the user to the correct page and that when hovered over, a box shadow appears. 
-
-         Hovering the mouse over the links on a desktop or tablet device reveals that the box shadow appears as expected. When the user clicks on any of the links, he or she is taken to the homepage, as expected.  
-
-         ![hover effect on footer links](static/images/readme/test/fig44.png "hover effect on footer links")
-
- 
-    6. Confirm that the brand logo in the footer has an  alt text when hovered and links to the home page when clicked.
-
-         When tested on a desktop device, the alt text appears when the mouse is hovered over the image, and when the user clicks the brand image, they are directed to the homepage as expected.
+        ![hover effect on social media icons](readme-files/readme/testing/man7.png "hover effect on social media icons")
 
 <br/>
 
-#### **RECIPES PAGE** 
-1. Navigation bar 
+#### **PRODUCTS PAGE** 
 
-    1. Navigate to the Recipes page on a desktop computer.
+1. Navigate to the all products page by selecting the category all products from the navbar's all products dropdown menu.
         
-    2. Confirm that the guest users menu item corresponds to the guest user's home page navigation bar.
+2. Confirm that the sort selector dropdown box is on the page and that the user can sort products by price, rating, name, and category.
  
-        When tested on all devices, the menu item for the recipe page is the same as the home page for the guest user.
+     When tested on a desktop device, the sort selector can be seen on the page, located on the left side of the page. The user can select any of the sort options by clicking on the selector box. If the user selects any of the options (price, rating, name, and category), the products will be sorted in the expected order. The same effect occurs on a tablet and a mobile device. The sort selector is placed above the products on a mobile device. 
 
-    3. Confirm that the menu item for the recipe page when the user is logged in differs from the menu item for the homepage when the user is a guest.
+3.  Confirm that the total number of products displayed when sorted is correct, and that the total number of products in each category is displayed when the user clicks any of the navbar menu links with that category
 
-        By logging into Ayo Recipes, it is possible to see that the navigation menu items are different. When logged in, the user has access to the following menu items (Recipes , Profile, Tips & Tricks & Logout).
-
-        ![menu bar for a logged in user ](static/images/readme/test/fig45.png "menu bar for a logged in user")
-
-
-2. Hero image
-    1. Navigate to the Recipes page on a desktop computer.
-
-    2.  Ensure that the hero image is visible and occupies the entire width of the screen on all devices, with a search bar in the centre of the image.
-
-         On a desktop, the hero image fills the entire screen width with no overflow issues. When the screen size is changed to a tablet or mobile device, the same effect occurs; the hero image takes up the entire screen width. As the screen width is changed, the search bar appears in the middle of the page. The search icon and the clear button are present as expected, adjusting to the size of the screen to accommodate all devices.
-
-    3. Confirm that when a user queries the search with a recipe or category name, the results are displayed and that if no results are found, a message informing the user is displayed.
-
-         When tested across all devices, the search bar does query the user's search after the user enters a recipe name/category name, displaying results. If no results are found, the user will receive a message.
-
-        ![no results found in recipe page ](static/images/readme/test/fig46.png "no results found in recipe page ")
-
-
-3. Recipe card containers
-
-    1. Go to the Recipes page on a desktop/ mobile device.
-
-    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be  able to click the image and be directed to the single -recipe page. 
-
-        On a tablet device the recipe cards show as expected with  a recipe picture, recipe name and cooking time
-
-         ![recipe cards in a tablet view](static/images/readme/test/fig47.png "recipe cards in a tablet view")
-
-        While  on a mobile device, the recipe cards collapse to one per row, as expected. 
-
-        ![recipe cards in a mobile view](static/images/readme/test/fig48.png "recipe cards in a mobile view")
-
-    3. Confirm that when the "BACK" button under the recipe cards is clicked, it takes the user to the appropriate site and that the button expands when the mouse is hovered over the item.
-
-          During testing, when the mouse is hovered over the button, it expands and a box shadow appears. As expected, the button is placed at the bottom of the recipe cards, adjusting to the screen width as it is increased and decreased. When the user clicks, he or she is returned to the homepage.
-
-<br/>
-
-#### **LOGIN PAGE**
-
-1. On a desktop, navigate to the Login page. 
-
-2. Confirm that the card container containing the login form has a background image and that the card adjusts to the screen responsively.
-
-    When tested on a desktop device, the background image is visible, and the card container adjusts to fit the screen width.
-
-    ![login page](static/images/readme/test/fig49.png "login page")
-
-3. Confirm that the form validation on the login page works when the required attribute is present.
+     When a user sorts the products on a desktop device using the sort selector box, the user is informed of the total number of products available on the left side of the page. The total number of products can be seen below the selector box on a mobile device. 
  
-    Testing this on all devices reveals that the user cannot "LOGIN" to their profile unless they provide the correct details in the correct format or fill out all of the fields.
+     When a user clicks on one of the categories in the navbar, the site reloads and displays the category name as well as the total number of products in that category. The same effect occurs when you use a tablet or a mobile device as expected.
+    
+     ![sort product](readme-files/readme/testing/man8.png "sort product")
 
-    ![login page with feedback](static/images/readme/test/fig50.png "login page with feedback")
 
-    When the user enters the correct information in the correct format and enters his or her username and password, they will be logged into their profile and will be able to create a recipe.
+4.  Confirm that clicking the "Product Home" link next to the total number of products takes the user to the desired page.
 
-4. Confirm that when the "Login" button is hovered, it expands with a box shadow and directs the user to the profile page.
+     When clicked, the "Product Home" link located beside the total number of products for all screen devices refreshes the product page, displaying all products in the MMA database, with the link disappearing after the page refreshes. 
 
-    Performing this test reveals that the Login button expands as expected, with a box shadow present to make it visually appealing. When the button is pressed, the user is taken to their profile page, where they are greeted with a flash message.
+     ![sort category](readme-files/readme/testing/man9.png "sort category")
 
-    ![button on login page](static/images/readme/test/fig51.png "button on login page")
+5.  Confirm that when a user queries the search with a product name, brand name or category name, the results are displayed and that if no results are found, a message informing the user is displayed.
+     When tested across all devices, the search bar queries the user's search after the user enters a product name/brand name/category name, displaying the results and total number of products found in that search. 
 
-    ![profile created](static/images/readme/test/fig52.png "profile created")
+      ![search criteria](readme-files/readme/testing/man10.png "search criteria")
 
-5. Confirm that when a user enters the wrong password or username, a feedback message is displayed informing them that the details were incorrect.
-        
-    When this test is run on all devices, it can be seen that when a user enters a wrong username/password and clicks the "LOGIN" page, they are presented with feedback informing them that the details they have entered are incorrect. 
-    It does not specify which input field is incorrect in order to keep hackers from gaining access to the user's account.
+      If no results are found, the user will be notified. 
 
-    ![provide wrong login details](static/images/readme/test/fig53.png "provide wrong login details")
+      ![no results found in search criteria](readme-files/readme/testing/man11.png "no results found in search criteria")
 
-6.	Confirm that clicking the "REGISTER HERE" link below the form leads to the sign-up page.
-        
-    By clicking on the "REGISTER HERE" link at the bottom of the form, the user is directed to the registration page, as expected, to sign up for Ayo Recipes.
+      To reset the search function, the user would need to click the "Products Home" link, or the user could click on the search icon on the navbar.
+
+      ![reset search criteria](readme-files/readme/testing/man12.png "reset search criteria")
+
+6. 	Confirm that the products are displayed in a card container design and are presented in four equal columns for a desktop device, two columns for an iPad, and one card container column for a mobile device. An image, some text, an icon, a category, and a button should all be included in the product card container. On a mobile device, the product cards should collapse and each product card should take up the entire width of the screen. The user should be able to click the image and be taken to the product detail page.
+
+     The products are displayed in four columns on a desktop device, three columns on a medium screen, and one column on a small screen. As expected, the product card container includes the product name, price, rating, heart icon, category, and view details button.
+
+      ![product tablet screen](readme-files/readme/testing/man13.png "product tablet screen")
+
+    When the screen width is reduced to that of a mobile device, the products collapse to one column that occupies the screen width, with the card details below. If the user clicks on the image, he or she will be taken to the product detail page, as expected.
+
+     ![product mobile screen](readme-files/readme/testing/man14.png "product mobile screen") 
+
+7.  Confirm that the links in the product card container take the user to the correct page and allow them to perform the desired function. 
+
+     If the user is a registered user, they can click on the heart icon in the product card container where they can view the product rating to add items to their wishlist basket; if the user is not registered, they will be taken to the login page and once signed in, the product will be added to their wishlist basket and directed back to the product detail page. When the user performs actions on the site, they will receive the necessary feedback.
+
+     If the user clicks on the category link under the heart icon, the user will be taken to that category page, which will display all of the products in that category as well as the total number of products available, as expected. To return to the all products page, the user must click the "Product Home" link.
+
+     ![product mobile screen](readme-files/readme/testing/man15.png "product mobile screen")
+
+
+8.  Confirm that when the "View Details" button in the product card is clicked, it takes the user to the appropriate page and that the text in the button expands when the mouse is hovered over the item.
+
+     When the mouse is hovered over the button during testing, the text expands and the font colour changes as expected. The button is placed at the bottom of the card and adjusts to the width of the screen as it is increased /decreased. The user is directed to the product detail page when he or she clicks the button.
+
+
+     ![view details button on product page](readme-files/readme/testing/man16.png "view details button on product page")
+<br/>
+
+#### **PRODUCT DETAIL PAGE**
+
+1. Navigate to the all products page by selecting the category “all products” from the navbar's all products dropdown menu. On the all products page  click the view details button . 
+
+2. Confirm that the add to Wishlist icon works properly and that the category tag located beneath the icon directs the user to the correct page..
+
+     When tested across all devices, it can be seen that when the user hovers over the "Add to wishlist") icon, the text changes colour, and when the icon or text is clicked, the user is notified that their product has been added to their wishlist basket and is directed back to the product detail page. If the product is already in the user's wishlist basket, the user is notified.
+
+     ![wishlist already exists ](readme-files/readme/testing/man17.png "wishlist already exists")
+
+     When a user clicks on the category tag, they are directed to the category page, which displays the products in that category as expected.
+
+3. Confirm that the product size box works as it should and that the quantity button is functional and responsive.
+ 
+     Testing this on all devices reveals that not all products have a size box, but the products that do have sizes have a dropdown box that displays all of the sizes available. As expected, the user can easily select any of the sizes. 
+
+     The quantity box, located beneath the size box, allows the user to reduce or increase the quantity of products required for purchase. The user must select a quantity between 1 and 99. 
+     The size dropdown box and the quantity box adjust to fit all screen sizes while remaining visible on the page
+
+
+4. 	Confirm that when the buttons are hovered over, a box shadow appears and the text changes colour, directing the user to the desired page when clicked.
+
+    When this test is run on all devices, it is clear that when the mouse is hovered over the buttons, a box shadow appears and the text colour changes to white, as expected. The box shadow's purpose is to make the buttons more visually appealing. When the button is clicked, the user is either returned to the all product page or the product is added to their shopping bag with the quantity and size selected, if applicable.
+
+     ![shopping buttons ](readme-files/readme/testing/man18.png "shopping buttons")
+
+5. Confirm that clicking on the product image opens the image in a new tab.
+
+     When tested on all screen devices, the user is directed to a new tab with an enlarged image of the product when the image on the product detail page is clicked.
+
+6. Check that registered users can leave reviews for each product. Each product should allow the user to leave one review. If the user is not already registered, they must sign up in order to leave a review.
+     Testing this on all devices reveals that if the user does not have an account, they will need to sign in or register in order to leave a review.
+    
+     ![review shown for unregistered user  ](readme-files/readme/testing/man19.png "review shown for unregistered user") 
+
+     If the user is logged in, he or she can add a review. The add review modal form appears, and once submitted, the user receives a thank you message. By clicking on the edit link, the user can also edit their own review. 
+
+     When a registered user clicks on the edit link, the edit review form appears, and the user must enter the new review and rating before receiving feedback.
+
+     ![review left by registered user](readme-files/readme/testing/man20.png "review left by registered user") 
+
 
 <br/>
 
-#### **REGISTER PAGE**
+#### **SHOPPING BAG PAGE**
 
-1. On a desktop, navigate to the Register page. 
+1. To access the shopping bag details on a desktop device, click the shopping bag icon. 
 
-2. Confirm that the register page has a background image and that the register form is in a card container.
+2. Confirm that the price of the shopping bag can be seen on the page as the user interacts with different sections of the website.
 
-    When tested on a tablet device, the background image is present on the site, and the register form is indeed in a card container with its contents evenly spaced.
+     Upon testing this on all devices, it was discovered that the user can see the total price of their bag from the shopping bag icon, ensuring that they are spending within their budget as planned.
 
-3. Confirm that the form validation for the register page is enabled in the card container. If the field is not filled correctly, the user should be prompted, and if it is filled correctly and the "SIGN UP" button is clicked, the user should be directed to the correct site.
+     ![shopping bag](readme-files/readme/testing/man21.png "shopping bag") 
 
-    Testing this on all devices reveals that the user cannot "LOGIN" to their profile unless they provide the correct details in the correct format or fill out all of the fields. The user will not be able to submit the registration form unless all fields are correctly filled out.
+3. Confirm that products in the users shopping bag can be updated and removed. 
 
-    ![register page validation](static/images/readme/test/fig54.png "register page validation")
+     When the quantity box is adjusted by increasing or decreasing the quantity symbols and the user clicks the update link, it can be seen on all devices. The new quantity is applied to the products, and the user is notified of the subtotal.
 
-    There are currently placeholders on the register page to help users with the information that is expected of them. This improves the user experience.
+     ![notification with bag contents](readme-files/readme/testing/man22.png "notification with bag contents") 
 
-    ![register page with placeholders](static/images/readme/test/fig55.png "register page with placeholders")
+     If the user decides to remove an item from their shopping bag, they can do so by clicking the "remove" button, which removes the item and notifies the user. If there are no items in the shopping bag, the user receives a message that says "no results found.
 
-    When the user correctly fills out all of the fields and clicks the "SIGN UP" button, he or she will be directed to their profile page.
-
-4. Confirm that clicking the "LOGIN" link takes the user to the Login page where they can sign up. 
-
-    By clicking on the "LOGIN" link located under the register form card container, the user is directed to the Login page, where they can login to their profile.
+     ![emptyshopping bag](readme-files/readme/testing/man23.png "empty shopping bag")  
 
 
-#### **SIDE NAVIGATION**
+4. Confirm that when a user adds an item to their bag, they receive a feedback notification with the product name, image, and delivery fee.
 
-1. Navigate to the Home page on a desktop and reduce the screen width to that of a tablet/mobile device.
-
-2. Confirm that when the hamburger icon is clicked, the side navigation appears from the left side, and that the user can easily hide the side navigation by dragging/swiping the mouse to the left.
-
-    When tested on a tablet device, the hamburger icon appears when the screen width is reduced. When the hamburger icon is clicked, the side navigation appears; to hide it, the user simply swipes left or drags the pointer left as expected.
-
-    ![side navigation bar](static/images/readme/test/fig56.png "side navigation bar")
-
-3. Confirm that the menu items on the side navigation bar, when clicked, take the user to the correct page, and that a white background overlay appears when the mouse is hovered over the menu items.
-
-    When tested on all devices, the white background does appear on the menu items when the mouse is hovered over them.
-
-    ![hover effect on menu items in sidenav](static/images/readme/test/fig57.png "hover effect on menu items in sidenav")
+     When tested on all devices, it can be seen that when a user adds an item to their shopping bag, the user receives a notification that the item has been added to their bag, which displays the product name, image, quantity, size if any, total, and delivery price, as expected. When the user clicks on the icon, they will be able to see all of the items in their shopping bag.
 
 
-4. Confirm that when the page is opened, the brand image logo appears in the side navigation bar.
+5. Confirm that the buttons on the page, when clicked, take the user to the appropriate pages and have a box shadow when hovered over.
 
-    During testing, it was discovered that when the hamburger icon is clicked and the side navigation bar opens, the user can see the brand image logo at the top of the menu recipes. When the brand image logo is clicked, the user is returned to the home page.
+     When tested on all screen devices, the box shadow appears as expected and the text colour changes to white when the mouse is hovered over it. If the user clicks the "Keep Shopping" button, they will be directed back to the all product page, while clicking the "Secure Checkout" button will take them to the checkout page.
 
-5. Confirm that when a user clicks the "Ayo Recipes" heading under the logo, they are directed to the homepage, just like the brand logo. 
+     ![secure checkout](readme-files/readme/testing/man24.png "secure checkout")  
 
-    When tested on a mobile device, it can be seen that when the hamburger icon is clicked, the sidenavigation bar opens and the user can click the heading for "Ayo Recipes," which directs them back to the homepage as the brand logo, as expected.
+
+#### **CHECKOUT PAGE**
+
+1. The user would need to click the shopping bag icon to get to the checkout page. If there are products in the shopping bag, the user can access the page by scrolling to the bottom of the page and clicking on the "secure checkout" button.
+
+2. Confirm that the user must fill out all mandatory fields before submitting the checkout form. If the fields are not properly filled out, the user should receive a validation message.
+
+     Testing  the form for an unregistered user on all devices it can be seen that the user would need to provide some mandatory fields in order for them to be able to submit the form to process their order. The fields that are mandatory there is a placeholder in the input field with an asterisk mark showing that the field is required.
+
+    ![checkout form ](readme-files/readme/testing/man25.png "checkout form")  
+
+     Testing the form for an unregistered user on all devices reveals that the user will need to provide some mandatory fields in order to submit the form and have their order processed. The mandatory fields have a placeholder in the input field with an asterisk mark indicating that the field is required. 
+
+     ![checkout form with validation message ](readme-files/readme/testing/man26.png "checkout form with validation message") 
+
+     If any fields are left blank, the user is notified when they click the submit button. If the user enters incorrect information or fewer characters than required, the form prompts them with a validation message stating what is expected.
+
+     The user must provide their payment card information; in this case, the user must use the default stripe test card details, which are
+
+     ![checkout form payment card details ](readme-files/readme/testing/man27.png "checkout form payment card details") 
+
+     Once the user has entered their credit card information, they will be able to process their order by clicking the complete order button.
+
+     The same effect occurs for a registered user, but under the delivery input field, the user can select the save delivery information option, which allows the user to save the address in their profile. If the user checks this box, they will be able to save their address for future purchases. 
+
+      ![checkout form save delivery information  ](readme-files/readme/testing/man28.png "save delivery information") 
+
+      After the registered user has filled out all of the input fields with the necessary information, they can proceed to process their order by clicking the completer order button.
+
+3.  Confirm that the buttons on the page, when clicked, take the user to the appropriate pages and have a box shadow when hovered over.
+
+     When tested on all screen devices, the box shadow appears as expected, and when the mouse is hovered over it, the text colour changes to white. If the user clicks the "Adjust Bag" button, they will be returned to the shopping bag page to adjust the bag items, whereas clicking the "Complete Order" button will take them to the checkout success page.
 
 <br/>
 
-#### **TIPS & TRICKS PAGE**
+#### **CHECKOUT SUCCESS PAGE**
 
-1. If you're a logged in user on a desktop, go to the Tips & Tricks page.  
+1.  To access the checkout page, the user would need to click the shopping bag icon. If the user has items in their shopping bag, they can access the page by scrolling to the bottom of the page and clicking the "secure checkout" button.
 
-2. Confirm that the images and brief summary of each section are responsive as the screen width is changed.
+2.  Confirm that when the user clicks the  “secure checkout “ button  they are directed to the checkout success page that displays the order summary 
 
-    As the screen width is adjusted to that of a tablet device, it is clear that the images and summary text, including the header text, of each section are responsive as expected.
+     When tested on all screen devices, it can be seen that when the button is clicked, the user is directed to the appropriate page, which displays the order summary for the user in a box, as expected. A notification alert informing the user that their order has been sent to their email address is also provided.
 
-    ![tips & tricks on a tablet view](static/images/readme/test/fig58.png "tips & tricks on a tablet view")
+     ![order summary confirmation  ](readme-files/readme/testing/man29.png "order summary confirmation") 
 
-3. Confirm that when a button on the page is hovered over, it expands in size and that clicking the button takes the user to the appropriate site on a new page.
+3. Confirm that the button on the page, when clicked, take the user to the appropriate page and has  a box shadow when hovered over.
 
     When the mouse is hovered over the buttons, the button expands with a box shadow present on all devices. When the user clicks the button, he or she is directed to the desired site on a new page, as expected.
 
+4. Confirm that the user receives an email confirmation once their order has been processed.
+     When the user clicks the "Secure Checkout" button and their order is processed, they will be emailed a confirmation email. This email contains the order details, date, order total, and so on. The email is sent from the official email address of the website. 
+
+     ![register email  ](readme-files/readme/testing/man30.png "register email") 
 <br/>
+
+#### **REGISTER PAGE**
+1. On a desktop, navigate to the my account icon and select from the dropdown menu “register” .
+
+2. Before submitting the sign up form , confirm that the user must fill out all mandatory fields. If the fields are not filled out correctly, the user should receive a validation message.
+
+     Testing this on all devices reveals that when a user attempts to register for an account with MMÀ, they must provide the mandatory fields indicated by an asterisk beside the input name. This is to inform the user that those fields are required in order to sign up successfully. If the fields are not filled out, the user will be notified and a validation message will be displayed. 
+
+     ![register page with validation error](readme-files/readme/testing/man31.png "register page with validation error") 
+
+     If the user completes all of the fields and clicks the "sign up" button, he or she is directed to the email confirmation page.
+
+3. Confirm that a box shadow appears when the user hovers over the "Sign up" button on the page and that clicking it takes the user to the verification email page.
+     When tested on all devices, a box shadow appears and the text colour changes when the user hovers over the "Sign Up" Button. When the user clicks the button, they are taken to the page where they can verify their email address, and an alert appears at the top of the page informing them that a confirmation email has been sent to them as expected. 
+
+     ![verify email address page](readme-files/readme/testing/man32.png "verify email address page") 
+
+4. Confirm that when a user registers for a new account at MMA, they will receive an email with a confirmation link that, when clicked, will take them back to the confirmation email page on the MMA website.
+
+     When a user registers for an account with MMA on any device, a confirmation email is sent to the user. 
+
+     ![confirmation email for new user ](readme-files/readme/testing/man33.png "confirmation email for new user")
+
+     If the user clicks on the verification link in the email, they are redirected to the website and asked to confirm their email address.
+
+     ![confirmation email on website ](readme-files/readme/testing/man34.png "confirmation email on website")
+
+5. Confirm that when a user clicks the "Confirm" button on the website's confirmation email page, they are directed back to the login page where they can enter their login information.
+
+     When tested on all devices, it can be seen that when the user clicks the confirm button, they are directed back to the login page and asked to enter their email and password to login to their newly created account, once their email has been confirmed.
+
+     ![sign in page for new user just registered ](readme-files/readme/testing/man35.png "csign in page for new user just registered ")
+
+<br/>
+
+#### **ABOUT PAGE**
+1. On the navbar navigate to the about page.
+
+2. Confirm that the text header has an animation effect and that the tagline text is visible when the about page loads on all devices. The text should be responsive on all devices.
+     The stretch animation effect was present when tested on all devices. The same thing happens when you use a tablet or a mobile device. For tablet and mobile devices, the font size adjusts to the screen size, keeping the screen clean and visually appealing.
+
+     ![about page header effect](readme-files/readme/testing/man36.png "about page header effect") 
+
+3. As the screen width changes, check that the images and buttons are responsive.
+     When the screen width is changed to that of a tablet device, it is clear that the images are responsive as expected, adjusting to the size of the various screens as well as the buttons on the page.
+
+4.	Confirm that when a button on the page is hovered over, it expands in size and that clicking it takes the user to the appropriate site on a new page or within the site.
+     When the mouse is hovered over the buttons, they expand and have a box shadow, which is present on all devices. When the user clicks the button, he or she is expected to be directed to the desired site within the website or to a new page if it is an external website.
+
+     ![ button on about page](readme-files/readme/testing/man37.png "button on about page") 
+
 
 #### **PROFILE PAGE**
-1. When you login or register, you are taken to your profile page.
+1. When you login or register, the user can access the profile page by clicking on the my account icon. A drop down menu appears, and they can select the "my profile" menu link.
 
-2. Confirm that the user's personal information appears correctly when he or she signs in. On all devices, the user details and icons should be responsive.
+2. Confirm that the user's personal information appears correctly when he or she signs in and their order history is visible. The page content should be responsive on all devices. 
+     When tested on a desktop device, the delivery address and order history can be seen on the page. Which is divided into two equal columns. On the left, you can see the delivery address, and on the right, you can see the order history. 
 
-    Testing this on a desktop device it can be seen than the user details match that of the database. On a tablet device it can be seen that the user details as well as the icons adjust to fit the size of the screen without looking squashed. The details are evenly spaced, on a mobile device the same effect takes place . The details are evenly spaced and collapse to one input field per column. 
+     The two columns collapse to one column on a tablet or mobile device, and the delivery address appears above the order history. Displaying the user's default delivery address for their most recent purchase if they saved their delivery address, whereas for a new user, the delivery address input fields are empty and there is no order summary history available. 
 
-     ![profile user details](static/images/readme/test/fig59.png "profile user details")
+     ![profile page of the registered user that has purchased an item](readme-files/readme/testing/man38.png "profile page of the registered user that has purchased an item") 
 
-3.	Confirm that when the mouse is hovered over the buttons, they expand and the user is directed to the correct page when the buttons are clicked.
+     The input fields and the order summary table can be seen to be responsive across all screen sizes.
 
-    When tested on a mobile device, the desired effect is seen when the mouse is hovered over the buttons: a box shadow appears on the button as it expands. 
+     The input fields and the order summary table can be seen to be responsive across all screen sizes, adjusting to the screen size accordingly.
+
+3. Confirm that when the user hovers over the "Update Information" button on the page, a box shadow appears and that clicking it allows them to update their default delivery address.
+
+     When tested on all devices, it can be seen that when the user hovers over the "Update Information" Button, a box shadow appears and the text colour changes. When the user clicks the button, the profile page reloads with the updated information, and the user is notified of the change. The expected effect occurs. 
+
+     ![profile page of the registered user updated](readme-files/readme/testing/man39.png "profile page of the registered user updated")
+
+
+4. 	When the order number is clicked in the order history, the user should be directed to the order summary page for that order.
+     When tested across all devices, it is clear that when the user clicks on the order number, the user is directed to the order summary page for that order. This allows the user to easily track their orders through their profile
+
+#### **LOGIN PAGE**
+1.  If you are returning user you can click on the my account icon on the navbar and select the “sign in “ link to access the login page. 
+
+2. Confirm that the user must fill out all mandatory fields before submitting the sign in form. If the fields are not correctly filled out, the user should receive a validation message.
+     When tested across all devices, it is clear that the mandatory fields have been identified for the user by adding an asterisk to the input field name. This notifies the user that all fields must be completed in order to sign in to their account. If the user does not provide an input, they will receive a validation message.
+
+     ![login page with validation error](readme-files/readme/testing/man40.png "login page with validation error") 
+
+3. Confirm that the forgot password link is operational and that the user can enter their email address to obtain a new password.
+     On the sign in page, the user can access the forgot password link by clicking on the "here" link located after the forgot password text. When the user clicks, they are directed to the password reset page, where they are asked to enter their email address in order to reset their password.
+
+     ![password reset page](readme-files/readme/testing/man41.png "password reset page")  
+
+     If the user wants to reset their password, they can fill out the input field and click the button, which will take them to the password reset done page, which will notify them that an email has been sent to reset their password. 
+
+     ![password reset email sent](readme-files/readme/testing/man42.png "password reset email sent ")
+
+     The user would receive an email requesting that they reset their password.
+
+     ![password reset email](readme-files/readme/testing/man43.png "password reset email") 
+
+4. Confirm that when the Sign In button is clicked, it takes the user to their account and that the box shadow appears when the mouse is hovered over it.
+
+     When tested on all devices, it can be seen that when the user clicks on the sign in button, the user is logged into their profile and the homepage is displayed to them. When a user signs in, they are notified. The box shadow is present on the Sign In button, and the text changes colour as expected.
+
+5.  Confirm that clicking the return to Home link takes the user to the homepage.
+
+     When tested on all devices, it can be seen that when the user clicks the return home link located beneath the forgot password text, the user is directed to the home page as expected.
+
+#### **WISHLIST PAGE**
+1.  Click on the wishlist icon in the navbar to be directed to the registered user's wishlist basket. To access the wishlist menu on a tablet or mobile device, click the "my account" icon.
+
+2. Confirm that when a user clicks the wishlist menu link or icon, they are directed to their Wishlist basket.
+
+     When tested on all devices, the stated effect occurs: when the icon or Wishlist menu link is clicked, the user is directed to their wishlist basket, which displays all of the products they would like to purchase in the future.
+
+3. Check that the buttons on the wishlist page perform their intended function.
+     When tested on a tablet device, the Wishlist basket adjusts to the screen size, and the buttons available to the user are "Product Details" and "Remove." When the product details button is clicked, the user can view more information about the product, and the Remove button, as expected, allows the user to remove the product item from their shopping bag. If a user removes an item from their Wishlist basket, they are notified, and if no products are available in the basket, the user is notified.
+
+     ![no item in wishlist basket](readme-files/readme/testing/man44.png "no item in wishlist basket") 
+
+
+#### **SIGN OUT PAGE**
+1. If you are a registered user, go to the navbar, my Account menu icon, and select the Sign out option.
+
+    ![logout option on navbar](readme-files/readme/testing/man45.png "logout option on navbar")
+
+2. Confirm that the sign out page includes a sign out button that, when clicked, allows the user to log out of their account. The provided links should also allow the user to return to the all products page.
+     When tested on a tablet device, the Wishlist basket adjusts to the screen size, and the buttons available to the user are "Product Details" and "Remove." When the product details button is clicked, the user can view more information about the product, and the Remove button, as expected, allows the user to remove the product item from their shopping bag. If a user removes an item from their Wishlist basket, they are notified, and if no products are available in the basket, the user is notified.
+
+      ![logout page](readme-files/readme/testing/man46.png "logout page")
+
+
+#### **ADD PROODUCT FORM**
+**( Add Product)**
+
+1. Confirm that the admin can see the "manage product" link when they log in to their account.. 
+     When an administrator logs in and clicks on the my account menu, they can access the manage products link on both mobile and desktop devices. When an admin clicks on the link, they are taken to the add product form.
+
+2. Confirm that the admin user  must fill out all  the mandatory fields before being able to add a product. If the fields are not correctly filled out, the user should receive a validation message.
+
+     When tested across all devices, it is clear that the mandatory fields have been identified for the user by adding an asterisk to the input field name. This notifies the admin user that all  required fields must be completed in order to add a new product. If the user does not provide the necessary input , they will receive a validation message.
+
+     ![add product form page](readme-files/readme/testing/man47.png "add product form page")
+
+3. Confirm that after filling out the required fields, the user will be able to add a product and be directed to the product detail page of that new product.
+     When tested on all devices, the admin is able to add a product to the database by clicking the add product button after filling out the mandatory fields on the form. If the admin user does not want to continue, they can click the cancel button, which has a black background colour when hovered over. The "add product" button on the website has the same effect as the "register" button. 
+
+     Once the new product is added, the user will be able to view the new product's product detail page as expected.
+
+     ![add product to MMÀ](readme-files/readme/testing/man48.png "add product to MMÀ")
 
 <br/>
 
-#### **ALL ADD FORMS**
-**( Create Recipe, Add Category)**
+#### **EDIT PRODUCT FORM**
 
-1. Confirm that the user must fill out all mandatory fields before submitting any of the forms. If the fields are not properly filled out, the user should receive a validation message.
+1.  On the product detail page, confirm that when the admin user clicks on the edit function below the keep shopping button. The edit form page is displayed, and the form is pre-populated with data.
 
-    When the two forms are tested, it is clear that the user is unable to submit any of them without entering the correct information. When the user clicks the submit button, they are notified if any fields were left blank. If the user enters incorrect information or enters fewer characters than required, they are also prompted on the form with a validation message stating what is expected. 
+     When tested on all devices, it can be seen that when the admin user clicks on the edit link under the keep shopping button, they are directed to the edit product form page, which displays the prepopulated data of the product to be edited, exactly as expected.
 
-    However, the select category validation did not work on the create recipe form, allowing the user to submit the form without selecting a category. This was solved by incorporating the select validation function from the task manager project of Code Institute. This caused the select category option to function as expected, notifying the user when no options were selected.
+     ![edit product form MMÀ](readme-files/readme/testing/man49.png "edit product form MMÀ")
 
 
-2.	Confirm that a flash message appears at the top of the screen providing feedback on the user's action.
+2.  Confirm that when a user clicks the "update product" button, the product is updated and that when the user cancels, the user is returned to the products page.
 
-    When the user clicks the submit button, he or she is given feedback on the action that was just completed. 
-
-<br/>
-
-#### **ALL EDIT FORMS**
-**( Edit Recipe, Edit Profile, Edit Category)**
-
-1.	Confirm that all edit forms populate the correct information in all input fields. Before submitting, the user must complete all mandatory fields. 
-
-    When testing the three pages forms, the desired effect occurs: the pre-populated information is presented in the input fields, and the user is informed about mandatory fields that cannot be left blank if they want to submit the form without filling out all of the fields. 
-
-    However, on the edit profile page, the "required" attribute was not added to the input type "email," allowing the user to submit the form without filling out the mandatory field. 
-
-    This was fixed by adding the "required" attribute to the "email" input type on the edit page. 
-
-2.	Confirm that a flash message appears at the top of the screen in response to the user's action. 
-
-    When the user clicks the Update button, he or she receives feedback on the action that was just completed.
+     When tested on all devices, it can be seen that when the user clicks the update products button, after updating the fields they want, they can click the update button to update the product data, and if they want to return to the all products page, they can click the cancel button. The desired result is obtained.
 
 <br/>
 
-#### **ALL DELETE FORMS**
-**( Delete Recipe, Delete Category)**
+#### **DELETE MODAL**
+**( Delete Review, Delete Product)**
 
-1.	Confirm that when the "delete" button is clicked, a modal appears asking the user to confirm their action. If the user selects Delete, the appropriate recipe/category is removed.
+1. Confirm that when the "delete" link on the product detail page is clicked, a modal appears asking the administrator to confirm their action. 
+     
+     The relevant product is deleted if the user clicks Delete. When tested across all devices, the modal appears when the admin clicks the "delete" link. A dialogue box appears, requesting confirmation from the user that they want to perform the desired function. The product is deleted from the website database when the user clicks the delete button. 
 
-    When tested on a desktop device, the modal does appear when the user clicks the "delete" button. A dialogue box appears, asking the user to confirm that they want to perform the desired function. When you click the delete button, the recipe/category is removed from the website and database.
+     ![delete product modal](readme-files/readme/testing/man50.png "delete product modal")
 
-2.	Confirm that a flash message appears at the top of the screen in response to the user's action.
 
-    When the user clicks the Update button, he or she receives feedback on the action that was just completed.
+2. Confirm that, in response to the admin's action, a notification appears at the top of the screen.
+     
+     When the user clicks the delete link, he or she receives feedback on the just completed action, as expected. The user is returned to the all products page.
 
-3.	Confirm that the "Cancel" link, when clicked, returns the user to the appropriate page.
+     ![product deleted notification ](readme-files/readme/testing/man51.png "product deleted notification")
 
-    When tested on a mobile device, the cancel button directs the user back to the manage categories page, and the dialogue box disappears.
- 
+3. Confirm that the "Cancel" link, when clicked, returns the user to the appropriate page.
+     When tested on all devices it can be seen that the cancel button directs the user back to the product detail  page, and the dialogue box disappears.
 
-4. Confirm that when you hover the mouse over the two buttons, they expand and a box shadow appears.
+4. Confirm that the admin user has permission to view and delete other user reviews. The admin should also be able to add reviews, edit their reviews, and delete reviews.
+     When an admin user logs in, they can view reviews just like any other unregistered or registered user. When the admin clicks the add review link, a modal appears, allowing the admin to add a review. Once added, the administrator has access to the edit and delete links. If the user clicks the edit link, the edit review modal appears, just like it does for other users, allowing the administrator to make changes.
+        ![admin able to add review and delete other users review ](readme-files/readme/testing/man52.png "admin able to add review and delete other users review")
 
-    When tested on a mobile device, the desired effect can be seen when the mouse is hovered over the buttons. As the button expands, a box shadow appears on it, and when clicked, it performs the desired function.
+     When an admin user clicks the delete link, a modal window appears, asking the user to confirm that they want to perform the desired function. 
+    
+      ![delete review modal](readme-files/readme/testing/man53.png "delete review modal")
+
+     When a user clicks the delete button, the product is removed and the user is notified.
+        ![delete review notification](readme-files/readme/testing/man53.png "delete review notification")
 
 <br/>
 
@@ -793,18 +908,18 @@ The admin user can access the Django admin site to manage the site's orders and 
 
 Some defensive back end programming has been put in place to limit users' access to certain functions.
 
-1.	Only the admin user has the ability to add a category to the website. The admin user's menu includes a new menu item called "Manage Categories." Any category can be added, edited, or deleted by the admin user from this page. 
+1.	Only the admin user can add a product, edit a product form, delete reviews, and delete products. The admin user's "my account" menu icon includes an additional link for managing products (add product), which allows the user to add products to the database.
 
-2.	When a guest user views the single recipe page, they do not have the option to order the recipe; instead, they only see the "back" button. When the button is pressed, the user is taken to the login page, where he or she can register and either create or order a recipe.
+2.	When a user registers or logs in, they can see all of the reviews that other users have left, but they can only leave one review per product. The user has the ability to edit but not delete their reviews. When the user is viewing the product reviews of other users, they will notice that the edit button is only available for reviews left by them.
 
+3.	 If the user registers for an account with MMÀ, they will notice that in order to access the wishlist basket on a mobile device, the user must click on the "my account"menu icon and select Wishlist from the dropdown menu. The user is then directed to the Wishlist page.
 
-3.	When a user registers/logs in, they can view all recipes created by other users and, if desired, order the recipe via an external link. The user would only be able to edit or delete their own recipes, not those of other users. When viewing another user's recipe versus recipes created by them, the registered / logged in user will notice that the buttons on the single recipe page are different. 
+4.	If the user is unable to provide an image url for the add product form, the new added product will be displayed with a default image. 
 
-4.	If the user is unable to provide an image url for the recipe on the add-recipe page, a default image will appear in the recipe card when the recipe is added to the user's profile. If the user wants to learn more about the recipe, they can click on the recipe card to be taken to the single recipe page, which includes a recipe image even if the user did not enter an image url in the add recipe form.
+5.	To edit or delete a product, the admin user can  only access this functions. They can use the edit and delete functions on the product detail page.
 
-5.	 The admin user has the same functions as the registered user. When viewing each recipe individually, the admin user has the ability to edit and delete all recipes. On the website, he or she can also add, edit, or delete a recipe category.
+6.	The admin user performs the same tasks as the registered user. When viewing each review, however, the admin user has the option to delete the reviews. 
 
-6.	Only the registered user and the admin user have access to the profile menu item and can create a recipe. To perform the basic CRUD functions, the guest user would need to register/login with Ayo Recipes.
 
 </br>
 
@@ -831,16 +946,20 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 ### **FURTHER TESTING** 
 
-1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive. Some feedbacks were provided. 
+This site was tested on a desktop (Mac OS and Windows), iPad, iPadPro, iPhone (6,7,8, and SE), and Pixel2 device to ensure that it was error-free and responsive on all pages. Additional testing was conducted by allowing some users to shop on the site.
 
-    * One of the feedbacks was that the register form was not accepting their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted the users input as well as the placeholder in order for the user to understand easily.  
+Some feedbacks were provided.
 
-    * Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
+1.	One of the comments received was that they received duplicate emails after processing their order, which was resolved by disabling the email password for one of my Gmail accounts. This fix resolved the problem, and the user received only one confirmation email.. 
 
-    * Colleagues reran the test and reported that interacting with the add recipe page was now smoother and they could select any option of their choice.
+2.	Another issue was that they were unsure how the edit review form functioned. They were unsure whether they needed to add a new review because the prepopulated data did not appear. This was fixed by inserting a small message beneath the edit review form informing the user that the review being edited is their previous review.
+
+    ![edit review form modified](readme-files/readme/testing/prob8.png "edit review form modified")
+
+     After the fix was applied, the user was directed to the updated site to shop again and provide feedback on the website's customer experience. The site was easier to use and more clear, according to the users.
 
 
-3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
+3. [AM I Responsive](http://ami.responsivedesign.is/) was used to capture the aesthetic look and responsiveness of MMÀ across all devices. Screenshot is below 
 
     ![overview of AYO RECIPES on all devices](static/images/readme/general-overview.png)
 
@@ -848,80 +967,40 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 ### **SOLVED BUGS**
 
-1. To display the correct category name that the user selected on the edit recipe page, the if/else statement provided in the for loop had to be changed. Instead of ( % If category.category_name == recipe.category_name % ), this was changed to ( % If category.category name in recipe.category name % ) because the recipe category name is in an array and we need to use the "in" keyword to check for the value category name in order for the system to pick the correct item from the array. 
+1. In order to display the correct message to the user when they left a review  some conditional  rendering was used on the product detail page. Initially the  if statement applied was ``` ( % if reviews.count % ) ``` which targeted the profile user . Its aim was to target if the user had a profile and their reviews were more than one for a product the user would be provided with a thank you message.
 
-2. On a tablet device, the flash message at the top of the website had no padding on the left and right sides, making the text look squashed. This was resolved by adding padding to the flash message's left and right sides.
+     On the product detail page, conditional rendering was used to display the correct message to the user when they left a review. The first if statement used was ```( % If reviews.count % )```, which targeted the profile user. Its goal was to target if the user had a profile and more than one review for a product, the user would be sent a thank you message after adding a review. 
 
-3. On the register page, it was discovered that the "about me" input field at the bottom of the page lacked a min-length or max-length attribute, allowing the user to enter any number of characters in the about me field. The text area element was fixed by adding the "min-length" and "max-length" attributes.
+     This was fixed by calling the review by user in the product detail views.py file and calling the user from the reviews. By including this function, I was able to call the reviews from user function in the template and fix the conditional rendering, allowing the user to see a thank you message once they had completed the form. 
 
+     ![product detail views.py](readme-files/readme/testing/prob3.png "product detail views.py")
+    
+     Some back end defence has been included in the reviews view.py file to ensure that no user can manipulate adding a review. 
+     
+     ![reviews views.py](readme-files/readme/testing/prob4.png "reviews views.py")
 
-4. The placeholder text for Phone number and password on the register page has been updated to a more concise text that can direct the user of the necessary pattern /input expected. The previous text was a little puzzling for the user.
+     This ensures that the user must be registered before leaving a review and that the user cannot leave two reviews for the same product.
 
-5. On the recipes page, an if/else statement is present for the recipe image incase the user does not input any link. If no link is added to the recipe image url , a default recipe image would appear on the recipes page in a recipe card. The image can also be seen on the single -recipe page and the users profile. 
-
- 
-6. The star rating on a tablet device was overflowing to another row on the add – recipe page. This was corrected by decreasing the font size of the star icon from a breakpoint of 1024px below.
-
-    ![tablet view of add recipe page ](static/images/readme/test/fig59.png "tablet view of add recipe page ")
-
-7. To create the dynamic input fields, stack overflow and [Youtube](https://www.youtube.com/watch?v=MLBLsxcB3Dc) were consulted. However, when the javascript code for the dynamic input fields was linked to the overall script.js file for the website, errors appeared in the chrome dev tools console tab. Except for the recipe and edit recipe pages, this error appeared on all pages. This was rectified by separating the JavaScript code for the dynamic input fields into a separate file called (addscript.js). 
-
-    The new file (addscript.js) was added to the add recipe and edit recipe pages to validate the dynamic input fields, which worked and eliminated all errors on each page.
-
-8.	When a user clicks on the category image pills or category name headings, they are taken to the view category page, which displays all of the recipes created by users in that category. If there are no recipes, the user should see the message "no category results found." 
-
-    This was not the case during testing, as the "no category results found" message was not visible. To resolve the issue, the steps used to create the search function for Ayo Recipes were used to create the if /else statement for the view _category page, allowing the user to see the message "no category results found."
-
-    This was fixed by adding an if/else statement above the for loop that said  (%if allrecipe|length > 0 %). The recipes' for loop should be nested inside the if else statement. When the test is run again with this fix, the message "no category results found" now appears as expected.
+2.	The footer was not staying at the bottom of the page on the shopping bag page and All authentication files. The first fix was to use the recommended bootstrap [method](https://getbootstrap.com/docs/5.0/examples/sticky-footer/), but this affected the navigation bar and the banner on the home page. I tried removing the home page from base.html and making it its own independent document, but some features on other pages did not work.
 
 
-9. The placeholder for the user to enter their phone number on the register page was still confusing to the user and did not accept the user's mobile phone number format. This was changed to a more clear understanding placeholder, with the font size increased to make it more visible. The pattern for the input field has been updated as well. This fix enabled the user to enter their phone number without issue.
+    ![footer floating](readme-files/readme/testing/prob5.png "footer floating")
 
-    [pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”]
+    To correct the error, the contents of the bag and the authentication forms were all wrapped in a wrapper with padding and margin. This allowed the footer to be pushed down and appear at the bottom of the pages.
 
-10. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
+3.	When the user completed their order, they received two confirmation emails. The emails came from Boutique Ado and MMA-Haircare. This was odd because when I contacted student support, they were unsure what the problem could be because the codes were correct. The email address for the MMA website was created from scratch and is linked to my Gmail account. I double-checked that the app passwords for boutique ado and MMA were distinct, which they were, but the problem persisted.
+    This was resolved by disabling the app password for the boutique Ado email address. With the new fix, when a user processes an order payment, MMA-haircare sends them only one email.
 
-     ![no padding at the bottom of home page ](static/images/readme/test/fig60.png "no padding at the home page")
+    ![Boutique Ado Email](readme-files/readme/testing/prob6.png "Boutique Ado Email")
+    ![mma-haircare email](readme-files/readme/testing/prob7.png "mma-haircare email")
 
-     ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
+4.	During testing, it was discovered that when the screen width was reduced to that of a mobile and tablet device, the add to Wishlist text present under the heart icon was missing and had to be added by removing the d-none class present on the add to Wishlist text on large screens. This fix made the text "Add to Wishlist" visible on smaller screens.
 
-11.	On the single recipe page, further testing on an iPad device revealed that there was almost no top padding for the recipe image, making the menu bar and recipe content look squashed. This was fixed by adding some top padding to the recipe-image class. This change improved the visual appeal of the recipes page.
+5.	To improve the site's accessibility score, the colour class used on the website as color-pink was changed to another bright pink colour so that the contrast between some of our description text and the background was clear. 
 
-    ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
+     This new fix increased the visibility of the text for users ```color-pink: color:#dc3545)```.
 
-    ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
- 
-12.	Initially, the delete modal did not work because the system read the same id for the various categories on Ayo Recipes. This was resolved by conducting research on [stackoverflow](https://stackoverflow.com/questions/44606429/modal-window-in-jinja2-template-flask), which suggested creating a dynamic modal that would target each category id, which worked. If an administrator wanted to delete a category, the correct category id is now targeted.
-
-13. During additional testing, one of my colleagues complained about having difficulty creating a recipe due to the select category. The select category was not working properly for her while she was using her phone and iPad to access the webpage, whereas it was working properly for me, the developer. I tested this on a desktop device with dev tools emulator, adjusting the screen size, but the issue that affected her was not visible.The options were working perfectly. 
-
-    When this test was performed on an iPad, it was discovered that the aforementioned problem exists. The user was unable to select a preferred category without the system changing it.
-
-    ![ Old category dropdown on addrecipe page and edit page](static/images/readme/test/olddropdown.png " Old category dropdown on addrecipe page and edit page")
-
-    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking on the mobile and tablet device.
-
-    ![ new category dropdown on addrecipe and edit page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
-
-    However, it should be noted that if the user selects all of the categories, the website will not break; rather, the recipe category will be updated with all fields, which is not what we want. We want the user to select only one category, which would have been implemented if we used the single select element, but in actual mobile and tablet devices, the single select element was not picking the user's option, so the workaround for this project was to use the select element with the "multiple" attribute.  
-
-
-14. When testing the admin user goals, it was discovered that when the admin user adds a new category, the categories are arranged alphabetically and take up two rows and two columns. 
-
-    ![ old category section on home page](static/images/readme/test/oldcategory.png " old category section on home page")
-
-    However, for some newly added categories, the html structure is distorted; the first fix was to add breakpoints for different screen devices, but this did not resolve the issue.
-
-    ![ distorted category section showing categories on home page](static/images/readme/test/distortedcategory.png " distorted category section showing categories on home page")
-
-    The design of the category section, as well as the html code, were changed to allow the admin to add new categories to the webpage without distorting the structure of the categories section. Instead of two rows of category images,the category images collapse an appear one category per row. The images and fonts have been created to be mobile-friendly on all devices. As the user adjusts the screen width, the images and heading text shrink to fit the screen without looking squashed or unpresentable.
-
-     ![ desktop view of new category section on home page](static/images/readme/test/list-category.png " desktop view of new category section on home page")
-
-     ![ mobile view of new category section on home page](static/images/readme/test/mobile-view-category.png " mobile view of new category section on home page")
-
-<br/>
-
+7
 #### **Unresolved Bug** 
 * On the register and login pages, the error shown below appeared, requesting that the autocomplete attribute be added to the input field. However, when this was added in accordance with the examples provided [here](https://goo.gl/9p2vKq), the problem persisted.
 
