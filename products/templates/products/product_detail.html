@@ -108,36 +108,34 @@
                     <div>
                     {% if request.user.is_superuser %}
                         <div>
-                            <small class="ml-3">
-                                <a href="{% url 'edit_product' product.id %}" class="text-black admin-btn">Edit</a> | 
-                                <a class="text-danger admin-btn" data-toggle="modal" data-target="#modaldelete{{ product.id }}">Delete</a>
+                            <a href="{% url 'edit_product' product.id %}" class="text-black admin-btn">Edit</a> | 
+                            <a class="text-danger admin-btn" data-toggle="modal" data-target="#modaldelete{{ product.id }}">Delete</a>
 
-                                <div class="modal fade" id="modaldelete{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="text-center text-black mt-2">
-                                                <h5 class="modal-title pt-2" id="modaldelete{{ product.id }}">
-                                                    DELETE PRODUCT
-                                                </h5>
-                                            </div>
-                                            <div class="modal-body text-black">
-                                               <h6>Are you sure you would like to remove <strong class="color-pink"> <em>'{{ product.name }}' </em></strong> from the store product list.<br></h6>
-                                            <br>
-                                            <p class="text-black action">
-                                                <span class="icon">
-                                                    <i class="fas fa-exclamation-circle"></i>
-                                                </span>
-                                                 Please note that this action cannot be undone!
-                                            </p>
-                                            </div>
-                                            <div class="pb-3 ml-3">
-                                                <button type="button" class="btn btn-outline-black text-uppercase rounded-0" data-dismiss="modal">Cancel</button>
-                                                <a class="btn btn-black rounded-0" href="{% url 'delete_product' product.id %}">DELETE</a>
-                                            </div>
+                            <div class="modal fade" id="modaldelete{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="text-center text-black mt-2">
+                                            <h5 class="modal-title pt-2">
+                                                DELETE PRODUCT
+                                            </h5>
+                                        </div>
+                                        <div class="modal-body text-black">
+                                            <h6>Are you sure you would like to remove <strong class="color-pink"> <em>'{{ product.name }}' </em></strong> from the store product list.<br></h6>
+                                        <br>
+                                        <p class="text-black action">
+                                            <span class="icon">
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                                Please note that this action cannot be undone!
+                                        </p>
+                                        </div>
+                                        <div class="pb-3 ml-3">
+                                            <button type="button" class="btn btn-outline-black text-uppercase rounded-0" data-dismiss="modal">Cancel</button>
+                                            <a class="btn btn-black rounded-0" href="{% url 'delete_product' product.id %}">DELETE</a>
                                         </div>
                                     </div>
                                 </div>
-                            </small>
+                            </div>
                         </div>          
                     {% endif %}
                     </div>
@@ -230,14 +228,14 @@
                                     <p class="text-black"> {{review.text_review}}</p>
                                 </div>
                                 {% if request.user.is_authenticated %}
-                                    <small class="text-black">
+                                    <div class="text-black small">
                                     {% if review.user == request.user %}
                                         {% include 'reviews/includes/edit-reviews.html' %}
                                     {% endif %}
                                         {% if request.user.is_superuser %}
                                             {% include 'reviews/includes/delete-reviews.html' %}
                                         {% endif %}
-                                    </small>
+                                    </div>
                                 {% endif %}
                             </div>
                         </div>
@@ -252,6 +250,11 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-grey">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>	
+    </div>
 
 
 
@@ -260,4 +263,9 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
+    <script>
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
 {% endblock %}
