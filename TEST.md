@@ -56,14 +56,14 @@ Some errors were discovered when we ran our product detail page through the vali
 ![error foor modal](readme-files/readme/testing/prob2.png "error for modal")
 
 ![heading with spinner](readme-files/readme/testing/prob1.png "heading with spinner")
+
 This was corrected by adding the aria-labelledby id to the h5 heading. When this was added, the errors were no longer visible.
  
 * [Homepage](readme-files/readme/testing/htmlvalidation/home.png)
-* [Profile](readme-files/readme/testing/htmlvalidation/profile.png)) 
+* [Profile](readme-files/readme/testing/htmlvalidation/profile.png)
 * [All Product](readme-files/readme/testing/htmlvalidation/allproductspage.png)  
 * [Checkout Success Page](readme-files/readme/testing/htmlvalidation/checkoutsuccess.png)
 * [Product Detail Page](readme-files/readme/testing/htmlvalidation/productdetailpage.png)
-* [Edit Category](static/images/readme/html/edit-category.png) 
 * [Wishlist Item](readme-files/readme/testing/htmlvalidation/wishlistitem.png)
 
 <br/>
@@ -86,13 +86,15 @@ Stripe was one of the undefined variables. This variable is referenced by the fu
 <br/>
 
 #### **PYTHON**
-* [Pep8 Online validator](http://pep8online.com/): This was used to run our Python code to ensure that all errors, such as trailing whitespace, were removed. When this was run through the validator, it was discovered that some whitespaces had been removed and that some variables had been flagged. Such as 
+* [Pep8 Online validator](http://pep8online.com/): This was used to run our Python code to ensure that all errors, such as trailing whitespace, were removed. When this was run through the validator, it was discovered that some whitespaces were present and that some variables had been flagged. Such as 
 
  - On the checkout /webhooks.py file the local variable 'e' is assigned to but never used which is used in our try block. 
 
  - The following is marked as imported ```checkout.signals' imported but unused``` but unused in the checkout apps.py file, but it is used on the website.
  
  - Long characters in the projects folder ```settings.py file (Line 136-145) ```have been ignored in order not to break the functionality line.
+
+ Except for the errors mentioned above, which were ignored, whitespaces were removed from all codes, allowing the code to be error-free.
 
 <br/>
 
@@ -419,7 +421,16 @@ The admin user can access the Django admin site to manage the site's orders and 
 
 
 
+
+
 ### **MANUAL TESTING**
+
+Some automated testing was performed, but due to time constraints, manual testing was prioritised.
+
+PLEASE NOTE :The stripe testing card is recommended for card payments as this is for educattional purposes.
+Card number: 4242 4242 4242 4242  
+CVC: any three numbers.
+Date: Future Date
 
 #### TESTING ALL FEATURES ON EACH PAGE 
 
@@ -924,23 +935,20 @@ Some defensive back end programming has been put in place to limit users' access
 </br>
 
 ### **LIGHTHOUSE TEST**
-The lighthouse test was used to evaluate our website's performance, accessibility, best web practises, and SEO. The lighthouse test results for Ayo Recipes are listed in the table below.
+The lighthouse test was used to assess the performance, accessibility, best web practises, and SEO of our website. The lighthouse suggestions were used to improve the website's performance by applying the lighthouse suggestions to boost the scores. The results of the lighthouse tests for MMA are shown in the table below.
 
 Page Name | Performance | Accessbility | Best Practices | SEO | See link   
 --- | --- | --- | ---  | --- | ---    
-index.html |  96 | 94 | 80 | 90 | [see here](static/images/readme/lighthouse/index.png)   
-recipes.html | 78 | 88 | 87 | 90 | [see here](static/images/readme/lighthouse/recipes.png)   
-profile.html | 80 | 93 | 87 | 90 | [see here](static/images/readme/lighthouse/profile.png)   
-single-recipe.html | 99 | 95 | 80 | 90 | [see here](static/images/readme/lighthouse/single-recipe.png)  
-edit-recipe.html | 91 | 82| 100 | 90 | [see here](static/images/readme/lighthouse/edit-recipe.png)  
-edit-profile.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthouse/edit-profile.png)   
-view-category.html | 90 | 94 | 87 | 90 | [see here](static/images/readme/lighthouse/view-category.png)
-add-recipe.html | 90 | 89 | 87 | 90 | [see here](static/images/readme/lighthouse/addrecipe.png)
-tips&trick.html | 100 | 94 | 80 | 80 | [see here](static/images/readme/lighthouse/tips&tricks.png)
-login.html | 92 | 95 | 87 | 90 | [see here](static/images/readme/lighthouse/login.png)
-register.html | 92 | 95 | 87 | 90 | [see here](static/images/readme/lighthouse/register.png) 
-manage-category.html | 94 | 94 | 87 | 90 | [see here](static/images/readme/lighthouse/manage-categories.png) 
-add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthouse/add-category.png) 
+about.html |  97 | 94 | 92 | 100 | [see here](readme-files/readme/testing/Lighthousetest/AboutPage.png)  
+profile.html | 90 | 97 | 92 | 100| [see here](readme-files/readme/testing/Lighthousetest/myprofilepage.png)     
+checkoutsucess.html | 97 | 96 | 92 | 100 | [see here](readme-files/readme/testing/Lighthousetest/Checkoutconfirmation.png)    
+bag.html | 90 | 88 | 92 | 90 | [see here](readme-files/readme/testing/Lighthousetest/shoppingbag.png)   
+register.html | 97 | 96| 92 | 90 | [see here](readme-files/readme/testing/Lighthousetest/Register.png)    
+login.html | 98 | 96 | 92 | 90 | [see here](readme-files/readme/testing/Lighthousetest/login.png)   
+checkout.html | 88 | 94 | 92| 100 | [see here](readme-files/readme/testing/Lighthousetest/Checkout.png)  
+index.html | 98| 96| 92| 100 | [see here](readme-files/readme/testing/Lighthousetest/Home.png)  
+product_detail.html | 97 | 87 | 92 | 90 | [see here](readme-files/readme/testing/Lighthousetest/productdetaillight.png)
+wishlist.html | 92 | 97 | 92 | 90 | [see here](readme-files/readme/testing/Lighthousetest/wishlistlight.png)   
 
 <br/>
 
@@ -961,9 +969,12 @@ Some feedbacks were provided.
 
 3. [AM I Responsive](http://ami.responsivedesign.is/) was used to capture the aesthetic look and responsiveness of MMÀ across all devices. Screenshot is below 
 
-    ![overview of AYO RECIPES on all devices](static/images/readme/general-overview.png)
+    ![overview of MMÁ on all devices](readme-files/readme/overview.png)
+
+4.  When manually testing all pages, it was discovered that some notifications, such as adding a review, editing a review, deleting a product, and editing a product, displayed the bag contents as they provided feedback to the user, which was a bit crowded and unnecessary because the user can still view the shopping bag total price from the navbar. To remove the contents of the bag, the message notification for these functions was changed.
 
 <br/>
+
 
 ### **SOLVED BUGS**
 

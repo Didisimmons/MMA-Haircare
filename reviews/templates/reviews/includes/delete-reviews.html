@@ -1,11 +1,11 @@
     <a class="text-danger admin-btn" data-toggle="modal" data-target="#modaldeletereview{{ review.id }}">DELETE</a>
 
     <!-- Modal to allow superuser to delete user reviews -->
-    <div class="modal fade" id="modaldeletereview{{ review.id }}" tabindex="-1" aria-labelledby="deletereviewModalLabell{{ review.id }}" aria-hidden="true">
+    <div class="modal fade" id="modaldeletereview{{ review.id }}" tabindex="-1" aria-labelledby="deletereviewModalLabel{{ review.id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="text-center text-black mt-2">
-                    <h5 class="modal-title pt-2">
+                    <h5 class="modal-title pt-2" id="deletereviewModalLabel{{ review.id }}">
                         DELETE REVIEW
                     </h5>
                 </div>

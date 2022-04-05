@@ -72,6 +72,7 @@ The goal of MMÀ is to provide people with Afro Caribbean hair safe natural prod
 
 The site has been designed to be extremely user-friendly in order for the user to interact with the products and other features on the site( such as Login, purchase items , e.t.c). The administrator manages the site's information and products, which are regularly updated to ensure that our users receive the most up-to-date products and that the information is consistent across all pages. 
 
+
 #### **Business Goals** 
 As the site owner I want to :
 1.	Create a visually appealing site that is responsive on all devices, promotes brand awareness, and is easy to use . 
@@ -586,7 +587,7 @@ These apps are
 
 
 # **Testing**  
-The testing documentation can be found [here](). 
+The testing documentation can be found [here](TEST.md). 
 
 <br/>   
   
@@ -861,23 +862,22 @@ Amazon web services s3 is a cloud-based storage service where we would store our
 3. Create a group for the user by selecting "User Groups" from the sidebar and clicking "Create New Group," then providing a name related to your application.
    - Look for s3 and then import "Amazon s3 full access policy.
    - To grant full access to our bucket in the policy, copy the ARN from the "bucket policy" page in S3, and our JSON editor should look like this.
-
-   {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:*"
-            ],
-            "Resource": [
-                "arn:aws:s3:::<YOUR-ARN>",
-                "arn:aws:s3:::<YOUR-ARN>/*"
-            ]
-        }
-    ]
-   }
-
+  ```
+   [
+      {
+         "AllowedHeaders": [
+            "Authorization"
+         ],
+         "AllowedMethods": [
+            "GET"
+         ],
+         "AllowedOrigins": [
+            "*"
+         ],
+         "ExposeHeaders": []
+      }
+   ]
+   ```
    - Click on the next page, which contains tags that are not required but must be clicked in order to access the "review policy page."
 
    - On the policy review page, enter a name and a description, then click "Create Policy." The policy is now in place.
@@ -959,38 +959,6 @@ To connect Django to our S3 bucket, we must first perform the following steps:
    ``` 
 
 7. Push all changes to github to ensure that everything listed above is properly installed.
-
-
-
-We can now create our database after we have set up MongoDB. The database was built using the Ayo Recipes [Data Scheme](static/images/readme/database-schema.png "Database schema").    
-
-2. **Create database**    
-   * Select the Cluster tab, then select the "Collections" button.  
-   * Since we aren’t uploading an existing dataset, select "Create Database."  
-   * Provide the name of your database and one initial collection that will be used for your project. 
-   * After we've done that, we can add more collections to our database by clicking the "Create Collection" button.
-   * We can manually create a document by selecting one of the collections and clicking the "insert document" button in the upper right corner. 
-
-### **2. Fork or Clone The Github Repository**   
-
-#### **Forking The GitHub Repository**  
-By forking the GitHub repository, we create a clone of our original repository (AYO RECIPES) in our GitHub account. By cloning our project we can make  modifications and experiments on the cloned repository without affecting the original repository.   
-
-1. Sign In to GitHub account .  
-2. Decide from the list of repositories which you would want to be duplicated. For this project it's AYO RECIPES .  
-3. Locate the "fork" option at the top right corner of the AYO RECIPES and click it. Once clicked it creates another copy of the AYO RECIPES repository to accommodate modifications.  
-
-#### **Making A Local Clone**     
-1. Log in to your GitHub account.
-2. Locate the desired repository to clone which in this case is “AYO RECIPES” .
-3. At the top of AYO RECIPES repository page,  Locate the “Code” button at the top  and click it. Copy the HTTPS link that appears.
-4. Activate your local IDE terminal.
-5. In the terminal, type “git clone” and then paste the link copied from HTTPS.
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-6. Press “Enter” and your local clone has been created.
-
 
 # **Credits**  
 ### **CONTENT**  

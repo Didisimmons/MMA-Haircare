@@ -66,7 +66,10 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """
+    A view to show individual product details
+    reviews and user can add items to wishlist
+    """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
@@ -94,6 +97,7 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
+    """ Add product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Admin has access.')
         return redirect(reverse('home'))
@@ -157,5 +161,5 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted!')
+    messages.info(request, 'Product deleted!')
     return redirect(reverse('products'))
