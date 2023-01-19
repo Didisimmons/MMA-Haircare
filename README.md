@@ -8,7 +8,7 @@ The aim of MMA is to provide people with Afro- centric hair ,quality luxurious p
 
 The ecommerce store allows users to perform some basic operations such as purchasing products, adding reviews, and adding items to their wish list, with some limitations for unregistered users. The super user has access to all of the site's basic CRUD (Create, Read, Update, and Delete) functions related to products and reviews.
 
-[View deployed site](https://mma-beauty.herokuapp.com/)
+[View deployed site](https://mma-haircare.onrender.com/)
 
 # **Table of Contents**   
 1. [UX Development](#ux-development)

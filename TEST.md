@@ -1020,4 +1020,5 @@ Some feedbacks were provided.
     ![New quantity box on shopping bag page](readme-files/readme/testing/man56.png "New quantity box on shopping bag page")
 
     ![New quantity box on shopping bag page number centred](readme-files/readme/testing/centeredqty.png "New quantity box on shopping bag page number centred")
+The number was centred to improve the design for the user.
 
